@@ -125,6 +125,46 @@ const devTools = (): void => {
   }
 };
 
+const checkPanicButton = (
+  key: string,
+  alt: boolean,
+  shift: boolean,
+  ctrl: boolean,
+  meta: boolean,
+): boolean => {
+  const options = JSON.parse(localStorage.getItem('options') || '{}');
+  
+  if (!options.panicButton || !options.panicShortcut || !Array.isArray(options.panicShortcut)) {
+    return false;
+  }
+  
+  const shortcut = options.panicShortcut;
+  const pressedKeys: string[] = [];
+  
+  if (ctrl) pressedKeys.push('Ctrl');
+  if (alt) pressedKeys.push('Alt');
+  if (shift) pressedKeys.push('Shift');
+  if (meta) pressedKeys.push('Meta');
+  
+  const upperKey = key.toUpperCase();
+  if (key.length === 1) {
+    pressedKeys.push(upperKey);
+  } else if (!['Control', 'Alt', 'Shift', 'Meta'].includes(key)) {
+    pressedKeys.push(key);
+  }
+  
+  const isMatch = shortcut.length === pressedKeys.length && 
+    shortcut.every(k => pressedKeys.includes(k));
+  
+  if (isMatch) {
+    const panicUrl = options.panicUrl || 'https://classroom.google.com';
+    window.location.href = panicUrl;
+    return true;
+  }
+  
+  return false;
+};
+
 const handleHotkey = (
   key: string,
   alt: boolean,
@@ -132,6 +172,10 @@ const handleHotkey = (
   ctrl: boolean,
   meta: boolean,
 ): void => {
+  if (checkPanicButton(key, alt, shift, ctrl, meta)) {
+    return;
+  }
+  
   if (alt && !shift && !ctrl && !meta) {
     if (key === 'n') {
       addTab();

@@ -26,6 +26,44 @@ const ThemedApp = () => {
   const cloakIcon = options.tabIcon || defaultIcon;
 
   useEffect(() => {
+    const handlePanicButton = (e) => {
+      if (!options.panicButton || !options.panicShortcut || !Array.isArray(options.panicShortcut)) {
+        return;
+      }
+      
+      const shortcut = options.panicShortcut;
+      const pressedKeys = [];
+      
+      if (e.ctrlKey) pressedKeys.push('Ctrl');
+      if (e.altKey) pressedKeys.push('Alt');
+      if (e.shiftKey) pressedKeys.push('Shift');
+      if (e.metaKey) pressedKeys.push('Meta');
+      
+      const upperKey = e.key.toUpperCase();
+      if (e.key.length === 1) {
+        pressedKeys.push(upperKey);
+      } else if (!['Control', 'Alt', 'Shift', 'Meta'].includes(e.key)) {
+        pressedKeys.push(e.key);
+      }
+      
+      const isMatch = shortcut.length === pressedKeys.length && 
+        shortcut.every(k => pressedKeys.includes(k));
+      
+      if (isMatch) {
+        e.preventDefault();
+        const panicUrl = options.panicUrl || 'https://classroom.google.com';
+        window.location.href = panicUrl;
+      }
+    };
+
+    document.addEventListener('keydown', handlePanicButton);
+
+    return () => {
+      document.removeEventListener('keydown', handlePanicButton);
+    };
+  }, [options.panicButton, options.panicShortcut, options.panicUrl]);
+
+  useEffect(() => {
     const handleVisibilityChange = () => {
       if (!options.autoCloak) return;
 
