@@ -1,8 +1,8 @@
 import { useOptions } from '/src/utils/optionsContext';
 import { searchConfig } from '/src/utils/config';
-import SettingsContainerItem from './components/ContainerItem';
+import HighlightedItem from './components/HighlightedItem';
 
-const Browsing = () => {
+const Browsing = ({ searchQuery }) => {
   const { options, updateOption } = useOptions();
 
   const selectedSearchConfig = () => {
@@ -21,15 +21,15 @@ const Browsing = () => {
 
   return (
     <>
-      <SettingsContainerItem
+      <HighlightedItem
+        searchQuery={searchQuery}
         config={searchConfig}
         action={searchAction}
         value={selectedSearchConfig().value}
         name="Search Engine"
+        description="Choose the default search engine used for queries."
         type="select"
-      >
-        Choose the default search engine used for queries.
-      </SettingsContainerItem>
+      />
     </>
   );
 };

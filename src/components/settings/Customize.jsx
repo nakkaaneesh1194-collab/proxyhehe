@@ -1,13 +1,13 @@
 import { useOptions } from '/src/utils/optionsContext';
 import { themeConfig, appsPerPageConfig, navScaleConfig } from '/src/utils/config';
-import SettingsContainerItem from './components/ContainerItem';
+import HighlightedItem from './components/HighlightedItem';
 
 const findOrFallback = (config, predicate, fallbackIndex = 0) => {
   const found = config.find(predicate);
   return found ? found.value : config[fallbackIndex].value;
 };
 
-const Customize = () => {
+const Customize = ({ searchQuery }) => {
   const { options, updateOption } = useOptions();
 
   const update = (val) => {
@@ -36,43 +36,43 @@ const Customize = () => {
 
   return (
     <>
-      <SettingsContainerItem
+      <HighlightedItem
+        searchQuery={searchQuery}
         config={themeConfig}
         action={update}
         value={selectedTheme}
         name="Site Theme"
+        description="Customize the appearance of the website by selecting a theme."
         type="select"
-      >
-        Customize the appearance of the website by selecting a theme.
-      </SettingsContainerItem>
+      />
 
-      <SettingsContainerItem
+      <HighlightedItem
+        searchQuery={searchQuery}
         config={appsPerPageConfig}
         action={update}
         value={selectedAppsPerPage}
         name="Apps per Page"
+        description="Number of apps to show per page (\"All\" will show everything)."
         type="select"
-      >
-        Number of apps to show per page ("All" will show everything).
-      </SettingsContainerItem>
+      />
 
-      <SettingsContainerItem
+      <HighlightedItem
+        searchQuery={searchQuery}
         config={navScaleConfig}
         action={update}
         value={selectedNavScale}
         name="Navigation Scale"
+        description="Scale navigation bar size (logo & font) globally."
         type="select"
-      >
-        Scale navigation bar size (logo & font) globally.
-      </SettingsContainerItem>
-      <SettingsContainerItem
+      />
+      <HighlightedItem
+        searchQuery={searchQuery}
         type="switch"
         name="Donation button"
+        description="Toggle whether you want the \"Support us\" button to show."
         action={(b) => setTimeout(() => updateOption({ donationBtn: b }), 100)}
         value={options.donationBtn ?? true}
-      >
-        Toggle whether you want the "Support us" button to show.
-      </SettingsContainerItem>
+      />
     </>
   );
 };

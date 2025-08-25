@@ -7,7 +7,7 @@ import theme from '/src/styles/theming.module.css';
 import { useOptions } from '/src/utils/optionsContext';
 import 'movement.css';
 
-const Setting = ({ setting }) => {
+const Setting = ({ setting, searchQuery }) => {
   const { options } = useOptions();
 
   const Container = ({ children }) => {
@@ -28,10 +28,10 @@ const Setting = ({ setting }) => {
   return (
     <>
       <Container>
-        {setting === 'Privacy' && <Privacy />}
-        {setting === 'Customize' && <Customize />}
-        {setting === 'Browsing' && <Browsing />}
-        {setting === 'Advanced' && <Advanced />}
+        {setting === 'Privacy' && <Privacy searchQuery={searchQuery} />}
+        {setting === 'Customize' && <Customize searchQuery={searchQuery} />}
+        {setting === 'Browsing' && <Browsing searchQuery={searchQuery} />}
+        {setting === 'Advanced' && <Advanced searchQuery={searchQuery} />}
       </Container>
     </>
   );
