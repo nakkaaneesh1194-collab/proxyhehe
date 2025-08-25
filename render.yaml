@@ -3,4 +3,4 @@
     name: educational-website
     env: node
     plan: free
-    startCommand: npm install && node index.js
+    startCommand: npm install && npm build && node server.js

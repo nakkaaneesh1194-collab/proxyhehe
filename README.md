@@ -1,61 +1,81 @@
-## Doge Unblocker
-Doge Unblocker is a site unblocker powered by [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet). Our service allows you to **get around internet restrictions** to visit your favorite sites and apps, without worrying about your browsing history being saved or your internet being blocked.
-### Key Features:
-<details>
-<summary>View All Features</summary>
+<div align="center">
+  
+  <img src="./public/logo.svg" width="322" />
+  <br />
+
+  <a href="https://buymeacoffee.com/dogubdev" target="_blank"><img src="https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-yellow.svg" width="130" /></a> ![](https://dcbadge.limes.pink/api/server/https://discord.gg/unblocking?compact=true)
 
 
+  <hr />
+  DogeUB (Doge Unblocker) version 5 is finally here!
 
-- Advanced Tab Cloaking
   
-- Advanced About:Blank Cloaking
-  
-- Hiding site from browser history
-  
-- Clickoff Cloaking
-  
-- Automatic URL Cloaking
-  
-- Customizable/Personalization features
-  
-- Access settings easily (right-click)
+  <br />
+  <br />
 
-- Inspect Element
   
-- URL Bar
+<img width="1278" height="628" alt="image" src="https://github.com/user-attachments/assets/1cd9f78f-bce9-4c0f-94a7-1e755ab9e111" />
 
-- Tabs
-  
-- Clean UI
-  
-- Powerful & fast web proxy
-  
-- A large selection of Apps & Games
-  
-- ...and more!
-</details>
+</div>
 
-### Current Developers:
-- [Derpman](https://github.com/derpbyte)
-- [fowntain](https://github.com/fowntain)
-### Deployment
-[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/template/h7StcI?referralCode=u82tqg)
-<a href="https://render.com/deploy?repo=https://github.com/dogenetwork/v4">
-<img src="https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/main/buttons/remade/render.svg"></img></a>
-[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/dogenetwork/v4)
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/dogenetwork/v4)
+## Overview
 
-**Deploy locally:**
+DogeUB is a modern web proxy frontend and internet browsing hub, allowing you to browse the web anonymously while providing a full suite of apps and games, built with [React](https://github.com/facebook/react).
+
+> [!IMPORTANT]
+> Please consider starring our repository if you are forking it!
+
+### Features:
+
+- **Performance:** Fast, lightweight, and highly responsive.
+- **Tabs:** Browse multiple sites with ease, providing an experience similar to a web browser!
+- **Customization:** Multiple themes, extensive settings, and user-tailored experience.
+
+---
+
+## Development & Building
+
+
+### Production:
+```bash
+git clone "repo name"
+cd "repo name"
+npm i
+npm run build
+node server.js
+````
+
+### Development:
+
+```bash
+git clone "repo name"
+cd "repo name"
+npm i
+npm run dev
 ```
-git clone https://github.com/DogeNetwork/v4
-cd v4
-npm install
-npm start
-```
-Or simply run the [`install.sh`](install.sh) file
 
-### Discord
-[![Join us on Discord](https://invidget.switchblade.xyz/sWPHCdxCPU?theme=dark)](https://discord.gg/unblocking)
+---
 
-### Commercial Use and Licensing
-This project is released to the public under the AGPL, meaning all users and contributors must comply with its terms and make the source code of any modified or distributed versions available under the AGPL. As the copyright holders, we (DogeNetwork) reserve the right to sublicense or use the software, including modified versions, for commercial purposes under separate proprietary terms, independent of the AGPL release.
+
+## Contributors / Developers
+
+| Name          | Role               | GitHub |
+| ------------- | ------------------ | ------ |
+| Derpman | Lead Developer     |      [@stellarcase](https://github.com/stellarcase) |
+| Fowntain | Lead Developer | [@fowntain](https://github.com/fowntain)     |
+
+> [!NOTE]
+> Want to be on this list? Make a pull request!
+
+---
+
+### Made possible thanks to:
+
+* [MercuryWorkshop/wisp-server-node](https://github.com/MercuryWorkshop/wisp-server-node)
+* [MercuryWorkshop/scramjet](https://github.com/MercuryWorkshop/scramjet)
+* [lucide-icons/lucide](https://github.com/lucide-icons/lucide)
+
+## License
+
+This project is licensed under the **Genuerro Afro V3 License**.  
+See the [LICENSE](LICENSE) file for more details.

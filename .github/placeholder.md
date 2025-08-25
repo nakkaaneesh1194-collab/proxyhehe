@@ -1,1 +1,0 @@
-this is only here to make .github show as a folder instead of squashing into `.github/ISSUE_TEMPLATE` because it looks ugly
