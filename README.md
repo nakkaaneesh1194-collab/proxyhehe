@@ -1,6 +1,6 @@
 <div align="center">
   
-  <img src="./public/logo.svg" width="322" />
+  <img src="https://github.com/DogeNetwork/dogeub/blob/main/public/icon.svg" width="322" />
   <br />
 
   <a href="https://buymeacoffee.com/dogubdev" target="_blank"><img src="https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-yellow.svg" width="130" /></a> ![](https://dcbadge.limes.pink/api/server/https://discord.gg/unblocking?compact=true)
