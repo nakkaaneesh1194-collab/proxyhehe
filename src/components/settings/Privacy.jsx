@@ -32,6 +32,14 @@ const Privacy = ({ searchQuery }) => {
         action={(b) => setTimeout(() => updateOption({ aboutBlank: b }), 100)}
         value={options.aboutBlank}
       />
+      <HighlightedItem
+        searchQuery={searchQuery}
+        type="switch"
+        name="Auto Cloak"
+        description="Automatically apply the selected cloak when you switch tabs, restore original when you return."
+        action={(b) => setTimeout(() => updateOption({ autoCloak: b }), 100)}
+        value={options.autoCloak}
+      />
     </>
   );
 };

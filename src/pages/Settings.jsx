@@ -35,6 +35,11 @@ const Settings = () => {
           description: 'This will open the site into an about:blank tab. Make sure popups are enabled.',
           keywords: ['about:blank', 'blank', 'popup', 'new window', 'stealth'],
         },
+        {
+          name: 'Auto Cloak',
+          description: 'Automatically apply the selected cloak when you switch tabs, restore original when you return.',
+          keywords: ['auto', 'automatic', 'cloak', 'switch', 'tab', 'visibility', 'hidden', 'away'],
+        },
       ],
     },
     {

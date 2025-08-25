@@ -52,7 +52,7 @@ const Customize = ({ searchQuery }) => {
         action={update}
         value={selectedAppsPerPage}
         name="Apps per Page"
-        description="Number of apps to show per page (\"All\" will show everything)."
+        description='Number of apps to show per page ("All" will show everything).'
         type="select"
       />
 
@@ -69,7 +69,7 @@ const Customize = ({ searchQuery }) => {
         searchQuery={searchQuery}
         type="switch"
         name="Donation button"
-        description="Toggle whether you want the \"Support us\" button to show."
+        description='Toggle whether you want the "Support us" button to show.'
         action={(b) => setTimeout(() => updateOption({ donationBtn: b }), 100)}
         value={options.donationBtn ?? true}
       />
