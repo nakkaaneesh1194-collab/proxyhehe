@@ -13,9 +13,10 @@ const Settings = () => {
   const [content, setContent] = useState('Privacy');
 
   const setContentHelp = (name) => {
-    if (name === content) setContent('');
-    else setContent(name);
-    setQuery('');
+    if (name !== content) {
+      setContent(name);
+      setQuery('');
+    }
   };
 
   const settings = [
