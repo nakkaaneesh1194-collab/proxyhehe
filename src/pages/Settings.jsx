@@ -5,6 +5,7 @@ import theme from '../styles/theming.module.css';
 import { Search, HatGlasses, Palette, Globe, Wrench } from 'lucide-react';
 import { useOptions } from '/src/utils/optionsContext';
 import RenderSetting from '../components/Settings';
+import 'movement.css';
 
 const Settings = () => {
   const { options } = useOptions();
@@ -93,10 +94,14 @@ const Settings = () => {
             theme[`theme-${options.theme || 'default'}`],
             'w-60 shrink-0 overflow-y-auto p-2 pt-3',
           )}
+          data-m="slide-in-left"
+          data-m-duration="0.5"
         >
           <div
             className="flex items-center max-w-52 h-7 rounded-md mx-auto px-2"
             style={{ backgroundColor: options.settingsSearchBar || '#3c475a' }}
+            data-m="fade-in"
+            data-m-delay="0.2"
           >
             <Search className="w-4 mr-1.5" />
             <input
@@ -129,6 +134,8 @@ const Settings = () => {
                       : undefined,
                 }}
                 onClick={() => setContentHelp(name)}
+                data-m="fade-in-up"
+                data-m-delay={`${0.3 + key * 0.1}`}
               >
                 <Icon className="w-5" />
                 <p className="mx-4">{name}</p>

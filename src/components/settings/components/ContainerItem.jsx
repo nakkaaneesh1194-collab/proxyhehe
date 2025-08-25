@@ -3,6 +3,7 @@ import ComboBox from './Combobox';
 import Switch from './Switch';
 import Input from './Input'
 import { useOptions } from '/src/utils/optionsContext';
+import 'movement.css';
 
 const SettingsContainerItem = ({ config, action, name, type, children, value }) => {
   const { options } = useOptions();
@@ -11,6 +12,8 @@ const SettingsContainerItem = ({ config, action, name, type, children, value }) 
     <div
       className="flex items-center justify-between w-full h-20 rounded-lg pl-5 p-3"
       style={{ backgroundColor: options.settingsContainerColor || '#1f324e' }}
+      data-m="fade-in-up"
+      data-m-duration="0.3"
     >
       <div className="min-w-0 flex-1 overflow-hidden">
         <p className="text-[1rem] font-[SFProText] truncate">{name}</p>
