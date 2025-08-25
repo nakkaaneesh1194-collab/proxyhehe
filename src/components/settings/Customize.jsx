@@ -1,14 +1,31 @@
 import { useOptions } from '/src/utils/optionsContext';
 import { themeConfig, appsPerPageConfig, navScaleConfig } from '/src/utils/config';
-import SettingsContainerItem from './components/ContainerItem';
+import HighlightedItem from './components/HighlightedItem';
+import { useEffect, useRef } from 'react';
 
 const findOrFallback = (config, predicate, fallbackIndex = 0) => {
   const found = config.find(predicate);
   return found ? found.value : config[fallbackIndex].value;
 };
 
-const Customize = () => {
+const Customize = ({ searchQuery }) => {
   const { options, updateOption } = useOptions();
+  const previousThemeRef = useRef(options.themeName);
+
+  useEffect(() => {
+    if (previousThemeRef.current !== options.themeName && previousThemeRef.current !== undefined) {
+      const items = document.querySelectorAll('[data-m]');
+      items.forEach((item, index) => {
+        item.setAttribute('data-m', 'bounce-in');
+        item.setAttribute('data-m-delay', `${index * 0.1}`);
+        setTimeout(() => {
+          item.setAttribute('data-m', 'fade-in-up');
+          item.removeAttribute('data-m-delay');
+        }, 1000);
+      });
+    }
+    previousThemeRef.current = options.themeName;
+  }, [options.themeName]);
 
   const update = (val) => {
     if (val && typeof val === 'object') {
@@ -36,43 +53,43 @@ const Customize = () => {
 
   return (
     <>
-      <SettingsContainerItem
+      <HighlightedItem
+        searchQuery={searchQuery}
         config={themeConfig}
         action={update}
         value={selectedTheme}
         name="Site Theme"
+        description="Customize the appearance of the website by selecting a theme."
         type="select"
-      >
-        Customize the appearance of the website by selecting a theme.
-      </SettingsContainerItem>
+      />
 
-      <SettingsContainerItem
+      <HighlightedItem
+        searchQuery={searchQuery}
         config={appsPerPageConfig}
         action={update}
         value={selectedAppsPerPage}
         name="Apps per Page"
+        description='Number of apps to show per page ("All" will show everything).'
         type="select"
-      >
-        Number of apps to show per page ("All" will show everything).
-      </SettingsContainerItem>
+      />
 
-      <SettingsContainerItem
+      <HighlightedItem
+        searchQuery={searchQuery}
         config={navScaleConfig}
         action={update}
         value={selectedNavScale}
         name="Navigation Scale"
+        description="Scale navigation bar size (logo & font) globally."
         type="select"
-      >
-        Scale navigation bar size (logo & font) globally.
-      </SettingsContainerItem>
-      <SettingsContainerItem
+      />
+      <HighlightedItem
+        searchQuery={searchQuery}
         type="switch"
         name="Donation button"
+        description='Toggle whether you want the "Support us" button to show.'
         action={(b) => setTimeout(() => updateOption({ donationBtn: b }), 100)}
         value={options.donationBtn ?? true}
-      >
-        Toggle whether you want the "Support us" button to show.
-      </SettingsContainerItem>
+      />
     </>
   );
 };

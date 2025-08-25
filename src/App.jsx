@@ -7,6 +7,8 @@ import Loader from './pages/Loader';
 import New from './pages/New';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
+import ThemeTransition from './components/ThemeTransition';
+import { useEffect, useRef } from 'react';
 
 const Home = lazyLoad(() => import('./pages/Home'));
 const Apps = lazyLoad(() => import('./pages/Apps'));
@@ -15,9 +17,48 @@ const Settings = lazyLoad(() => import('./pages/Settings'));
 
 const ThemedApp = () => {
   const { options } = useOptions();
+  const originalTitleRef = useRef(null);
+  const originalIconRef = useRef(null);
 
-  document.title = options.tabName || meta[0].value.tabName;
-  document.querySelector("link[rel~='icon']").href = options.tabIcon || meta[0].value.tabIcon;
+  const defaultTitle = meta[0].value.tabName;
+  const defaultIcon = meta[0].value.tabIcon;
+  const cloakTitle = options.tabName || defaultTitle;
+  const cloakIcon = options.tabIcon || defaultIcon;
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!options.autoCloak) return;
+
+      const iconElement = document.querySelector("link[rel~='icon']");
+      
+      if (document.hidden) {
+        document.title = cloakTitle;
+        iconElement.href = cloakIcon;
+      } else {
+        document.title = defaultTitle;
+        iconElement.href = defaultIcon;
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [options.autoCloak, cloakTitle, cloakIcon, defaultTitle, defaultIcon]);
+
+  useEffect(() => {
+    if (options.autoCloak && !document.hidden) {
+      document.title = defaultTitle;
+      document.querySelector("link[rel~='icon']").href = defaultIcon;
+    } else if (options.autoCloak && document.hidden) {
+      document.title = cloakTitle;
+      document.querySelector("link[rel~='icon']").href = cloakIcon;
+    } else {
+      document.title = cloakTitle;
+      document.querySelector("link[rel~='icon']").href = cloakIcon;
+    }
+  }, [cloakTitle, cloakIcon, defaultTitle, defaultIcon, options.autoCloak]);
 
   const pages = [
     { path: '/', element: <Home /> },
@@ -32,6 +73,7 @@ const ThemedApp = () => {
   return (
     <>
       <Routing pages={pages} />
+      <ThemeTransition />
       <style>{`
         body { 
           color: ${options.siteTextColor || '#a0b0c8'};
