@@ -9,7 +9,7 @@ import RenderSetting from '../components/Settings';
 const Settings = () => {
   const { options } = useOptions();
   const [query, setQuery] = useState('');
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState('Privacy');
 
   const setContentHelp = (name) => {
     if (name === content) setContent('');
