@@ -28,7 +28,27 @@ const ComboBox = ({
   useEffect(() => {
     if (isOpen && buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
-      setButtonRect(rect);
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      
+      const maxWidth = Math.min(
+        rect.width * 1.5,
+        viewportWidth - rect.left - 20,
+        300
+      );
+      
+      let left = rect.left;
+      if (left + maxWidth > viewportWidth - 20) {
+        left = viewportWidth - maxWidth - 20;
+      }
+      
+      setButtonRect({
+        ...rect,
+        left,
+        maxWidth,
+        bottom: rect.bottom,
+        width: rect.width
+      });
     }
   }, [isOpen]);
 
@@ -85,6 +105,7 @@ const ComboBox = ({
                     left: `${buttonRect.left}px`,
                     width: 'max-content',
                     minWidth: `${buttonRect.width}px`,
+                    maxWidth: `${buttonRect.maxWidth}px`,
                   }}
                 >
                   {config.map((cfg) => (
@@ -104,7 +125,7 @@ const ComboBox = ({
                           >
                             {selected && <Check size={16} />}
                           </span>
-                          <p className={clsx('ml-2 text-[0.88rem] whitespace-nowrap text-center')}>
+                          <p className={clsx('ml-2 text-[0.88rem] text-center truncate')}>
                             {cfg.option}
                           </p>
                         </>
