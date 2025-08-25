@@ -22,7 +22,13 @@ const Privacy = ({ searchQuery }) => {
         config={meta}
         value={selectedMeta().value}
         type="select"
-        action={(value) => updateOption(value)}
+        action={(value) => {
+          updateOption(value);
+          const selectedOption = meta.find(m => m.value === value);
+          if (selectedOption && selectedOption.option === 'Default' && options.autoCloak) {
+            updateOption({ autoCloak: false });
+          }
+        }}
       />
       <HighlightedItem
         searchQuery={searchQuery}
@@ -39,6 +45,7 @@ const Privacy = ({ searchQuery }) => {
         description="Automatically apply the selected cloak when you switch tabs, restore original when you return."
         action={(b) => setTimeout(() => updateOption({ autoCloak: b }), 100)}
         value={options.autoCloak}
+        disabled={selectedMeta().option === 'Default'}
       />
     </>
   );
