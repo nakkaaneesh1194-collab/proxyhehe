@@ -7,6 +7,7 @@ import Loader from './pages/Loader';
 import New from './pages/New';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
+import ThemeTransition from './components/ThemeTransition';
 import { useEffect, useRef } from 'react';
 
 const Home = lazyLoad(() => import('./pages/Home'));
@@ -72,6 +73,7 @@ const ThemedApp = () => {
   return (
     <>
       <Routing pages={pages} />
+      <ThemeTransition />
       <style>{`
         body { 
           color: ${options.siteTextColor || '#a0b0c8'};

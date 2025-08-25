@@ -1,6 +1,7 @@
 import { useOptions } from '/src/utils/optionsContext';
 import { themeConfig, appsPerPageConfig, navScaleConfig } from '/src/utils/config';
 import HighlightedItem from './components/HighlightedItem';
+import { useEffect, useRef } from 'react';
 
 const findOrFallback = (config, predicate, fallbackIndex = 0) => {
   const found = config.find(predicate);
@@ -9,6 +10,22 @@ const findOrFallback = (config, predicate, fallbackIndex = 0) => {
 
 const Customize = ({ searchQuery }) => {
   const { options, updateOption } = useOptions();
+  const previousThemeRef = useRef(options.themeName);
+
+  useEffect(() => {
+    if (previousThemeRef.current !== options.themeName && previousThemeRef.current !== undefined) {
+      const items = document.querySelectorAll('[data-m]');
+      items.forEach((item, index) => {
+        item.setAttribute('data-m', 'bounce-in');
+        item.setAttribute('data-m-delay', `${index * 0.1}`);
+        setTimeout(() => {
+          item.setAttribute('data-m', 'fade-in-up');
+          item.removeAttribute('data-m-delay');
+        }, 1000);
+      });
+    }
+    previousThemeRef.current = options.themeName;
+  }, [options.themeName]);
 
   const update = (val) => {
     if (val && typeof val === 'object') {
