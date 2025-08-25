@@ -6,7 +6,7 @@ import { useOptions } from '/src/utils/optionsContext';
 import { useRef } from 'react';
 import 'movement.css';
 
-const SettingsContainerItem = ({ config, action, name, type, children, value }) => {
+const SettingsContainerItem = ({ config, action, name, type, children, value, disabled }) => {
   const { options } = useOptions();
   const comboBoxRef = useRef(null);
   const switchRef = useRef(null);
@@ -22,7 +22,7 @@ const SettingsContainerItem = ({ config, action, name, type, children, value }) 
       if (button) {
         button.click();
       }
-    } else if (type === 'switch' && switchRef.current) {
+    } else if (type === 'switch' && switchRef.current && !disabled) {
       const button = switchRef.current.querySelector('button');
       if (button) {
         button.click();
@@ -38,7 +38,7 @@ const SettingsContainerItem = ({ config, action, name, type, children, value }) 
 
   return (
     <div
-      className="flex items-center justify-between w-full h-20 rounded-lg pl-5 p-3 cursor-pointer hover:opacity-95 transition-opacity"
+      className={`flex items-center justify-between w-full h-20 rounded-lg pl-5 p-3 transition-opacity ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:opacity-95'}`}
       style={{ backgroundColor: options.settingsContainerColor || '#1f324e' }}
       data-m="fade-in-up"
       data-m-duration="0.3"
@@ -57,7 +57,7 @@ const SettingsContainerItem = ({ config, action, name, type, children, value }) 
         )}
         {type == 'switch' && (
           <div ref={switchRef}>
-            <Switch action={action} value={value} />
+            <Switch action={action} value={value} disabled={disabled} />
           </div>
         )}
         {type == 'input' && (
