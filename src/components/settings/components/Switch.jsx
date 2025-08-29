@@ -3,11 +3,10 @@ import { Switch } from '@headlessui/react';
 import { useState } from 'react';
 import { useOptions } from '/src/utils/optionsContext';
 
-export default function SwitchComponent({ action, value, disabled }) {
+export default function SwitchComponent({ action, value }) {
   const { options } = useOptions();
   const [enabled, setEnabled] = useState(value);
   const switchChange = (value) => {
-    if (disabled) return;
     setEnabled(value);
     action(value);
   };
@@ -15,11 +14,7 @@ export default function SwitchComponent({ action, value, disabled }) {
     <Switch
       checked={enabled}
       onChange={switchChange}
-      disabled={disabled}
-      className={clsx(
-        "group relative flex h-7 w-14 mr-5 rounded-full p-1 ease-in-out focus:outline-none",
-        disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer"
-      )}
+      className="group relative flex h-7 w-14 mr-5 cursor-pointer rounded-full p-1 ease-in-out focus:outline-none"
       style={{
         backgroundColor: enabled ? options.switchEnabledColor || '#4c6c91' : options.switchColor || '#ffffff1a',
         transition: 'background-color 0.2s ease-in-out',

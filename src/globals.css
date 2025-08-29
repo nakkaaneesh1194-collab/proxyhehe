@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @tailwind utilities;
+@plugin 'tailwind-scrollbar';
 
 @layer base {
   *,

@@ -1,15 +1,5 @@
-import AppLayout from "../layouts/Apps";
-import Nav from "../layouts/Nav";
+import AppLayout from '../layouts/Apps';
 
-const Apps = () => {
-  return (
-    <div className="flex flex-col h-screen overflow-hidden">
-      <Nav />
-      <div className="flex-1 overflow-y-auto">
-        <AppLayout type="apps" />
-      </div>
-    </div>
-  );
-};
+const Apps = () => <AppLayout type="apps" />;
 
 export default Apps;

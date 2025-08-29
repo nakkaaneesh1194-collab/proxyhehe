@@ -1,14 +1,11 @@
 import Routing from './Routing';
 import { OptionsProvider, useOptions } from './utils/optionsContext';
-import { meta } from './utils/config';
 import './index.css';
 import 'nprogress/nprogress.css';
 import Loader from './pages/Loader';
 import New from './pages/New';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
-import ThemeTransition from './components/ThemeTransition';
-import { useEffect, useRef } from 'react';
 
 const Home = lazyLoad(() => import('./pages/Home'));
 const Apps = lazyLoad(() => import('./pages/Apps'));
@@ -17,86 +14,6 @@ const Settings = lazyLoad(() => import('./pages/Settings'));
 
 const ThemedApp = () => {
   const { options } = useOptions();
-  const originalTitleRef = useRef(null);
-  const originalIconRef = useRef(null);
-
-  const defaultTitle = meta[0].value.tabName;
-  const defaultIcon = meta[0].value.tabIcon;
-  const cloakTitle = options.tabName || defaultTitle;
-  const cloakIcon = options.tabIcon || defaultIcon;
-
-  useEffect(() => {
-    const handlePanicButton = (e) => {
-      if (!options.panicButton || !options.panicShortcut || !Array.isArray(options.panicShortcut)) {
-        return;
-      }
-      
-      const shortcut = options.panicShortcut;
-      const pressedKeys = [];
-      
-      if (e.ctrlKey) pressedKeys.push('Ctrl');
-      if (e.altKey) pressedKeys.push('Alt');
-      if (e.shiftKey) pressedKeys.push('Shift');
-      if (e.metaKey) pressedKeys.push('Meta');
-      
-      const upperKey = e.key.toUpperCase();
-      if (e.key.length === 1) {
-        pressedKeys.push(upperKey);
-      } else if (!['Control', 'Alt', 'Shift', 'Meta'].includes(e.key)) {
-        pressedKeys.push(e.key);
-      }
-      
-      const isMatch = shortcut.length === pressedKeys.length && 
-        shortcut.every(k => pressedKeys.includes(k));
-      
-      if (isMatch) {
-        e.preventDefault();
-        const panicUrl = options.panicUrl || 'https://classroom.google.com';
-        window.location.href = panicUrl;
-      }
-    };
-
-    document.addEventListener('keydown', handlePanicButton);
-
-    return () => {
-      document.removeEventListener('keydown', handlePanicButton);
-    };
-  }, [options.panicButton, options.panicShortcut, options.panicUrl]);
-
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (!options.autoCloak) return;
-
-      const iconElement = document.querySelector("link[rel~='icon']");
-      
-      if (document.hidden) {
-        document.title = cloakTitle;
-        iconElement.href = cloakIcon;
-      } else {
-        document.title = defaultTitle;
-        iconElement.href = defaultIcon;
-      }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, [options.autoCloak, cloakTitle, cloakIcon, defaultTitle, defaultIcon]);
-
-  useEffect(() => {
-    if (options.autoCloak && !document.hidden) {
-      document.title = defaultTitle;
-      document.querySelector("link[rel~='icon']").href = defaultIcon;
-    } else if (options.autoCloak && document.hidden) {
-      document.title = cloakTitle;
-      document.querySelector("link[rel~='icon']").href = cloakIcon;
-    } else {
-      document.title = cloakTitle;
-      document.querySelector("link[rel~='icon']").href = cloakIcon;
-    }
-  }, [cloakTitle, cloakIcon, defaultTitle, defaultIcon, options.autoCloak]);
 
   const pages = [
     { path: '/', element: <Home /> },
@@ -111,7 +28,6 @@ const ThemedApp = () => {
   return (
     <>
       <Routing pages={pages} />
-      <ThemeTransition />
       <style>{`
         body { 
           color: ${options.siteTextColor || '#a0b0c8'};

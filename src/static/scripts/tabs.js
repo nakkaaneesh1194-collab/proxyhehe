@@ -480,7 +480,10 @@ window.addEventListener('load', async () => {
       all: '/scram/scramjet.all.js',
       sync: '/scram/scramjet.sync.js',
     },
-    siteFlags: { '.*': { serviceworkers: false } },
+    flags: {
+		rewriterLogs: false,
+		cleanErrors: true,
+	},
   });
 
   try {

@@ -60,6 +60,22 @@ app.get('/assets/img/*', async (req, reply) => {
   }
 });
 
+app.get("/js/script.js", async (req, reply) => {
+  try {
+    const res = await fetch("https://byod.privatedns.org/js/script.js");
+    if (!res.ok) return reply.code(res.status).send();
+
+    const type = res.headers.get("content-type") || "application/javascript";
+    reply.type(type);
+
+    const buffer = await res.arrayBuffer();
+    reply.send(Buffer.from(buffer));
+  } catch {
+    reply.code(500).send();
+  }
+});
+
+
 app.get('/return', async (req, reply) => {
   const query = req.query?.q;
   if (!query) return reply.code(401).send({ error: 'query parameter?' });
