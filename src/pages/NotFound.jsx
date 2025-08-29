@@ -19,12 +19,12 @@ const NotFound = () => {
   };
 
   useEffect(() => {
-    if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/serve/')) {
+    if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/uv/service/')) {
       nav('/');
     }
   }, [loc, nav]);
 
-  if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/serve/')) return null;
+  if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/uv/service/')) return null;
 
   return (
     <div

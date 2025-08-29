@@ -8,7 +8,7 @@ class TabManager {
     this.unsupported = unsupported;
     this.filter = filter;
     this.options = JSON.parse(localStorage.getItem('options')) || {};
-    this.prType = this.options.prType || 'scr';
+    this.prType = this.options.prType || 'auto';
     this.search = this.options.engine || 'https://www.google.com/search?q=';
     this.newTabUrl = '/new';
     this.newTabTitle = 'New Tab';
@@ -71,7 +71,8 @@ class TabManager {
     window.tabManager = this;
   }
 
-  ex = (url) => decodeURIComponent(url.replace(/^https?:\/\/[^\/]+\/(scramjet|serve)\//i, ''));
+  ex = (url) =>
+    decodeURIComponent(url.replace(/^https?:\/\/[^\/]+\/(scramjet|uv\/service)\//i, ''));
 
   shouldUseScramjet = async (input) => {
     if (this.prType === 'scr') return true;
@@ -302,7 +303,7 @@ class TabManager {
         f.style.zIndex = 10;
         f.style.opacity = '1';
         f.style.pointerEvents = 'auto';
-        f.src = '/serve/' + encodeURIComponent(url);
+        f.src = '/uv/service/' + encodeURIComponent(url);
         this.ic.appendChild(f);
       }
 
@@ -317,7 +318,7 @@ class TabManager {
           sf.go(url);
         }
       } else {
-        if (f) f.src = '/serve/' + encodeURIComponent(url);
+        if (f) f.src = '/uv/service/' + encodeURIComponent(url);
       }
       t.url = url;
     }
@@ -510,7 +511,7 @@ window.addEventListener('load', async () => {
   }
 
   try {
-    await navigator.serviceWorker.register('/sw.js', {
+    await navigator.serviceWorker.register('/s_sw.js', {
       scope: '/scramjet/',
     });
   } catch (err) {
@@ -518,7 +519,7 @@ window.addEventListener('load', async () => {
   }
 
   try {
-    await navigator.serviceWorker.register('/v_sw.js');
+    await navigator.serviceWorker.register('/uv/sw.js');
   } catch (err) {
     console.error('uv sw reg err:', err);
   }

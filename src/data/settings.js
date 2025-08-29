@@ -142,7 +142,8 @@ export const advancedConfig = ({ options, updateOption }) => ({
     desc: 'Clear your site data if you are having issues.',
     type: 'button',
     value: 'Reset Data',
-    action: () => import('/src/utils/utils.js').then(({ resetInstance }) => resetInstance())
+    action: () => import('/src/utils/utils.js').then(({ resetInstance }) => resetInstance()),
+    disabled: true,
   },
 });
 
