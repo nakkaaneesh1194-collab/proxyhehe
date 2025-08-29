@@ -13,8 +13,8 @@
   <br />
   <br />
 
-  
-<img width="1278" height="628" alt="image" src="https://github.com/user-attachments/assets/1cd9f78f-bce9-4c0f-94a7-1e755ab9e111" />
+  <img width="1278" height="628" alt="image" src="preview.png" />
+
 
 </div>
 
