@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useOptions } from '../utils/optionsContext';
 
 const calc = (hex, alpha = 0.5) => {
-  const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16));
+  const [r, g, b] = hex.match(/\w\w/g).map((x) => parseInt(x, 16));
   return `rgba(${r},${g},${b},${alpha})`;
 };
 
@@ -11,7 +11,7 @@ const NotFound = () => {
   const loc = useLocation();
   const nav = useNavigate();
   const { options } = useOptions();
-  const mainText = options.siteTextColor ?? "#a0b0c8";
+  const mainText = options.siteTextColor ?? '#a0b0c8';
 
   const colorConfig = {
     text: mainText,
@@ -19,17 +19,17 @@ const NotFound = () => {
   };
 
   useEffect(() => {
-    if (!loc.pathname.includes('/scramjet/')) {
+    if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/serve/')) {
       nav('/');
     }
   }, [loc, nav]);
 
-  if (!loc.pathname.includes('/scramjet/')) return null;
+  if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/serve/')) return null;
 
   return (
-    <div 
+    <div
       className="min-h-screen flex flex-col items-center justify-center p-6"
-      style={{ fontFamily: "SFProText, system-ui, sans-serif" }}
+      style={{ fontFamily: 'SFProText, system-ui, sans-serif' }}
     >
       <h1 className="text-2xl font-medium mb-2" style={{ color: colorConfig.text }}>
         Whoops, something broke!

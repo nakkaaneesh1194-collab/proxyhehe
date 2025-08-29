@@ -40,7 +40,7 @@ const configs = [
   {
     name: 'Browsing',
     icon: Globe,
-    keywords: ['tabs', 'tab', 'proxy', 'search engine', 'engine'],
+    keywords: ['tabs', 'tab', 'proxy engine', 'search engine', 'scramjet', 'ultraviolet'],
     fn: browsingConfig,
   },
   {
@@ -55,6 +55,8 @@ const configs = [
       'debug',
       'experimental',
       'inspect',
+      'reset instance',
+      'clear cache'
     ],
     fn: advancedConfig,
   },

@@ -109,6 +109,14 @@ export const browsingConfig = ({ options, updateOption }) => ({
     type: 'select',
     action: (a) => updateOption(a),
   },
+  2: {
+    name: 'Backend Engine',
+    desc: 'Choose the default proxy engine used for browsing.',
+    config: prConfig,
+    value: find(prConfig, (c) => c.value?.prType === options.prType, 0),
+    type: 'select',
+    action: (a) => updateOption(a),
+  },
 });
 
 export const advancedConfig = ({ options, updateOption }) => ({
@@ -125,9 +133,16 @@ export const advancedConfig = ({ options, updateOption }) => ({
   2: {
     name: 'Wisp Config',
     desc: 'Configure the websocket server location.',
-    value: options.wServer || prConfig.wisp,
+    value: options.wServer || `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/wisp/`,
     type: 'input',
     action: (b) => updateOption({ wServer: b }),
+  },
+  3: {
+    name: 'Reset Instance',
+    desc: 'Clear your site data if you are having issues.',
+    type: 'button',
+    value: 'Reset Data',
+    action: () => import('/src/utils/utils.js').then(({ resetInstance }) => resetInstance())
   },
 });
 

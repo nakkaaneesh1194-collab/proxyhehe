@@ -1,12 +1,14 @@
 import { BareMuxConnection } from '@mercuryworkshop/bare-mux';
 import * as contentObserver from './content_observer';
 import { setupHotkeys } from './hotkeys';
-import { unsupported } from './config';
+import { unsupported, filter } from './config';
 
 class TabManager {
   constructor() {
     this.unsupported = unsupported;
+    this.filter = filter;
     this.options = JSON.parse(localStorage.getItem('options')) || {};
+    this.prType = this.options.prType || 'scr';
     this.search = this.options.engine || 'https://www.google.com/search?q=';
     this.newTabUrl = '/new';
     this.newTabTitle = 'New Tab';
@@ -69,7 +71,20 @@ class TabManager {
     window.tabManager = this;
   }
 
-  ex = (url) => decodeURIComponent(url.replace(/^https?:\/\/[^\/]+\/scramjet\//i, ''));
+  ex = (url) => decodeURIComponent(url.replace(/^https?:\/\/[^\/]+\/(scramjet|serve)\//i, ''));
+
+  shouldUseScramjet = async (input) => {
+    if (this.prType === 'scr') return true;
+    if (this.prType === 'uv') return false;
+    if (this.prType === 'auto') {
+      try {
+        return this.filter.some((f) => input.toLowerCase().includes(f.toLowerCase()));
+      } catch {
+        return false;
+      }
+    }
+    return false;
+  };
 
   showBg = (c) => {
     this.bg.style.opacity = c ? '1' : '0';
@@ -178,7 +193,12 @@ class TabManager {
   add = () => {
     if (this.tabs.length >= this.maxTabs) return;
     this.tabs.forEach((t) => (t.active = false));
-    const t = { id: this.nextId++, title: this.newTabTitle, url: this.newTabUrl, active: true };
+    const t = {
+      id: this.nextId++,
+      title: this.newTabTitle,
+      url: this.newTabUrl,
+      active: true,
+    };
     this.tabs.push(t);
     this.render();
     this.createIframes();
@@ -221,12 +241,12 @@ class TabManager {
     }
   };
 
-  updateUrl = (input) => {
+  updateUrl = async (input) => {
     if (!input) return;
     const t = this.active();
     if (!t) return;
 
-    if (this.unsupported.some(s => input.includes(s))) {
+    if (this.unsupported.some((s) => input.includes(s))) {
       alert(`The website "${input}" is not supported at this time`);
       return;
     }
@@ -234,7 +254,6 @@ class TabManager {
     if (input === 'tabs://new') {
       const oldFrame = document.getElementById(`iframe-${t.id}`);
       if (oldFrame) oldFrame.remove();
-
       const f = document.createElement('iframe');
       f.id = `iframe-${t.id}`;
       f.className = this.fCss;
@@ -246,46 +265,65 @@ class TabManager {
       t.url = this.newTabUrl;
       t.title = this.newTabTitle;
       if (this.ui) this.ui.value = '';
-
       f.onload = () => {
         try {
           contentObserver.unbind();
           contentObserver.bind();
         } catch {}
       };
-
       this.showActive();
       this.render();
       return;
     }
+
     const url = this.formatInputUrl(input);
     this.showBg(false);
+
+    const useScr = await this.shouldUseScramjet(url);
+    const f = document.getElementById(`iframe-${t.id}`);
 
     if (this.isNewTab(t.url)) {
       const oldFrame = document.getElementById(`iframe-${t.id}`);
       if (oldFrame) oldFrame.remove();
 
-      const sf = scramjet.createFrame();
-      this.frames[t.id] = sf;
-      const f = this.frames[t.id].frame;
-      f.id = `iframe-${t.id}`;
-      f.className = this.fCss;
-      f.style.zIndex = 10;
-      f.style.opacity = '1';
-      f.style.pointerEvents = 'auto';
-
-      this.ic.appendChild(f);
+      if (useScr) {
+        const sf = scramjet.createFrame();
+        this.frames[t.id] = sf;
+        const frame = sf.frame;
+        frame.id = f.id;
+        frame.className = f.className;
+        this.ic.appendChild(frame);
+        sf.go(url);
+        this.addLoadListener(t.id);
+      } else {
+        const f = document.createElement('iframe');
+        f.id = `iframe-${t.id}`;
+        f.className = this.fCss;
+        f.style.zIndex = 10;
+        f.style.opacity = '1';
+        f.style.pointerEvents = 'auto';
+        f.src = '/serve/' + encodeURIComponent(url);
+        this.ic.appendChild(f);
+      }
 
       t.url = url;
-      sf.go(url);
-      this.addLoadListener(t.id);
     } else {
-      this.frames[t.id].go(url);
+      if (useScr) {
+        if (this.frames[t.id]) {
+          this.frames[t.id].go(url);
+        } else if (f) {
+          const sf = scramjet.createFrame(f);
+          this.frames[t.id] = sf;
+          sf.go(url);
+        }
+      } else {
+        if (f) f.src = '/serve/' + encodeURIComponent(url);
+      }
+      t.url = url;
     }
 
     this.showActive();
     this.render();
-
     try {
       t.title = new URL(url).hostname.replace('www.', '');
     } catch {
@@ -368,16 +406,10 @@ class TabManager {
   back = () => {
     const activeTab = this.active();
     if (!activeTab) return;
-
     const iframe = document.getElementById(`iframe-${activeTab.id}`);
     if (!iframe || this.isNewTab(activeTab.url)) return;
-
     try {
-      if (this.frames[activeTab.id] && this.frames[activeTab.id].back) {
-        this.frames[activeTab.id].back();
-      } else {
-        iframe.contentWindow.history.back();
-      }
+      iframe.contentWindow.history.back();
     } catch (err) {
       console.warn('[err] back():', err);
     }
@@ -386,16 +418,10 @@ class TabManager {
   forward = () => {
     const activeTab = this.active();
     if (!activeTab) return;
-
     const iframe = document.getElementById(`iframe-${activeTab.id}`);
     if (!iframe || this.isNewTab(activeTab.url)) return;
-
     try {
-      if (this.frames[activeTab.id] && this.frames[activeTab.id].forward) {
-        this.frames[activeTab.id].forward();
-      } else {
-        iframe.contentWindow.history.forward();
-      }
+      iframe.contentWindow.history.forward();
     } catch (err) {
       console.warn('[err] forward():', err);
     }
@@ -404,18 +430,10 @@ class TabManager {
   reload = () => {
     const activeTab = this.active();
     if (!activeTab) return;
-
     const iframe = document.getElementById(`iframe-${activeTab.id}`);
     if (!iframe) return;
-
     try {
-      if (this.isNewTab(activeTab.url)) {
-        iframe.src = iframe.src;
-      } else if (this.frames[activeTab.id] && this.frames[activeTab.id].reload) {
-        this.frames[activeTab.id].reload();
-      } else {
-        iframe.contentWindow.location.reload();
-      }
+      iframe.contentWindow.location.reload();
     } catch (err) {
       console.warn('[err] reload():', err);
     }
@@ -458,9 +476,9 @@ class TabManager {
     return div.innerHTML;
   };
 }
-
-window.scramjet = null;
 window.addEventListener('load', async () => {
+  window.scramjet = null;
+
   const { ScramjetController } = $scramjetLoadController();
   const connection = new BareMuxConnection('/baremux/worker.js');
   const ws =
@@ -468,7 +486,6 @@ window.addEventListener('load', async () => {
     `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/wisp/`;
   try {
     await connection.setTransport('/epoxy/index.mjs', [{ wisp: ws }]);
-    console.log(`Transport set w/ ${ws}`);
   } catch (e) {
     console.error('failed to set transport:', e);
     return;
@@ -481,9 +498,9 @@ window.addEventListener('load', async () => {
       sync: '/scram/scramjet.sync.js',
     },
     flags: {
-		rewriterLogs: false,
-		cleanErrors: true,
-	},
+      rewriterLogs: false,
+      cleanErrors: true,
+    },
   });
 
   try {
@@ -493,14 +510,21 @@ window.addEventListener('load', async () => {
   }
 
   try {
-    await navigator.serviceWorker.register('/sw.js');
+    await navigator.serviceWorker.register('/sw.js', {
+      scope: '/scramjet/',
+    });
   } catch (err) {
-    console.error('sw registration err:', err);
+    console.error('scr sw reg err:', err);
+  }
+
+  try {
+    await navigator.serviceWorker.register('/v_sw.js');
+  } catch (err) {
+    console.error('uv sw reg err:', err);
   }
 
   try {
     await new TabManager();
-    console.log('TabManager init');
   } catch (err) {
     console.error(err);
   }

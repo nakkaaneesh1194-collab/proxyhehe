@@ -1,4 +1,32 @@
+import pkg from '../../package.json';
 let blur, focus, panicListener;
+
+export const resetInstance = () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .getRegistrations()
+      .then((registrations) => registrations.forEach((reg) => reg.unregister()));
+  }
+  if ('caches' in window) {
+    caches.keys().then((keys) => keys.forEach((key) => caches.delete(key)));
+  }
+  localStorage.clear();
+  sessionStorage.clear();
+
+  if ('indexedDB' in window) {
+    ['__op', '$scramjet'].forEach((db) => {
+      const req = indexedDB.deleteDatabase(db);
+      req.onerror = () => console.error(`Failed to clear ${db}`);
+    });
+  }
+  document.cookie
+    .split(';')
+    .forEach(
+      (c) => (document.cookie = `${c.trim()}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`),
+    );
+
+  location.href = '/';
+};
 
 export const ckOff = () => {
   const op = JSON.parse(localStorage.options || '{}');
@@ -58,6 +86,7 @@ export const panic = () => {
 
 export const check = (() => {
   const op = JSON.parse(localStorage.options || '{}');
+  !op.version && localStorage.setItem('options', JSON.stringify({ version: pkg.version }));
   if (op.beforeUnload) {
     window.addEventListener('beforeunload', (e) => {
       e.preventDefault();
@@ -85,11 +114,3 @@ export const check = (() => {
   ckOff();
   panic();
 })();
-
-export const reg = async () => {
-  try {
-    await navigator.serviceWorker.register('/sw.js');
-  } catch (err) {
-    console.log(err);
-  }
-};

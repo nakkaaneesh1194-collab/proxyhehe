@@ -228,7 +228,6 @@ export const themeConfig = [
   },
 ];
 
-
 export const meta = [
   {
     option: 'Default',
@@ -525,6 +524,23 @@ export const navScaleConfig = [
   { option: '130%', value: { navScale: 1.3 } },
 ];
 
-export const prConfig = {
-  wisp: `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/wisp/`,
-};
+export const prConfig = [
+  {
+    option: 'Automatic',
+    value: {
+      prType: 'auto',
+    },
+  },
+  {
+    option: 'Ultraviolet only',
+    value: {
+      prType: 'uv',
+    },
+  },
+  {
+    option: 'Scramjet only',
+    value: {
+      prType: 'scr',
+    },
+  },
+];
