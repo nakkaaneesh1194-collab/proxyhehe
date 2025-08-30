@@ -1,12 +1,12 @@
 import { BareMuxConnection } from '@mercuryworkshop/bare-mux';
 import * as contentObserver from './content_observer';
 import { setupHotkeys } from './hotkeys';
-import { unsupported, filter } from './config';
+import { CONFIG } from './config';
 
 class TabManager {
   constructor() {
-    this.unsupported = unsupported;
-    this.filter = filter;
+    this.unsupported = CONFIG.unsupported;
+    this.filter = CONFIG.filter;
     this.options = JSON.parse(localStorage.getItem('options')) || {};
     this.prType = this.options.prType || 'auto';
     this.search = this.options.engine || 'https://www.google.com/search?q=';
@@ -288,7 +288,7 @@ class TabManager {
       if (oldFrame) oldFrame.remove();
 
       if (useScr) {
-        const sf = scramjet.createFrame();
+        const sf = scr.createFrame();
         this.frames[t.id] = sf;
         const frame = sf.frame;
         frame.id = f.id;
@@ -313,7 +313,7 @@ class TabManager {
         if (this.frames[t.id]) {
           this.frames[t.id].go(url);
         } else if (f) {
-          const sf = scramjet.createFrame(f);
+          const sf = scr.createFrame(f);
           this.frames[t.id] = sf;
           sf.go(url);
         }
@@ -477,22 +477,27 @@ class TabManager {
     return div.innerHTML;
   };
 }
-window.addEventListener('load', async () => {
-  window.scramjet = null;
+
+window.addEventListener('load', async function () {
+  window.scr = null;
 
   const { ScramjetController } = $scramjetLoadController();
   const connection = new BareMuxConnection('/baremux/worker.js');
+  
   const ws =
     JSON.parse(localStorage.getItem('options') || {}).wServer ||
-    `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/wisp/`;
+    `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}${CONFIG.ws}`;
+  
   try {
-    await connection.setTransport('/epoxy/index.mjs', [{ wisp: ws }]);
+    await connection.setTransport('/epoxy/index.mjs', [
+      { wisp: ws }
+    ]);
   } catch (e) {
-    console.error('failed to set transport:', e);
-    return;
+    console.log('failed to set transport:', e);
+    throw e;
   }
 
-  window.scramjet = new ScramjetController({
+  window.scr = new ScramjetController({
     files: {
       wasm: '/scram/scramjet.wasm.wasm',
       all: '/scram/scramjet.all.js',
@@ -505,9 +510,10 @@ window.addEventListener('load', async () => {
   });
 
   try {
-    await scramjet.init();
+    await scr.init();
   } catch (err) {
-    console.error('await scramjet.init() failed:', err);
+    console.error('await scr.init() failed:', err);
+    throw err;
   }
 
   try {
@@ -516,18 +522,21 @@ window.addEventListener('load', async () => {
     });
   } catch (err) {
     console.error('scr sw reg err:', err);
+    throw err;
   }
 
   try {
     await navigator.serviceWorker.register('/uv/sw.js');
   } catch (err) {
     console.error('uv sw reg err:', err);
+    throw err;
   }
 
   try {
     await new TabManager();
   } catch (err) {
     console.error(err);
+    throw err;
   }
 
   const query = sessionStorage.getItem('query');

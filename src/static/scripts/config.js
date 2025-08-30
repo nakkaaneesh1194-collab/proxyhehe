@@ -1,3 +1,6 @@
-export const unsupported = ['spotify.com'];
-
-export const filter = ['neal.fun'];
+export const CONFIG = {
+  bUrl: '/seal/',
+  ws: '/wisp/',
+  unsupported: ['spotify.com'],
+  filter: ['neal.fun'],
+};
