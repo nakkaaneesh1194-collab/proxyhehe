@@ -10,12 +10,13 @@ import wisp from "wisp-server-node";
 import { MasqrMiddleware } from "./masqr.js";
 import dotenv from "dotenv";
 import { access } from "node:fs/promises";
+import { ServerResponse } from "node:http";
 
 dotenv.config();
+ServerResponse.prototype.setMaxListeners(50);
 
 const port = 2345;
 const server = createServer();
-server.setMaxListeners(50);
 server.on("upgrade", wisp.routeRequest);
 
 const app = Fastify({
