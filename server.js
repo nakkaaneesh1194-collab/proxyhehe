@@ -15,6 +15,7 @@ dotenv.config();
 
 const port = 2345;
 const server = createServer();
+server.setMaxListeners(50);
 server.on("upgrade", wisp.routeRequest);
 
 const app = Fastify({
