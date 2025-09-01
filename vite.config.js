@@ -5,6 +5,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const console = true;
 
 const obf = {
   enable: true,
@@ -16,7 +17,7 @@ const obf = {
     controlFlowFlatteningThreshold: 0.5,
     deadCodeInjection: false,
     debugProtection: false,
-    disableConsoleOutput: true,
+    disableConsoleOutput: console,
     identifierNamesGenerator: 'hexadecimal',
     selfDefending: true,
     simplify: true,

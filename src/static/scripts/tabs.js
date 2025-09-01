@@ -483,19 +483,41 @@ window.addEventListener('load', async function () {
 
   const { ScramjetController } = $scramjetLoadController();
   const connection = new BareMuxConnection('/baremux/worker.js');
-  
+  const log = (...args) =>
+    console.log('%c[INFO]%c', 'color: #0af; font-weight: bold;', 'color: inherit;', ...args);
+
+  const error = (...args) =>
+    console.error('%c[ERROR]%c', 'color: #f55; font-weight: bold;', 'color: inherit;', ...args);
+
+  const warn = (...args) =>
+    console.warn('%c[WARN]%c', 'color: #fa0; font-weight: bold;', 'color: inherit;', ...args);
+
   const ws =
     JSON.parse(localStorage.getItem('options') || {}).wServer ||
     `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}${CONFIG.ws}`;
-  
+
   try {
-    await connection.setTransport('/epoxy/index.mjs', [
-      { wisp: ws }
-    ]);
+    await connection.setTransport('/epoxy/index.mjs', [{ wisp: ws }]);
   } catch (e) {
-    console.log('failed to set transport:', e);
+    error('setTransport failed:', e);
     throw e;
   }
+
+  const websk = new WebSocket(ws);
+
+  websk.onopen = () => {
+    log(`connected: ${ws}`);
+    setInterval(() => {
+      if (websk.readyState === WebSocket.OPEN) {
+        try {
+          websk.send(JSON.stringify({ type: 'ping' }));
+          log(`sent keep-alive ping to ${ws}`);
+        } catch (err) {
+          error(`could not send heartbeat to ${ws}:`, err);
+        }
+      }
+    }, 30000);
+  };
 
   window.scr = new ScramjetController({
     files: {
@@ -511,8 +533,9 @@ window.addEventListener('load', async function () {
 
   try {
     await scr.init();
+    log('scr.init()');
   } catch (err) {
-    console.error('await scr.init() failed:', err);
+    error('scr.init() failed:', err);
     throw err;
   }
 
@@ -521,21 +544,21 @@ window.addEventListener('load', async function () {
       scope: '/scramjet/',
     });
   } catch (err) {
-    console.error('scr sw reg err:', err);
+    error('scr sw reg err:', err);
     throw err;
   }
 
   try {
     await navigator.serviceWorker.register('/uv/sw.js');
   } catch (err) {
-    console.error('uv sw reg err:', err);
+    error('uv sw reg err:', err);
     throw err;
   }
 
   try {
     await new TabManager();
   } catch (err) {
-    console.error(err);
+    error('new TabManager() failed:', err);
     throw err;
   }
 
