@@ -75,6 +75,7 @@ npm run dev
 
 * [MercuryWorkshop/wisp-server-node](https://github.com/MercuryWorkshop/wisp-server-node)
 * [MercuryWorkshop/scramjet](https://github.com/MercuryWorkshop/scramjet)
+* [titaniumnetwork-dev/Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)
 * [lucide-icons/lucide](https://github.com/lucide-icons/lucide)
 
 ## License
