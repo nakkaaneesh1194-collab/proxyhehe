@@ -10,6 +10,8 @@ class TabManager {
     this.options = JSON.parse(localStorage.getItem('options')) || {};
     this.prType = this.options.prType || 'auto';
     this.search = this.options.engine || 'https://www.google.com/search?q=';
+    this.encoder = new TextEncoder();
+    this.decoder = new TextDecoder();
     this.newTabUrl = '/new';
     this.newTabTitle = 'New Tab';
     this.frames = {};
@@ -71,8 +73,54 @@ class TabManager {
     window.tabManager = this;
   }
 
-  ex = (url) =>
-    decodeURIComponent(url.replace(/^https?:\/\/[^\/]+\/(scramjet|uv\/service)\//i, ''));
+  ex = (url) => this.dnc(url.replace(/^https?:\/\/[^\/]+\/(scramjet|uv\/service)\//i, ''));
+
+  makeKey = (host) => {
+    const base = host || 'default';
+    return this.encoder.encode((base + base).slice(0, 16));
+  };
+
+  enc = (str) => {
+    if (!str) return str;
+    try {
+      const key = makeKey(location.host);
+      const data = this.encoder.encode(str);
+      const len = data.length;
+      let out = '';
+      for (let i = 0; i < len; i++) {
+        const v = data[i] ^ key[i % key.length];
+        out += v.toString(16).padStart(2, '0');
+      }
+      return out;
+    } catch {
+      return str;
+    }
+  };
+
+  dnc = (str) => {
+    if (!str) return str;
+    try {
+      const len = str.length;
+      if (len % 2 !== 0) return decodeURIComponent(str);
+
+      for (let i = 0; i < len; i++) {
+        const c = str.charCodeAt(i);
+        if (!(c >= 48 && c <= 57) && !(c >= 97 && c <= 102) && !(c >= 65 && c <= 70)) {
+          return decodeURIComponent(str);
+        }
+      }
+
+      const key = makeKey(location.host);
+      const out = new Uint8Array(len / 2);
+      for (let i = 0, j = 0; i < len; i += 2, j++) {
+        const byte = parseInt(str.substr(i, 2), 16);
+        out[j] = byte ^ key[j % key.length];
+      }
+      return this.decoder.decode(out);
+    } catch {
+      return decodeURIComponent(str);
+    }
+  };
 
   shouldUseScramjet = async (input) => {
     if (this.prType === 'scr') return true;
@@ -102,7 +150,7 @@ class TabManager {
       ? /^https?:\/\//.test(input)
         ? input
         : 'https://' + input
-      : search + encodeURIComponent(input);
+      : search + this.enc(input);
 
   startTracking = () => this.tabs.forEach((t) => this.track(t.id));
 
@@ -303,7 +351,7 @@ class TabManager {
         f.style.zIndex = 10;
         f.style.opacity = '1';
         f.style.pointerEvents = 'auto';
-        f.src = '/uv/service/' + encodeURIComponent(url);
+        f.src = '/uv/service/' + this.enc(url);
         this.ic.appendChild(f);
       }
 
@@ -318,7 +366,7 @@ class TabManager {
           sf.go(url);
         }
       } else {
-        if (f) f.src = '/uv/service/' + encodeURIComponent(url);
+        if (f) f.src = '/uv/service/' + this.enc(url);
       }
       t.url = url;
     }
