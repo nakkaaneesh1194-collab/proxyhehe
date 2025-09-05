@@ -38,8 +38,8 @@ DogeUB is a modern web proxy frontend and internet browsing hub, allowing you to
 
 ### Production:
 ```bash
-git clone "repo name"
-cd "repo name"
+git clone https://github.com/DogeNetwork/dogeub.git
+cd dogeub
 npm i
 npm run build
 node server.js
@@ -48,8 +48,8 @@ node server.js
 ### Development:
 
 ```bash
-git clone "repo name"
-cd "repo name"
+git clone https://github.com/DogeNetwork/dogeub.git
+cd dogeub
 npm i
 npm run dev
 ```
