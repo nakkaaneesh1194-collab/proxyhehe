@@ -2,6 +2,7 @@ import { BareMuxConnection } from '@mercuryworkshop/bare-mux';
 import * as contentObserver from './content_observer';
 import { setupHotkeys } from './hotkeys';
 import { CONFIG } from './config';
+import { logUtils } from '/src/utils/utils';
 
 class TabManager {
   constructor() {
@@ -526,46 +527,36 @@ class TabManager {
   };
 }
 
-window.addEventListener('load', async function () {
+window.addEventListener('load', async () => {
+  /*
+    All logging from here will only show if the vitePluginBundleObfuscator plugin is disabled in Vite, or if disableConsoleOutput is set to false.
+  */
   window.scr = null;
 
   const { ScramjetController } = $scramjetLoadController();
   const connection = new BareMuxConnection('/baremux/worker.js');
-  const log = (...args) =>
-    console.log('%c[INFO]%c', 'color: #0af; font-weight: bold;', 'color: inherit;', ...args);
+  const { log, warn, error } = logUtils;
 
-  const error = (...args) =>
-    console.error('%c[ERROR]%c', 'color: #f55; font-weight: bold;', 'color: inherit;', ...args);
+  const getOption = (key, fallback) =>
+    JSON.parse(localStorage.getItem('options') || '{}')[key] ?? fallback;
 
-  const warn = (...args) =>
-    console.warn('%c[WARN]%c', 'color: #fa0; font-weight: bold;', 'color: inherit;', ...args);
+  const ws = getOption('wServer', CONFIG.ws);
+  const transport = getOption('transport', CONFIG.transport);
 
-  const ws =
-    JSON.parse(localStorage.getItem('options') || {}).wServer ||
-    `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}${CONFIG.ws}`;
-
-  try {
-    await connection.setTransport('/epoxy/index.mjs', [{ wisp: ws }]);
-  } catch (e) {
-    error('setTransport failed:', e);
-    throw e;
-  }
-
-  const websk = new WebSocket(ws);
-
-  websk.onopen = () => {
-    log(`connected: ${ws}`);
-    setInterval(() => {
-      if (websk.readyState === WebSocket.OPEN) {
-        try {
-          websk.send(JSON.stringify({ type: 'ping' }));
-          log(`sent keep-alive ping to ${ws}`);
-        } catch (err) {
-          error(`could not send heartbeat to ${ws}:`, err);
-        }
-      }
-    }, 30000);
+  const setTransport = async () => {
+    try {
+      await connection.setTransport(transport, [{ wisp: ws }]);
+      log(`Set transport: ${transport}`);
+    } catch (e) {
+      error('setTransport failed:', e);
+      throw e;
+    }
   };
+
+  await setTransport();
+  // The WebSocket mysteriously "closes" after a period of inactivity; (according to the logs)
+  // This provides a workaround, not a permanent fix
+  setInterval(setTransport, 30000);
 
   window.scr = new ScramjetController({
     files: {
@@ -573,10 +564,7 @@ window.addEventListener('load', async function () {
       all: '/scram/scramjet.all.js',
       sync: '/scram/scramjet.sync.js',
     },
-    flags: {
-      rewriterLogs: false,
-      cleanErrors: true,
-    },
+    flags: { rewriterLogs: false, cleanErrors: true },
   });
 
   try {
@@ -587,43 +575,36 @@ window.addEventListener('load', async function () {
     throw err;
   }
 
-  try {
-    await navigator.serviceWorker.register('/s_sw.js', {
-      scope: '/scramjet/',
-    });
-  } catch (err) {
-    error('scr sw reg err:', err);
-    throw err;
+  const sws = [{ path: '/s_sw.js', scope: '/scramjet/' }, { path: '/uv/sw.js' }];
+
+  for (const sw of sws) {
+    try {
+      await navigator.serviceWorker.register(sw.path, sw.scope ? { scope: sw.scope } : undefined);
+    } catch (err) {
+      warn(`SW reg err (${sw.path}):`, err);
+    }
   }
 
+  let tabManager;
   try {
-    await navigator.serviceWorker.register('/uv/sw.js');
+    tabManager = await new TabManager();
   } catch (err) {
-    error('uv sw reg err:', err);
-    throw err;
-  }
-
-  try {
-    await new TabManager();
-  } catch (err) {
-    error('new TabManager() failed:', err);
+    error('TabManager init failed:', err);
     throw err;
   }
 
   const query = sessionStorage.getItem('query');
-  if (query) {
-    tabManager.navigate(query);
-    sessionStorage.removeItem('query');
-  }
+  query && tabManager.navigate(query);
+  sessionStorage.removeItem('query');
 
-  const tbtn = document.getElementById('tabs-btn');
-  const tbar = document.getElementById('tb');
-  const bBtn = document.getElementById('n-bk');
-  const fBtn = document.getElementById('n-fw');
-  const rBtn = document.getElementById('n-rl');
+  const domMap = {
+    'tabs-btn': () => document.getElementById('tb')?.classList.toggle('hidden'),
+    'n-bk': () => tabManager.back(),
+    'n-fw': () => tabManager.forward(),
+    'n-rl': () => tabManager.reload(),
+  };
 
-  if (tbtn && tbar) tbtn.addEventListener('click', () => tbar.classList.toggle('hidden'));
-  bBtn.addEventListener('click', () => tabManager.back());
-  fBtn.addEventListener('click', () => tabManager.forward());
-  rBtn.addEventListener('click', () => tabManager.reload());
+  Object.entries(domMap).forEach(([id, fn]) => {
+    document.getElementById(id)?.addEventListener('click', fn);
+  });
 });
