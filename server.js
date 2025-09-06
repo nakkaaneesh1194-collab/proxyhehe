@@ -2,10 +2,10 @@ import dotenv from "dotenv";
 import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import fastifyCookie from "@fastify/cookie";
-import wisp from "wisp-server-node";
 import { join } from "node:path";
 import { access } from "node:fs/promises";
 import { createServer, ServerResponse } from "node:http";
+import { server as wisp } from "@mercuryworkshop/wisp-js/server";
 import { createBareServer } from "@tomphttp/bare-server-node";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
@@ -17,11 +17,19 @@ dotenv.config();
 ServerResponse.prototype.setMaxListeners(50);
 
 const port = 2345, server = createServer(), bare = createBareServer("/seal/");
+
+Object.assign(wisp.options, {
+  dns_method: "resolve",
+  dns_servers: ["1.1.1.3", "1.0.0.3"],
+  dns_result_order: "ipv4first",
+});
+
 server.on("upgrade", (req, sock, head) =>
   bare.shouldRoute(req) ? bare.routeUpgrade(req, sock, head)
   : req.url.endsWith("/wisp/") ? wisp.routeRequest(req, sock, head)
   : sock.end()
 );
+
 const app = Fastify({
   serverFactory: h => (server.on("request", (req,res) =>
     bare.shouldRoute(req) ? bare.routeRequest(req,res) : h(req,res)), server),
@@ -29,6 +37,7 @@ const app = Fastify({
 });
 
 await app.register(fastifyCookie);
+
 [
   { root: join(import.meta.dirname, "dist"), prefix: "/", decorateReply: true },
   { root: epoxyPath, prefix: "/epoxy/" },
