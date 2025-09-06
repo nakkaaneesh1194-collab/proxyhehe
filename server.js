@@ -5,7 +5,7 @@ import fastifyCookie from "@fastify/cookie";
 import { join } from "node:path";
 import { access } from "node:fs/promises";
 import { createServer, ServerResponse } from "node:http";
-import { server as wisp } from "@mercuryworkshop/wisp-js/server";
+import { logging, server as wisp } from "@mercuryworkshop/wisp-js/server";
 import { createBareServer } from "@tomphttp/bare-server-node";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
@@ -17,6 +17,7 @@ dotenv.config();
 ServerResponse.prototype.setMaxListeners(50);
 
 const port = 2345, server = createServer(), bare = createBareServer("/seal/");
+logging.set_level(logging.NONE);
 
 Object.assign(wisp.options, {
   dns_method: "resolve",
