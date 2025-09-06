@@ -564,7 +564,7 @@ window.addEventListener('load', async () => {
       all: '/scram/scramjet.all.js',
       sync: '/scram/scramjet.sync.js',
     },
-    flags: { rewriterLogs: false, cleanErrors: true },
+    flags: { rewriterLogs: false, scramitize: false, cleanErrors: true, sourcemaps: true },
   });
 
   try {
