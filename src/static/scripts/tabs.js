@@ -537,8 +537,10 @@ window.addEventListener('load', async () => {
   const connection = new BareMuxConnection('/baremux/worker.js');
   const { log, warn, error } = logUtils;
 
-  const getOption = (key, fallback) =>
-    JSON.parse(localStorage.getItem('options') || '{}')[key] ?? fallback;
+  const getOption = (key, fallback) => {
+    const item = JSON.parse(localStorage.getItem('options') || '{}')[key]
+    return (item !== "" && item) ? item : fallback;
+  }
 
   const ws = getOption('wServer', CONFIG.ws);
   const transport = getOption('transport', CONFIG.transport);
