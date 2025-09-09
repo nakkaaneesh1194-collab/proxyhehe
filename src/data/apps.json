@@ -99,8 +99,8 @@
       "appName": "Roblox",
       "desc": "All-Time favorites",
       "icon": "/assets/img/roblox.webp",
-      "url": "rbx()",
-      "disabled": true
+      "url": "https://www.easyfun.gg/cloud-games/roblox.html",
+      "disabled": false
     },
     {
       "appName": "Tiny Fishing",
@@ -666,7 +666,7 @@
       "appName": "Genshin Impact",
       "desc": "Domination Games",
       "icon": "/assets/img/genshin.webp",
-      "url": "https://now.gg/play/cognosphere-pte-ltd-/1773/genshin-impact.html",
+      "url": "https://www.easyfun.gg/cloud-games/genshin-impact.html",
       "disabled": false
     },
     {
@@ -918,7 +918,7 @@
       "appName": "Subway Surfers",
       "desc": "Running Games",
       "icon": "/assets/img/subway.webp",
-      "url": "https://derpman.codeberg.page/echo/@main/subway-surfers/index.html",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/subway-surfers/index.html",
       "disabled": false
     },
     {
@@ -967,7 +967,7 @@
       "appName": "Vex 3",
       "desc": "Running Games",
       "icon": "/assets/img/vex3.webp",
-      "url": "https://derpman.codeberg.page/vex3",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/vex3/index.html",
       "disabled": false
     },
     {
@@ -1177,7 +1177,7 @@
       "appName": "Bitlife",
       "desc": "Brain Games",
       "icon": "/assets/img/bitlife.webp",
-      "url": "https://derpman.codeberg.page/echo/@main/bitlife/index.html",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bitlife/index.html",
       "disabled": false
     },
     {
