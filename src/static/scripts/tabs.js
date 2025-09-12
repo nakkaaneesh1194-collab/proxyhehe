@@ -5,16 +5,16 @@ import { CONFIG } from './config';
 import { logUtils } from '/src/utils/utils';
 
 class TabManager {
-  constructor() {
+  constructor(arr) {
     this.unsupported = CONFIG.unsupported;
     this.filter = CONFIG.filter;
     this.options = JSON.parse(localStorage.getItem('options')) || {};
     this.prType = this.options.prType || 'auto';
     this.search = this.options.engine || 'https://www.google.com/search?q=';
-    this.encoder = new TextEncoder();
-    this.decoder = new TextDecoder();
     this.newTabUrl = '/new';
     this.newTabTitle = 'New Tab';
+    this.enc = arr[0];
+    this.dnc = arr[1];
     this.frames = {};
     this.tabs = [{ id: 1, title: this.newTabTitle, url: this.newTabUrl, active: true }];
     this.nextId = 2;
@@ -75,53 +75,6 @@ class TabManager {
   }
 
   ex = (url) => this.dnc(url.replace(/^https?:\/\/[^\/]+\/(scramjet|uv\/service)\//i, ''));
-
-  makeKey = (host) => {
-    const base = host || 'default';
-    return this.encoder.encode((base + base).slice(0, 16));
-  };
-
-  enc = (str) => {
-    if (!str) return str;
-    try {
-      const key = makeKey(location.host);
-      const data = this.encoder.encode(str);
-      const len = data.length;
-      let out = '';
-      for (let i = 0; i < len; i++) {
-        const v = data[i] ^ key[i % key.length];
-        out += v.toString(16).padStart(2, '0');
-      }
-      return out;
-    } catch {
-      return str;
-    }
-  };
-
-  dnc = (str) => {
-    if (!str) return str;
-    try {
-      const len = str.length;
-      if (len % 2 !== 0) return decodeURIComponent(str);
-
-      for (let i = 0; i < len; i++) {
-        const c = str.charCodeAt(i);
-        if (!(c >= 48 && c <= 57) && !(c >= 97 && c <= 102) && !(c >= 65 && c <= 70)) {
-          return decodeURIComponent(str);
-        }
-      }
-
-      const key = makeKey(location.host);
-      const out = new Uint8Array(len / 2);
-      for (let i = 0, j = 0; i < len; i += 2, j++) {
-        const byte = parseInt(str.substr(i, 2), 16);
-        out[j] = byte ^ key[j % key.length];
-      }
-      return this.decoder.decode(out);
-    } catch {
-      return decodeURIComponent(str);
-    }
-  };
 
   shouldUseScramjet = async (input) => {
     if (this.prType === 'scr') return true;
@@ -589,7 +542,8 @@ window.addEventListener('load', async () => {
 
   let tabManager;
   try {
-    tabManager = await new TabManager();
+    const c = self.__uv$config;
+    tabManager = await new TabManager([c.encodeUrl, c.decodeUrl]);
   } catch (err) {
     error('TabManager init failed:', err);
     throw err;
