@@ -6,7 +6,7 @@ import Loader from './pages/Loader';
 import New from './pages/New';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
-import { registerPreloader } from './utils/preload';
+import { initPreload } from './utils/preload';
 
 const importHome = () => import('./pages/Home');
 const importApps = () => import('./pages/Apps');
@@ -18,11 +18,11 @@ const Apps = lazyLoad(importApps);
 const Games = lazyLoad(importGames);
 const Settings = lazyLoad(importSettings);
 
-registerPreloader('/materials', importApps);
-registerPreloader('/docs', importGames);
-registerPreloader('/settings', importSettings);
+initPreload('/materials', importApps);
+initPreload('/docs', importGames);
+initPreload('/settings', importSettings);
 
-registerPreloader('/', importHome);
+initPreload('/', importHome);
 
 const ThemedApp = () => {
   const { options } = useOptions();

@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useOptions } from '/src/utils/optionsContext';
 import clsx from 'clsx';
-import { preloadPath } from '/src/utils/preload';
+import { preload } from '/src/utils/preload';
 
 const NavItem = ({ items }) => {
   const loc = useLocation();
@@ -28,8 +28,8 @@ const NavItem = ({ items }) => {
               fontSize: `${16 * scale}px`,
             }}
             onClick={item.onClick}
-            onMouseEnter={() => preloadPath(item.route)}
-            onFocus={() => preloadPath(item.route)}
+            onMouseEnter={() => preload(item.route)}
+            onFocus={() => preload(item.route)}
           >
             {Icon && (
               <Icon

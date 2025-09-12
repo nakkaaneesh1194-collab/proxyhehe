@@ -1,10 +1,10 @@
 const preloaders = new Map();
 
-export function registerPreloader(path, fn) {
+export function initPreload(path, fn) {
   if (typeof fn === 'function') preloaders.set(path, fn);
 }
 
-export function preloadPath(path) {
+export function preload(path) {
   const fn = preloaders.get(path);
   try {
     if (fn) {
@@ -13,13 +13,9 @@ export function preloadPath(path) {
         p.catch(() => {});
       }
     }
-  } catch {
-    // gulp
-  }
+  } catch {}
 }
 
 if (typeof window !== 'undefined') {
-  window.__routePreload = { preloadPath, registerPreloader };
+  window.__routePreload = { preload, initPreload };
 }
-
-export default preloadPath;
