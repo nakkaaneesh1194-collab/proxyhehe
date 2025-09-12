@@ -80,5 +80,5 @@ npm run dev
 
 ## License
 
-This project is licensed under the **Genuerro Afro V3 License**.  
+This project is licensed under the **GNU Affero GPL v3**.  
 See the [LICENSE](LICENSE) file for more details.
