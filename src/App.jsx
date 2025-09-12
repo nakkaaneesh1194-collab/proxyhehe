@@ -6,11 +6,23 @@ import Loader from './pages/Loader';
 import New from './pages/New';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
+import { registerPreloader } from './utils/preload';
 
-const Home = lazyLoad(() => import('./pages/Home'));
-const Apps = lazyLoad(() => import('./pages/Apps'));
-const Games = lazyLoad(() => import('./pages/Games'));
-const Settings = lazyLoad(() => import('./pages/Settings'));
+const importHome = () => import('./pages/Home');
+const importApps = () => import('./pages/Apps');
+const importGames = () => import('./pages/Games');
+const importSettings = () => import('./pages/Settings');
+
+const Home = lazyLoad(importHome);
+const Apps = lazyLoad(importApps);
+const Games = lazyLoad(importGames);
+const Settings = lazyLoad(importSettings);
+
+registerPreloader('/materials', importApps);
+registerPreloader('/docs', importGames);
+registerPreloader('/settings', importSettings);
+
+registerPreloader('/', importHome);
 
 const ThemedApp = () => {
   const { options } = useOptions();

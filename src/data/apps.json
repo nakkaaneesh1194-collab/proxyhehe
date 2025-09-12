@@ -85,6 +85,83 @@
       "icon": "/assets/img/fmhy.webp",
       "url": "https://fmhy.net",
       "disabled": false
+    },
+    {
+      "appName": "Discord",
+      "desc": "Chat, voice, and communities all in one place.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=discord.com",
+      "url": "https://discord.com/app",
+      "disabled": false
+    },
+    {
+      "appName": "YouTube",
+      "desc": "Watch, create, and share videos worldwide.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=youtube.com",
+      "url": "https://youtube.com",
+      "disabled": false
+    },
+    {
+      "appName": "Reddit",
+      "desc": "Community discussion, news, memes, and more.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=reddit.com",
+      "url": "https://reddit.com",
+      "disabled": false
+    },
+    {
+      "appName": "Wikipedia",
+      "desc": "The free encyclopedia that anyone can edit.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=wikipedia.org",
+      "url": "https://wikipedia.org",
+      "disabled": false
+    },
+    {
+      "appName": "GitHub",
+      "desc": "Host, review, and collaborate on code.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=github.com",
+      "url": "https://github.com",
+      "disabled": false
+    },
+    {
+      "appName": "Gmail",
+      "desc": "Google's fast, secure email service.",
+      "icon": "https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png",
+      "url": "https://mail.google.com",
+      "disabled": false
+    },
+    {
+      "appName": "Outlook",
+      "desc": "Email and calendar from Microsoft.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=outlook.live.com",
+      "url": "https://outlook.live.com/mail/",
+      "disabled": false
+    },
+    {
+      "appName": "Netflix",
+      "desc": "Watch TV shows, movies, and originals.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=netflix.com",
+      "url": "https://netflix.com",
+      "disabled": false
+    },
+    {
+      "appName": "Amazon",
+      "desc": "Shop millions of products online.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=amazon.com",
+      "url": "https://amazon.com",
+      "disabled": false
+    },
+    {
+      "appName": "X (Twitter)",
+      "desc": "Real-time news and social conversations.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=x.com",
+      "url": "https://x.com/i/flow/login",
+      "disabled": false
+    },
+    {
+      "appName": "Instagram",
+      "desc": "Share photos, reels, and stories.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=instagram.com",
+      "url": "https://instagram.com",
+      "disabled": false
     }
   ],
   "games": [
@@ -1675,6 +1752,1063 @@
       "desc": "All-Time favorites",
       "icon": "/assets/img/nf.webp",
       "url": "https://neal.fun",
+      "disabled": false
+    },
+    {
+      "appName": "100ng",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/100ng/100ng-logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/100ng/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "2048 Multitask",
+      "desc": "Brain Games",
+      "icon": "https://lh3.googleusercontent.com/x7qbQKPHcGheSAiY0Ehyb_9wianRS91C4uiRI3Llr8PBx1Fbg5I5372WjHzNfBCajISDG0O_p2U_VgM_oHTa7X6uyw=s128-rj-sc0x00ffffff",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/2048-multitask/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "9007199254740992",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/9007199254740992/logo-4.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/9007199254740992/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "A Dance of Fire and Ice",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/a-dance-of-fire-and-ice/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/a-dance-of-fire-and-ice/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "A Dark Room",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adarkroom/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adarkroom/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Adrenaline Challenge",
+      "desc": "Car/Racing Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adrenalinechallenge/adrenalinechallenge.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adrenalinechallenge/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Adventure Drivers",
+      "desc": "Car/Racing Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adventure-drivers/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adventure-drivers/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Align 4",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/align-4/board.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/align-4/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Angry Sharks",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/angry-sharks/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/angry-sharks/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Aquapark Slides",
+      "desc": "Running Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/aquapark-slides/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/aquapark-slides/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Astray",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/astray/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/astray/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Baldi's Basics",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/baldis-basics/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/baldis-basics/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Ball Dodge",
+      "desc": "Running Games",
+      "icon": "https://cdn-icons-png.flaticon.com/512/5930/5930147.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ball-dodge/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Ballistic Chickens",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ballistic-chickens/logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ballistic-chickens/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Battle for Gondor",
+      "desc": "Domination Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/battleforgondor/battleforgondor.JPG",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/battleforgondor/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Big Red Button",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bigredbutton/bigredbutton.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bigredbutton/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Black Knight",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/blackknight/blackknight.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/blackknight/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Boxhead 2Play",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxhead2play/boxhead2play.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxhead2play/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Boxing Random",
+      "desc": "Sport Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxing-random/512x340.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxing-random/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Burger & Frights",
+      "desc": "Running Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/burger-and-frights/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/burger-and-frights/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Canyon Defense",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/canyondefense/canyondefense.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/canyondefense/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Champion Archer",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/championarcher/championarcher.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/championarcher/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "CN Ping Pong",
+      "desc": "Sport Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cnpingpong/tabletennisultimate.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cnpingpong/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Craftmine",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/craftmine/craftmine.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/craftmine/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Creative Kill Chamber",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/creativekillchamber/creativekillchamber.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/creativekillchamber/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "CS:GO Clicker",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/csgo-clicker/case1.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/csgo-clicker/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Cubefield",
+      "desc": "Running Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cubefield/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cubefield/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Cupcake 2048",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cupcake2048/favicon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cupcake2048/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Deal or No Deal",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/deal-or-no-deal/index.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/deal-or-no-deal/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Defend The Tank",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/defend-the-tank/landscape.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/defend-the-tank/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Doctor Acorn 2",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doctor-acorn2/loading-logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doctor-acorn2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Doge 2048",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doge2048/doge1.jpeg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doge2048/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Double Wires",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doublewires/doublewires.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doublewires/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Dragon vs Bricks",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/dragon-vs-bricks/icon.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/dragon-vs-bricks/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Edge Not Found",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/edgenotfound/edge.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/edgenotfound/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Eel Slap",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/eel-slap/eel-slap.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/eel-slap/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Elastic Man",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/elasticman/elasticman.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/elasticman/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Endless War 3",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/endlesswar3/endlesswar3.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/endlesswar3/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Evil Glitch",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evil-glitch/icon.jpeg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evil-glitch/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Evolution",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evolution/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evolution/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Exo",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/exo/small.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/exo/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Factory Balls",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/factoryballs/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/factoryballs/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Fair Squares",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fairsquares/index.apple-touch-icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fairsquares/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Fake Virus",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fake-virus/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fake-virus/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Fancy Pants Adventures",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fancypantsadventures/fancypantsadventure.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fancypantsadventures/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Flappy 2048",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flappy-2048/ClearSans-Bold-webfont.svg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flappy-2048/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Flash Tetris",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flashtetris/flashtetris.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flashtetris/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Flippy Fish",
+      "desc": "Running Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flippy-fish/2022_10_28_0jt_Kleki.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flippy-fish/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "FNAW",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fnaw/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fnaw/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Froggy's Battle",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/froggys-battle/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/froggys-battle/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Frying Nemo",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/frying-nemo/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/frying-nemo/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Game Inside",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/game-inside/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/game-inside/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Generic Fishing Game",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/generic-fishing-game/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/generic-fishing-game/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "George and the Printer",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/georgeandtheprinter/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/georgeandtheprinter/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Gimme The Airpod",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gimme-the-airpod/logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gimme-the-airpod/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Go Ball",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/go-ball/loading-logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/go-ball/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Goodnight",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/goodnight/goodnight.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/goodnight/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Gravity Soccer",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gravity-soccer/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gravity-soccer/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Grindcraft",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/grindcraft/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/grindcraft/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Hacker Typer",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hackertype/logo192.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hackertype/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Handshakes",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/handshakes/splash.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/handshakes/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Happy Hop",
+      "desc": "Running Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/happy-hop/loading-logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/happy-hop/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Helicopter",
+      "desc": "Running Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/helicopter/helicopter.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/helicopter/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Hex Empire",
+      "desc": "Domination Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hexempire/hexempire.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hexempire/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Hungry Lamu",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hungry-lamu/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hungry-lamu/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Idle Shark",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/idle-shark/favicon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/idle-shark/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Impossible Quiz",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/impossiblequiz/impossiblequiz.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/impossiblequiz/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Interactive Buddy",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/interactivebuddy/interactivebuddy.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/interactivebuddy/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Just Fall",
+      "desc": "Domination Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-fall/splash.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-fall/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Just One Boss",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-one-boss/pv1Gr5.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-one-boss/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Kitchen Gun Game",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kitchen-gun-game/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kitchen-gun-game/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Kitten Cannon",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kittencannon/kittencannon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kittencannon/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Marvin Spectrum",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/marvinspectrum/marvinspectrum.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/marvinspectrum/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Matrix Rampage",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/matrixrampage/matrixrampage.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/matrixrampage/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Meme 2048",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/meme2048/advice_dog_background.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/meme2048/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Merge Round Racers",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/merge-round-racers/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/merge-round-racers/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Mine Blocks",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/mineblocks/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/mineblocks/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Minecraft 1.5",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-15/splash.jpeg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-15/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Minecraft 1.8",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-18/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-18/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Minecraft Classic",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-classic/pack.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-classic/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Minecraft Beta",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraftbeta/bg_main.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraftbeta/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Minesweeper",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minesweeper/minesweeper.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minesweeper/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Mini Putt",
+      "desc": "Sport Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/miniputt/miniputt.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/miniputt/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "My Rusty Submarine",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/my-rusty-submarine/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/my-rusty-submarine/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "n-gon",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/n-gon/bot.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/n-gon/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Ninja",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninja/logo1.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninja/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Ninja vs Evilcorp",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninjavsevilcorp/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninjavsevilcorp/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Noob Steve Parkour",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/noob-steve-parkour/logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/noob-steve-parkour/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "NS Shaft",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ns-shaft/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ns-shaft/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "NS Resurgence",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/nsresurgence/neon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/nsresurgence/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Pandemic 2",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pandemic2/pandemic2.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pandemic2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Paper.io 2",
+      "desc": "Domination Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/paperio2/logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/paperio2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Particle Clicker",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/particle-clicker/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/particle-clicker/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Physibox",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn-icons-png.flaticon.com/512/5930/5930147.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/physibox/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Pixel Gun Survival",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pixel-gun-survival/512x384.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pixel-gun-survival/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Popcat Classic",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/popcat-classic/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/popcat-classic/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Precision Client",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/precision-client/logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/precision-client/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Protektor",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/protektor/loading-logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/protektor/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Push The Square",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-the-square/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-the-square/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Push Your Luck",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-your-luck/Bg.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-your-luck/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Resent Client",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/resent-client/splash.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/resent-client/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Ruffle",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ruffle/logo.svg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ruffle/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Sand Game",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sand-game/sand-game.PNG",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sand-game/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Sandboxels",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sandboxels/sandboxels.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sandboxels/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Santy Is Home",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/santy-is-home/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/santy-is-home/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Scrap Metal",
+      "desc": "Car/Racing Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/scrapmetal/1run4progresslogo-light_orig.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/scrapmetal/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Shell Shockers",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shellshockers/favicon.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shellshockers/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Shot in the Dark",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shotinthedark/shot.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shotinthedark/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Shuttle Deck",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shuttledeck/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shuttledeck/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Sky Car Stunt",
+      "desc": "Car/Racing Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sky-car-stunt/512x384.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sky-car-stunt/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Sleeping Beauty",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sleepingbeauty/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sleepingbeauty/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Smoking Barrels",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/smokingbarrels/smokingbarrels.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/smokingbarrels/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Soldier Legend",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/soldier-legend/logo.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/soldier-legend/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Solitaire",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/solitaire/screen-shot-win.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/solitaire/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Sort the Court",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sort-the-court/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sort-the-court/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Space Company",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/space-company/whiteLogo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/space-company/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Space Garden",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spacegarden/spl.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spacegarden/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Spinning Rat",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spinningrat/apple-touch-icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spinningrat/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Starve",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/starve/favicon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/starve/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Stick Duel Battle",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-duel-battle/512x340.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-duel-battle/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Stickman Boost",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-boost/icon-256.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-boost/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Stickman Golf",
+      "desc": "Sport Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-golf/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-golf/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Stick War",
+      "desc": "Domination Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickwar/stickwar.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickwar/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Storm the House 2",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stormthehouse2/stormthehouse2.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stormthehouse2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Super Mario Construct",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/supermarioconstruct/textareaimage.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/supermarioconstruct/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Surviv.io",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/surviv/favicon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/surviv/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Sushi Unroll",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sushi-unroll/favicon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sushi-unroll/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Synesthesia",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/synesthesia/index.apple-touch-icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/synesthesia/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Tactical Weapon Pack 2",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tactical-weapon-pack-2/splash.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tactical-weapon-pack-2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Tactical Assassin 2",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tacticalassasin2/tacticalassassin2.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tacticalassasin2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Tank Trouble 2",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tank-trouble-2/loading-logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tank-trouble-2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Tanuki Sunset",
+      "desc": "Car/Racing Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tanuki-sunset/logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tanuki-sunset/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "The Hotel",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/the-hotel/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/the-hotel/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "The Battle",
+      "desc": "Domination Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thebattle/thebattle.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thebattle/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "The Heist",
+      "desc": "Car/Racing Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/theheist/theheist.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/theheist/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "This Is The Only Level",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thisistheonlylevel/thisistheonlylevel.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thisistheonlylevel/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Tiny Islands",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tiny-islands/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tiny-islands/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Toss the Turtle",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tosstheturtle/tosstheturtle.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tosstheturtle/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Townscaper",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/townscaper/WebGL.jpg",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/townscaper/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "TV Static",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tv-static/static.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tv-static/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Wall Smash",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wallsmash/thumb.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wallsmash/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Waterworks",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/waterworks/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/waterworks/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Weave Silk",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/weavesilk/thumb.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/weavesilk/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "WebGL Fluid Simulation",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webgl-fluid-simulation/logo.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webgl-fluid-simulation/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "WebRetro",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webretro/Flint_sprite.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webretro/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Win the Whitehouse",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/win-the-whitehouse/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/win-the-whitehouse/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Wordle",
+      "desc": "Brain Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wordle/logo_144x144.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wordle/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "X Trial Racing",
+      "desc": "Car/Racing Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/x-trial-racing/splash.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/x-trial-racing/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Yoshi Fabrication",
+      "desc": "Ball/Platformer Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/yoshifabrication/flowwatertm0.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/yoshifabrication/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "You Are Bezos",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/you-are-bezos/icon.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/you-are-bezos/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Zombs Royale",
+      "desc": "Shooter Games",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/zombs-royale/        zomb.png",
+      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/zombs-royale/index.html",
       "disabled": false
     }
   ]
