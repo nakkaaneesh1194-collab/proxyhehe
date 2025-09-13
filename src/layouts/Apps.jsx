@@ -1,6 +1,6 @@
 import Nav from '../layouts/Nav';
 import { useState, useMemo, useRef, useEffect } from 'react';
-import { Search, ChevronDown } from 'lucide-react';
+import { Search, ChevronDown, LayoutGrid } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useOptions } from '/src/utils/optionsContext';
 import appsData from '../data/apps.json';
@@ -9,7 +9,6 @@ import theme from '../styles/theming.module.css';
 import Pagination from '@mui/material/Pagination';
 import clsx from 'clsx';
 
-const FALLBACK_ICON = './game_fallback.webp';
 const SORT_OPTIONS = [
   { value: 'categorical', label: 'Categorical' },
   { value: 'alphabetical', label: 'Alphabetical' },
@@ -25,6 +24,7 @@ const Apps = ({ type = 'default', data = appsData, options }) => {
   const [page, setPage] = useState(1);
   const [showSort, setShowSort] = useState(false);
   const sortRef = useRef(null);
+  const [fallback, setFallback] = useState({});
 
   const itemsPerPage = options.itemsPerPage || 20;
 
@@ -137,15 +137,19 @@ const Apps = ({ type = 'default', data = appsData, options }) => {
             )}
             onClick={!app.disabled ? () => navApp(app.url) : undefined}
           >
-            <img
-              src={app.icon}
-              alt={`${app.appName} icon`}
-              className="w-20 h-20 rounded-[12px] mb-4 object-cover"
-              draggable="false"
-              onError={(e) =>
-                e.currentTarget.src !== FALLBACK_ICON && (e.currentTarget.src = FALLBACK_ICON)
-              }
-            />
+            <div className="w-20 h-20 rounded-[12px] mb-4 overflow-hidden">
+              {fallback[app.appName] ? (
+                <LayoutGrid className="w-full h-full" />
+              ) : (
+                <img
+                  src={app.icon}
+                  draggable="false"
+                  className="w-full h-full object-cover"
+                  onError={() => setFallback({ ...fallback, [app.appName]: true })}
+                />
+              )}
+            </div>
+
             <p className="text-m font-semibold">{app.appName.split('').join('\u200B')}</p>
             <p className="text-sm mt-2">{(app.desc || '').split('').join('\u200B')}</p>
           </div>
