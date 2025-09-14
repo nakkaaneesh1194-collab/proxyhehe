@@ -6,7 +6,7 @@ const TextInput = ({ defValue, onChange, placeholder = 'Enter text', maxW = 40 }
 
   return (
     <div
-      className={clsx('relative w-full', 'rounded-md border')}
+      className={clsx('relative w-full', 'rounded-xl border')}
       style={{
         backgroundColor: options.settingsDropdownColor || '#1a2a42',
         maxWidth: `${maxW}rem`,

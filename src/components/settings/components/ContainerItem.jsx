@@ -20,7 +20,7 @@ const SettingsContainerItem = ({
   return (
     <div
       className={clsx(
-        'flex items-center justify-between w-full min-h-[5rem] rounded-lg pl-5 p-3 duration-150 transition-all',
+        'flex items-center justify-between w-full min-h-[5rem] rounded-[1rem] pl-5 p-3 duration-150 transition-all',
         disabled && 'opacity-60 pointer-events-none',
       )}
       style={{ backgroundColor: options.settingsContainerColor || '#1f324e' }}

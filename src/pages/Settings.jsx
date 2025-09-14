@@ -121,7 +121,7 @@ const Settings = () => {
           )}
         >
           <div
-            className="flex items-center max-w-52 h-7 rounded-md mx-auto px-2"
+            className="flex items-center max-w-52 h-7 rounded-lg mx-auto px-2"
             style={{ backgroundColor: options.settingsSearchBar || '#3c475a' }}
           >
             <Search className="w-4 mr-1.5" />
@@ -156,7 +156,7 @@ const Settings = () => {
                 <div
                   key={name}
                   className={clsx(
-                    'w-full flex flex-col rounded-md duration-75 cursor-pointer px-5 py-2',
+                    'w-full flex flex-col rounded-xl duration-75 cursor-pointer px-5 py-2',
                     content !== name && 'bg-transparent hover:bg-[#ffffff23]',
                   )}
                   style={{

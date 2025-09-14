@@ -8,7 +8,7 @@ const Button = ({ value, action, disabled = false, maxW = 40 }) => {
     <button
       onClick={action}
       className={clsx(
-        'rounded-md border text-[0.9rem] font-medium cursor-pointer',
+        'rounded-xl border text-[0.9rem] font-medium cursor-pointer',
         'flex items-center justify-center h-10 px-4 transition-opacity duration-150',
         'hover:opacity-80 active:opacity-90',
         disabled ? "opacity-60" : undefined,
