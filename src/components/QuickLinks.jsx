@@ -39,7 +39,7 @@ const QuickLinks = ({ cls, nav = true }) => {
       name: 'GitHub',
     },
   ];
-  const [quickLinks, setQuickLinks] = useState(() => options.quickLinks ?? defaultLinks);
+  const [quickLinks, setQuickLinks] = useState(() => JSON.parse(localStorage.getItem('options') || {}).quickLinks ?? defaultLinks);
   const [isOpen, setOpen] = useState(false);
   const handleQuickLink = (arr) => {
     setQuickLinks(arr);
