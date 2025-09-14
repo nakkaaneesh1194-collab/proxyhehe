@@ -3,7 +3,6 @@ import { OptionsProvider, useOptions } from './utils/optionsContext';
 import './index.css';
 import 'nprogress/nprogress.css';
 import Loader from './pages/Loader';
-import New from './pages/New';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
 import { initPreload } from './utils/preload';
@@ -17,6 +16,7 @@ const Home = lazyLoad(importHome);
 const Apps = lazyLoad(importApps);
 const Games = lazyLoad(importGames);
 const Settings = lazyLoad(importSettings);
+const New = lazyLoad(() => import ('./pages/New'));
 
 initPreload('/materials', importApps);
 initPreload('/docs', importGames);

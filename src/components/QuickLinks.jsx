@@ -5,13 +5,17 @@ import { Plus, CircleX, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import LinkDialog from './NewQuickLink';
 
-const QuickLinks = () => {
+const QuickLinks = ({ cls, nav = true }) => {
   const { options, updateOption } = useOptions();
   const [fallback, setFallback] = useState({});
   const navigate = useNavigate();
   const g = (s) => {
-    sessionStorage.setItem('query', s);
-    navigate('/indev');
+    if (nav) {
+      sessionStorage.setItem('query', s);
+      navigate('/indev');
+    } else {
+      window.parent.tabManager.navigate(s);
+    }
   };
   const defaultLinks = [
     {
@@ -63,7 +67,12 @@ const QuickLinks = () => {
   );
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 w-full max-w-[40rem] mx-auto mt-[16rem]">
+    <div
+      className={clsx(
+        'flex flex-wrap justify-center gap-4',
+        !cls ? 'w-full max-w-[40rem] mx-auto mt-[16rem]' : cls,
+      )}
+    >
       {quickLinks.map((link, i) => (
         <div className={linkItem} key={i} onClick={() => g(link.link)}>
           <div

@@ -8,7 +8,7 @@ import Logo from '../components/Logo';
 import theme from '../styles/theming.module.css';
 import 'movement.css';
 
-export default function SearchContainer() {
+export default function SearchContainer({ logo = true, cls, nav = true }) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
@@ -76,16 +76,22 @@ export default function SearchContainer() {
   const handleKeyDown = async (e) => {
     if (e.key === 'Enter') {
       const trimmed = query.trim();
-      if (trimmed) {
+      if (trimmed && nav) {
         sessionStorage.setItem('query', trimmed);
         navigate('/indev');
+      } else if (trimmed) {
+        window.parent.tabManager.navigate(trimmed);
       }
     }
   };
 
   const handleResultClick = (phrase) => {
-    sessionStorage.setItem('query', phrase);
-    navigate('/indev');
+    if (nav) {
+      sessionStorage.setItem('query', phrase);
+      navigate('/indev');
+    } else {
+      window.parent.tabManager.navigate(phrase);
+    }
   };
 
   // on unmount
@@ -103,11 +109,13 @@ export default function SearchContainer() {
 
   return (
     <div
-      className="absolute w-full px-20 py-4 flex flex-col items-center mt-8 z-50"
-      data-m="bounce-up"
-      data-m-duration="0.8"
+      className={clsx(
+        !cls ? 'absolute w-full px-20 py-4 flex flex-col items-center mt-8 z-50' : cls,
+      )}
+      data-m={!cls && 'bounce-up'}
+      data-m-duration={!cls && '0.8'}
     >
-      <Logo options="w-[15rem] h-30" />
+      {logo && <Logo options="w-[15rem] h-30" />}
       <GlowWrapper
         glowOptions={{ color: options.glowWrapperColor || '255, 255, 255', size: 70, opacity: 0.2 }}
       >
@@ -122,11 +130,7 @@ export default function SearchContainer() {
             )}
           >
             {iconSrc ? (
-              <img
-                src={iconSrc}
-                className="w-5 h-5 shrink-0"
-                alt="Search icon"
-              />
+              <img src={iconSrc} className="w-5 h-5 shrink-0" alt="Search icon" />
             ) : (
               <Earth size={22} />
             )}

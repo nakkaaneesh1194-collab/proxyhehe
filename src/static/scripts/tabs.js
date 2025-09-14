@@ -104,7 +104,7 @@ class TabManager {
       ? /^https?:\/\//.test(input)
         ? input
         : 'https://' + input
-      : search + this.enc(input);
+      : search + encodeURIComponent(input);
 
   startTracking = () => this.tabs.forEach((t) => this.track(t.id));
 
