@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Geist';
+  font-family: 'Geist', 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   font-size: 14px;
   font-weight: 500;
   user-select: none;
