@@ -3,14 +3,9 @@ import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import fastifyCookie from "@fastify/cookie";
 import { join } from "node:path";
-import { access } from "node:fs/promises";
 import { createServer, ServerResponse } from "node:http";
 import { logging, server as wisp } from "@mercuryworkshop/wisp-js/server";
 import { createBareServer } from "@tomphttp/bare-server-node";
-import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
-import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
-import { bareModulePath } from "@mercuryworkshop/bare-as-module3";
-import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { MasqrMiddleware } from "./masqr.js";
 
 dotenv.config();
@@ -41,17 +36,7 @@ await app.register(fastifyCookie);
 
 [
   { root: join(import.meta.dirname, "dist"), prefix: "/", decorateReply: true },
-  { root: epoxyPath, prefix: "/epoxy/" },
-  { root: baremuxPath, prefix: "/baremux/" },
-  { root: bareModulePath, prefix: "/baremod/" },
-  { root: join(import.meta.dirname, "dist/uv"), prefix: "/_dist_uv/" },
-  { root: uvPath, prefix: "/_uv/" }
 ].forEach(r => app.register(fastifyStatic, { ...r, decorateReply: r.decorateReply||false }));
-
-app.get("/uv/*", async (req, reply) =>
-  reply.sendFile(req.params["*"], await access(join(import.meta.dirname,"dist/uv",req.params["*"]))
-    .then(()=>join(import.meta.dirname,"dist/uv")).catch(()=>uvPath))
-);
 
 if (process.env.MASQR === "true")
   app.addHook("onRequest", MasqrMiddleware);
