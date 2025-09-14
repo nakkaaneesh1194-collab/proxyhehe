@@ -12,8 +12,8 @@ import react from '@vitejs/plugin-react-swc';
 import vitePluginBundleObfuscator from 'vite-plugin-bundle-obfuscator';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const bare = createBareServer('/seal/');
 logging.set_level(logging.NONE);
+let bare;
 
 Object.assign(wisp.options, {
   dns_method: 'resolve',
@@ -74,7 +74,9 @@ export default defineConfig({
     }),
     {
       name: 'server',
+      apply: 'serve',
       configureServer(server) {
+        bare = createBareServer('/seal/'); 
         server.httpServer?.on('upgrade', (req, sock, head) => routeRequest(req, sock, head));
         server.middlewares.use((req, res, next) => routeRequest(req, res) || next());
       },
