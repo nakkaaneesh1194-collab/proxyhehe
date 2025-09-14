@@ -13,7 +13,7 @@ const FieldOption = ({ name, type, state }) => {
       <Input
         className={clsx(
           'w-full h-10 pl-3 rounded-md outline-0 border',
-          options.type == 'dark' ? 'bg-black/40' : 'bg-black/15',
+          options.type == 'light' ? 'bg-black/15' : 'bg-black/35',
         )}
         value={form[type]}
         onChange={(e) => setForm({ ...form, [type]: e.target.value })}
