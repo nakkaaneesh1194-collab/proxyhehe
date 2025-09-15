@@ -2128,7 +2128,7 @@
     {
       "appName": "George and the Printer",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/georgeandtheprinter/icon.png",
+      "icon": "https://img.itch.zone/aW1nLzQyODUxNTUucG5n/original/nUotXS.png",
       "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/georgeandtheprinter/index.html",
       "disabled": false
     },
@@ -2807,8 +2807,281 @@
     {
       "appName": "Zombs Royale",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/zombs-royale/        zomb.png",
+      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/zombs-royale/zomb.png",
       "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/zombs-royale/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "People Playground",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://img.tapimg.net/market/images/f3f8c0d88767c8b847dd476179ff5634.png?imageView2/0/h/270/format/jpg/interlace/1/ignore-error/1&t=1",
+      "url": "https://html-classic.itch.zone/html/14803006/ppg/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Amanda The Adventurer",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/450.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/amanda-the-adventurer/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Baldi's Basics Plus",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/467.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/baldi-plus/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Bendy and the Ink Machine",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/215.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bendy/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Bergentruck 201x",
+      "desc": "Car/Racing Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/455.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bergentruck/BERGENTRUCK_201X.html",
+      "disabled": false
+    },
+    {
+      "appName": "BLOODMONEY!",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/454.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bloodmoney/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Buckshot Roulette",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/205.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/buckshot-roulette/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Class of '09",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/259.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/class-of-09/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Cuphead",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/465.png",
+      "url": "https://rawcdn.githack.com/web-ports/cuphead/734089aa8d8a82017733717dece88c83ba952a98/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Deltarune",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/425.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/deltarune/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/38.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/1/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 2",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/39.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 3",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/40.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/3/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 4",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/41.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/4/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 4 (Halloween Edition)",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/428.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/4-halloween/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Raft",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/457.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/raft/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "R.E.P.O (REPO)",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/195.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/repo/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Undertale",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/184.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/undertale/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Undertale (Yellow)",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/456.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/undertale-yellow/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "WebFishing",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/423.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/webfishing/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Andy's Apple Farm",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/426.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/andys-apple-farm/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Baldi's Basics Classic Remastered",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/466.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/baldi-remaster/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Dead Plate",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/462.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/dead-plate/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "The Deadseat",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/458.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/deadseat/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Do NOT Take This Cat Home",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/193.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/donottakethiscathome/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Fears to Fathom: Home Alone",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/460.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/fears-to-fathom/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Happy Sheepies",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/351.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/happy-sheepies/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Hotline Miami",
+      "desc": "Shooter Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/217.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/hotline-miami/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Human Expenditure Program",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/482.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/human-expenditure-program/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Kindergarten",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/445.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/kindergarten/1/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Kindergarten 2",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/446.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/kindergarten/2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Lacey's Flash Games",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/463.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/lacysflashgames/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Omori",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/427.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/omori-fixed/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Slender: The Eight Pages",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/451.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/slender/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Speed Stars",
+      "desc": "Running Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/266.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/speed-stars/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "That's Not My Neighbor",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/216.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/thats-not-my-neighbor/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "The Man From The Window",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/459.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/the-man-in-the-window/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "ULTRAKILL",
+      "desc": "Shooter Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/196.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/ultrakill/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Yume Nikki",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/433.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/yume-nikki/index.html",
       "disabled": false
     }
   ]
