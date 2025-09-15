@@ -28,6 +28,13 @@ const ComboBox = ({
       ? config
       : config.filter(({ option }) => option.toLowerCase().includes(query.toLowerCase()));
 
+  const scroll = clsx(
+    'scrollbar scrollbar-track-transparent scrollbar-thin',
+    options?.type === 'dark' || !options?.type
+      ? 'scrollbar-thumb-gray-600'
+      : 'scrollbar-thumb-gray-500',
+  );
+
   return (
     <Combobox
       value={selectedValue}
@@ -76,6 +83,7 @@ const ComboBox = ({
               'flex flex-col gap-1',
               'w-full max-h-60 overflow-auto',
               'rounded-[0.8rem] border bg-inherit p-[0.4rem] shadow-lg',
+              scroll
             )}
           >
             {filteredOptions.map((cfg) => (

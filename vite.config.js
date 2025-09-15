@@ -76,9 +76,25 @@ export default defineConfig({
       name: 'server',
       apply: 'serve',
       configureServer(server) {
-        bare = createBareServer('/seal/'); 
+        bare = createBareServer('/seal/');
         server.httpServer?.on('upgrade', (req, sock, head) => routeRequest(req, sock, head));
         server.middlewares.use((req, res, next) => routeRequest(req, res) || next());
+      },
+    },
+    {
+      name: 'search',
+      apply: 'serve',
+      configureServer(s) {
+        s.middlewares.use('/return', async (req, res) => {
+          const q = new URL(req.url, 'http://x').searchParams.get('q');
+          try {
+            const r = q && (await fetch(`https://duckduckgo.com/ac/?q=${encodeURIComponent(q)}`));
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(r ? await r.json() : { error: 'query parameter?' }));
+          } catch {
+            res.end(JSON.stringify({ error: 'request failed' }));
+          }
+        });
       },
     },
   ],

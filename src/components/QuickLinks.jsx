@@ -86,7 +86,7 @@ const QuickLinks = ({ cls, nav = true }) => {
               'group-hover:opacity-100 duration-200 ease',
             )}
           >
-            <CircleX size="16" />
+            <CircleX size="16" className="opacity-50" />
           </div>
           <div className={linkLogo}>
             {fallback[i] ? (

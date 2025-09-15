@@ -12,19 +12,14 @@ export const resetInstance = () => {
   }
   localStorage.clear();
   sessionStorage.clear();
-
-  if ('indexedDB' in window) {
-    ['__op', '$scramjet'].forEach((db) => {
-      const req = indexedDB.deleteDatabase(db);
-      req.onerror = () => console.error(`Failed to clear ${db}`);
-    });
-  }
-  document.cookie
-    .split(';')
-    .forEach(
-      (c) => (document.cookie = `${c.trim()}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`),
-    );
-
+  /*
+    if ('indexedDB' in window) {
+      ['__op', '$scramjet'].forEach((db) => {
+        const req = indexedDB.deleteDatabase(db);
+        req.onerror = () => console.error(`Failed to clear ${db}`);
+      });
+    }
+  */
   location.href = '/';
 };
 

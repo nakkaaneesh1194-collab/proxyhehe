@@ -143,7 +143,6 @@ export const advancedConfig = ({ options, updateOption }) => ({
     type: 'button',
     value: 'Reset Data',
     action: () => import('/src/utils/utils.js').then(({ resetInstance }) => resetInstance()),
-    disabled: true,
   },
 });
 
