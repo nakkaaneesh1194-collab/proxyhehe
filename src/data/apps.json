@@ -3083,6 +3083,13 @@
       "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/433.png",
       "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/yume-nikki/index.html",
       "disabled": false
+    },
+    {
+      "appName": "Crazy Cattle 3D",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/164.png",
+      "url": "https://1games.io/game/crazy-cattle-3d/",
+      "disabled": false
     }
   ]
 }
