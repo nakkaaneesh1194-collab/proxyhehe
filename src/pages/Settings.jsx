@@ -34,6 +34,8 @@ const configs = [
       'size',
       'donate',
       'donation',
+      'tabs bar',
+      'tab bar'
     ],
     fn: customizeConfig,
   },

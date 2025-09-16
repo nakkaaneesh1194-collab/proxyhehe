@@ -444,17 +444,19 @@ class TabManager {
 
   render = () => {
     const w = this.getTabWidth();
+    const op = JSON.parse(localStorage.getItem('options') || '{}');
     this.tc.innerHTML = this.tabs
       .map(
         (t, i) => `
-          <div class="tab-item relative flex items-center justify-between pl-2.5 pr-1.5 py-1 rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${
+          <div class="tab-item relative flex items-center rounded-b-none justify-between pl-2.5 pr-1.5 py-[0.28rem] rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${
             t.active
-              ? 'bg-[#8b8b8b3f] text-[' +
-                  JSON.parse(localStorage.getItem('options') || {}).bodyText || '#8a9bb8' + ']'
+              ? `border border-b-0 text-[${op.bodyText || '#8a9bb8'}]`
               : 'hover:bg-[#cccccc2f]'
           } ${i === 0 ? 'ml-0' : '-ml-px'}" style="width:${w}px;min-width:${
           this.minW
-        }px" data-tab-id="${t.id}">
+        }px;background-color:${t.active ? op.urlBarBg || '#1d303f' : undefined}" data-tab-id="${
+          t.id
+        }">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
             <span class="text-[12px] font-medium truncate flex-1 mr-2 ml-1.5" title="${this.escapeHTML(
               t.title,
@@ -491,9 +493,9 @@ window.addEventListener('load', async () => {
   const { log, warn, error } = logUtils;
 
   const getOption = (key, fallback) => {
-    const item = JSON.parse(localStorage.getItem('options') || '{}')[key]
-    return (item !== "" && item) ? item : fallback;
-  }
+    const item = JSON.parse(localStorage.getItem('options') || '{}')[key];
+    return item !== '' && item ? item : fallback;
+  };
 
   const ws = getOption('wServer', CONFIG.ws);
   const transport = getOption('transport', CONFIG.transport);
@@ -555,10 +557,30 @@ window.addEventListener('load', async () => {
 
   const domMap = {
     'tabs-btn': () => document.getElementById('tb')?.classList.toggle('hidden'),
+    'tbtog': () => {
+      document.getElementById('tb')?.classList.add('hidden');
+      !localStorage.getItem('tip0') &&
+        document.dispatchEvent(
+          new CustomEvent('basecoat:toast', {
+            detail: {
+              config: {
+                category: 'info',
+                title: 'Tips Notifier',
+                duration: Math.pow(6400, 2), // there was no 'indefinite' option lmao
+                description: 'You can hide the tab bar automatically in Settings!',
+                cancel: { label: 'Got it!' },
+              },
+            },
+          }),
+          localStorage.setItem('tip0', '1'),
+        );
+    },
     'n-bk': () => tabManager.back(),
     'n-fw': () => tabManager.forward(),
     'n-rl': () => tabManager.reload(),
   };
+
+  (tabManager.options.showTb ?? true) && domMap['tabs-btn']();
 
   Object.entries(domMap).forEach(([id, fn]) => {
     document.getElementById(id)?.addEventListener('click', fn);

@@ -7,6 +7,7 @@ export function unbind(): void {
       cur.contentWindow?.document.removeEventListener('click', curClick);
     } catch {}
   }
+  
   cur = null;
   curClick = null;
 }

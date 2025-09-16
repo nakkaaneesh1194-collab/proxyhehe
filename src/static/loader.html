@@ -38,6 +38,7 @@
         Menu,
         Plus,
         Search,
+        PanelBottomClose
       } from "lucide";
 
       createIcons({
@@ -49,6 +50,7 @@
           Menu,
           Plus,
           Search,
+          PanelBottomClose
         },
       });
     </script>
@@ -144,10 +146,14 @@
 
   <body>
     <div class="flex flex-col justify-center items-center h-screen select-none">
-      <div id="tb" class="hidden w-full border-b shadow-xl/5 flex items-center px-2 py-1">
+      <div id="tb" class="hidden w-full shadow-xl/5 flex items-center px-2 pt-[0.3rem]">
         <div id="tabs-cont" class="flex flex-1 overflow-hidden gap-1"></div>
-        <button id="tab-btn" class="ml-2 w-7 h-7 rounded-xs flex items-center justify-center transition-all duration-200">
+        <button id="tab-btn" class="ml-2 w-6 h-6 mb-1 rounded-lg flex items-center justify-center transition-all duration-200">
           <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="tbtog" class="ml-2 w-6 h-6 mb-1 mr-1 rounded-lg flex items-center justify-center transition-all duration-200 hover:bg-[#b6bfc748] active:bg-[#d8e4ee6e]"
+          title="Hide Tab bar">
+          <i data-lucide="panel-bottom-close" class="w-4 h-4"></i>
         </button>
       </div>
       <div class="flex w-full h-[45px] p-1 pl-2 pr-3 gap-1 z-50 shadow-xl/5 items-center" id="d-url">

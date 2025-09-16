@@ -84,6 +84,13 @@ export const customizeConfig = ({ options, updateOption }) => ({
     action: (a) => updateOption(a),
   },
   3: {
+    name: 'Tabs Bar',
+    desc: 'Show the tabs bar, allowing you to open multiple sites when browsing.',
+    value: options.showTb ?? true,
+    type: 'switch',
+    action: (b) => setTimeout(() => updateOption({ showTb: b }), 100),
+  },
+  4: {
     name: 'Navigation Scale',
     desc: 'Scale navigation bar size (logo & font) globally.',
     config: navScaleConfig,
@@ -91,7 +98,7 @@ export const customizeConfig = ({ options, updateOption }) => ({
     type: 'select',
     action: (a) => updateOption(a),
   },
-  4: {
+  5: {
     name: 'Donation button',
     desc: 'Toggle whether you want the "Support us" button to show.',
     value: options.donationBtn ?? true,
