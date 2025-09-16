@@ -1,11 +1,14 @@
 import Routing from './Routing';
-import { OptionsProvider, useOptions } from './utils/optionsContext';
-import './index.css';
-import 'nprogress/nprogress.css';
+import ReactGA from "react-ga4";
 import Loader from './pages/Loader';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { OptionsProvider, useOptions } from './utils/optionsContext';
 import { initPreload } from './utils/preload';
+import './index.css';
+import 'nprogress/nprogress.css';
 
 const importHome = () => import('./pages/Home');
 const importApps = () => import('./pages/Apps');
@@ -21,11 +24,19 @@ const New = lazyLoad(() => import ('./pages/New'));
 initPreload('/materials', importApps);
 initPreload('/docs', importGames);
 initPreload('/settings', importSettings);
-
 initPreload('/', importHome);
+
+function useTracking() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+}
 
 const ThemedApp = () => {
   const { options } = useOptions();
+  useTracking();
 
   const pages = [
     { path: '/', element: <Home /> },
