@@ -5,7 +5,6 @@ import ReactGA from "react-ga4";
 import App from "./App";
 
 ReactGA.initialize("G-HWLK0PZVBM");
-ReactGA.send("pageview"); 
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
