@@ -3,8 +3,8 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { logging, server as wisp } from '@mercuryworkshop/wisp-js/server';
-import { createBareServer } from '@tomphttp/bare-server-node';
-import { epoxyPath } from '@mercuryworkshop/epoxy-transport';
+import createBareServer from "@tomphttp/bare-server-node";
+import { libcurlPath } from '@mercuryworkshop/libcurl-transport';
 import { baremuxPath } from '@mercuryworkshop/bare-mux/node';
 import { bareModulePath } from '@mercuryworkshop/bare-as-module3';
 import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
@@ -57,7 +57,7 @@ export default defineConfig({
     vitePluginBundleObfuscator(obf),
     viteStaticCopy({
       targets: [
-        { src: [normalizePath(resolve(epoxyPath, '*'))], dest: 'epoxy' },
+        { src: [normalizePath(resolve(libcurlPath, '*'))], dest: 'libcurl' },
         { src: [normalizePath(resolve(baremuxPath, '*'))], dest: 'baremux' },
         { src: [normalizePath(resolve(bareModulePath, '*'))], dest: 'baremod' },
         {
@@ -121,13 +121,13 @@ export default defineConfig({
         Math.random().toString(36).substring(2, 8),
     },
   },
-  server: {
-    proxy: {
-      '/assets/img': {
-        target: 'https://dogeub-assets.pages.dev',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/assets\/img/, '/img'),
-      },
+server: {
+  proxy: {
+    '/assets/img': {
+      target: 'https://dogeub-assets.pages.dev',
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/assets\/img/, '/img'),
     },
   },
+},
 });

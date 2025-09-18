@@ -5,7 +5,7 @@ import fastifyCookie from "@fastify/cookie";
 import { join } from "node:path";
 import { createServer, ServerResponse } from "node:http";
 import { logging, server as wisp } from "@mercuryworkshop/wisp-js/server";
-import { createBareServer } from "@tomphttp/bare-server-node";
+import createBareServer from "@tomphttp/bare-server-node";
 import { MasqrMiddleware } from "./masqr.js";
 
 dotenv.config();

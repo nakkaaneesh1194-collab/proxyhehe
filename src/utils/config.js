@@ -537,6 +537,14 @@ export const prConfig = [
       prType: 'uv',
     },
   },
+  /*
+  {
+    option: 'Ultraviolet V1 only',
+    value: {
+      prType: 'uv1',
+    },
+  },
+  */
   {
     option: 'Scramjet only',
     value: {
