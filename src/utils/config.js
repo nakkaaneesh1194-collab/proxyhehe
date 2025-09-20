@@ -232,7 +232,7 @@ export const meta = [
   {
     option: 'Default',
     value: {
-      tabName: `v5-prod-${pkg.version} stable`,
+      tabName: `v5-${__ENVIRONMENT__}-${pkg.version}`,
       tabIcon: '/icon.svg',
     },
   },
@@ -537,14 +537,12 @@ export const prConfig = [
       prType: 'uv',
     },
   },
-  /*
-  {
+  /*{
     option: 'Ultraviolet V1 only',
     value: {
       prType: 'uv1',
     },
-  },
-  */
+  },*/
   {
     option: 'Scramjet only',
     value: {

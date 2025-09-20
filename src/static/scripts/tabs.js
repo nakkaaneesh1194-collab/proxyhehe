@@ -450,7 +450,8 @@ window.addEventListener('load', async () => {
   };
 
   const ws = getOption('wServer', CONFIG.ws);
-  const transport = getOption('transport', CONFIG.transport);
+  const transport = (location.hostname.endsWith('.vercel.app') ? CONFIG.baremod : CONFIG.transport);
+  let c = self.__uv$config;
 
   const setTransport = async () => {
     try { await connection.setTransport(transport, [{ wisp: ws }]); log(`Set transport: ${transport}`); }
@@ -484,7 +485,6 @@ window.addEventListener('load', async () => {
 
   let tabManager;
   try {
-    const c = self.__uv$config;
     tabManager = await new TabManager([c.encodeUrl, c.decodeUrl]);
   } catch (err) { error('TabManager init failed:', err); throw err; }
 

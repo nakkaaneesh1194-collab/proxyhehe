@@ -5,13 +5,13 @@ import fastifyCookie from "@fastify/cookie";
 import { join } from "node:path";
 import { createServer, ServerResponse } from "node:http";
 import { logging, server as wisp } from "@mercuryworkshop/wisp-js/server";
-import createBareServer from "@tomphttp/bare-server-node";
+import { createBareServer } from "@tomphttp/bare-server-node";
 import { MasqrMiddleware } from "./masqr.js";
 
 dotenv.config();
 ServerResponse.prototype.setMaxListeners(50);
 
-const port = process.env.PORT || 2345, server = createServer(), bare = createBareServer("/seal/");
+const port = process.env.PORT || 2345, server = createServer(), bare = process.env.BARE !== "false" ? createBareServer("/seal/") : null;
 logging.set_level(logging.NONE);
 
 Object.assign(wisp.options, {
@@ -21,22 +21,24 @@ Object.assign(wisp.options, {
 });
 
 server.on("upgrade", (req, sock, head) =>
-  bare.shouldRoute(req) ? bare.routeUpgrade(req, sock, head)
+  bare?.shouldRoute(req) ? bare.routeUpgrade(req, sock, head)
   : req.url.endsWith("/wisp/") ? wisp.routeRequest(req, sock, head)
   : sock.end()
 );
 
 const app = Fastify({
   serverFactory: h => (server.on("request", (req,res) =>
-    bare.shouldRoute(req) ? bare.routeRequest(req,res) : h(req,res)), server),
+    bare?.shouldRoute(req) ? bare.routeRequest(req,res) : h(req,res)), server),
   logger: false
 });
 
 await app.register(fastifyCookie);
 
-[
-  { root: join(import.meta.dirname, "dist"), prefix: "/", decorateReply: true },
-].forEach(r => app.register(fastifyStatic, { ...r, decorateReply: r.decorateReply||false }));
+app.register(fastifyStatic, {
+  root: join(import.meta.dirname, "dist"),
+  prefix: "/",
+  decorateReply: true
+});
 
 if (process.env.MASQR === "true")
   app.addHook("onRequest", MasqrMiddleware);

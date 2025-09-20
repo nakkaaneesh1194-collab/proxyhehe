@@ -12,18 +12,11 @@ export const resetInstance = () => {
   }
   localStorage.clear();
   sessionStorage.clear();
-  /*
-    if ('indexedDB' in window) {
-      ['__op', '$scramjet'].forEach((db) => {
-        const req = indexedDB.deleteDatabase(db);
-        req.onerror = () => console.error(`Failed to clear ${db}`);
-      });
-    }
-  */
   location.href = '/';
 };
 
 export const ckOff = () => {
+  if (document.title.includes('v5-')) return;
   const op = JSON.parse(localStorage.options || '{}');
   import('./config.js').then(({ meta }) => {
     const { tabName: t, tabIcon: i } = op;

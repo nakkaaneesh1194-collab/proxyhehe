@@ -182,7 +182,7 @@
     {
       "appName": "Tiny Fishing",
       "desc": "All-Time favorites",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/tiny-fishing/thumb.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/tiny-fishing/thumb.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/tiny-fishing/index.html",
       "disabled": false
     },
@@ -203,7 +203,7 @@
     {
       "appName": "Bounce Back",
       "desc": "Shooter Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/bounceback.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/bounceback.jpg",
       "url": "https://skoolcdn.github.io/gfiles/gfiles/html5/bounceback",
       "disabled": false
     },
@@ -252,7 +252,7 @@
     {
       "appName": "Janissary Battles",
       "desc": "Shooter Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/janissary.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/janissary.png",
       "url": "https://html5.gamedistribution.com/rvvASMiM/8b55f4f729be4e70b6155f27d2e04690/?gd_sdk_referrer_url=https://gamedistribution.com/games/janissary-battles",
       "disabled": false
     },
@@ -273,21 +273,21 @@
     {
       "appName": "Master Archer",
       "desc": "Shooter Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/masterarcher.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/masterarcher.jpg",
       "url": "https://playcanv.as/p/JERg21J8",
       "disabled": false
     },
     {
       "appName": "Missiles",
       "desc": "Shooter Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/missiles/miss.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/missiles/miss.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/missiles/index.html",
       "disabled": false
     },
     {
       "appName": "Robostorm",
       "desc": "Shooter Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/robostorm.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/robostorm.jpg",
       "url": "https://robostorm.io",
       "disabled": false
     },
@@ -302,35 +302,35 @@
       "appName": "Rooftop Snipers",
       "desc": "Shooter Games",
       "icon": "https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/c127771edb0e821e4109b7058ae3f094.jpeg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rooftop-snipers/index.html",
+      "url": "https://dogeub-assets.ftp.sh/rooftop-snipers/index.html",
       "disabled": false
     },
     {
       "appName": "Station 141",
       "desc": "Shooter Games",
       "icon": "/assets/img/station141.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/station-141/index.html",
+      "url": "https://dogeub-assets.ftp.sh/station-141/index.html",
       "disabled": false
     },
     {
       "appName": "Stick Archers",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-archers/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-archers/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stick-archers/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/stick-archers/index.html",
       "disabled": false
     },
     {
       "appName": "Stick Merge",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-merge/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-merge/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stick-merge/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/stick-merge/index.html",
       "disabled": false
     },
     {
       "appName": "Superhot",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/superhot/hot.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/superhot/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/superhot/hot.jpg",
+      "url": "https://dogeub-assets.ftp.sh/superhot/index.html",
       "disabled": false
     },
     {
@@ -343,7 +343,7 @@
     {
       "appName": "Wolfenstein",
       "desc": "Shooter Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/wolfenstein-3d/art/wolf3d.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/wolfenstein-3d/art/wolf3d.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/wolfenstein-3d/index.html",
       "disabled": false
     },
@@ -357,15 +357,15 @@
     {
       "appName": "Archery World Tour",
       "desc": "Sport Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/awt.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/awt.jpg",
       "url": "https://gamesnacks.com/embed/games/archery",
       "disabled": false
     },
     {
       "appName": "Basket Bros",
       "desc": "Sport Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/basketbros.jpg",
-      "url": "https:https://www.3kh0-assets.silvereen.net/3kh0-assets/basketbros-io/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/basketbros.jpg",
+      "url": "https:https://dogeub-assets.ftp.sh/basketbros-io/index.html",
       "disabled": false
     },
     {
@@ -399,28 +399,28 @@
     {
       "appName": "Cannon Basketball 4",
       "desc": "Sport Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cannon-basketball-4/img/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cannon-basketball-4/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/cannon-basketball-4/img/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/cannon-basketball-4/index.html",
       "disabled": false
     },
     {
       "appName": "Champion Island",
       "desc": "Sport Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/champion-island/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/champion-island/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/champion-island/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/champion-island/index.html",
       "disabled": false
     },
     {
       "appName": "Let's Surf",
       "desc": "Sport Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/ltsf.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/edge-surf/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/ltsf.png",
+      "url": "https://dogeub-assets.ftp.sh/edge-surf/index.html",
       "disabled": false
     },
     {
       "appName": "Penalty Kicks",
       "desc": "Sport Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/penaltykicks.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/penaltykicks.png",
       "url": "https://www.mathplayground.com/penalty-kicks/index.html",
       "disabled": false
     },
@@ -441,8 +441,8 @@
     {
       "appName": "Soccer Skills",
       "desc": "Sport Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/soccer-skills/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/soccer-skills/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/soccer-skills/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/soccer-skills/index.html",
       "disabled": false
     },
     {
@@ -463,20 +463,20 @@
       "appName": "99 Balls Evo",
       "desc": "Ball/Platformer Games",
       "icon": "/assets/img/99ballsevo.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/99balls/index.html",
+      "url": "https://dogeub-assets.ftp.sh/99balls/index.html",
       "disabled": false
     },
     {
       "appName": "Achievement Unlocked",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/achievementunlocked/achievementunlocked.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/achievementunlocked/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/achievementunlocked/achievementunlocked.png",
+      "url": "https://dogeub-assets.ftp.sh/achievementunlocked/index.html",
       "disabled": false
     },
     {
       "appName": "Amidst The Clouds",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/amidst-the-clouds/splash.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/amidst-the-clouds/splash.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/amidst-the-clouds/index.html",
       "disabled": false
     },
@@ -490,22 +490,22 @@
     {
       "appName": "Big NEON Tower Tiny Square",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/bntts/icons/icon-256.png",
-      "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/bntts/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/bntts/icons/icon-256.png",
+      "url": "https://www.coolmathgames.com/0-big-neon-tower-tiny-square/play",
       "disabled": false
     },
     {
       "appName": "Big Tower Tiny Square",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/btts/images.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/btts/images.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/btts/index.html",
       "disabled": false
     },
     {
       "appName": "Bob The Robber 2",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/btr2.jpeg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bobtherobber2/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/btr2.jpeg",
+      "url": "https://dogeub-assets.ftp.sh/bobtherobber2/index.html",
       "disabled": false
     },
     {
@@ -518,7 +518,7 @@
     {
       "appName": "Circlo",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/circlo/img/circlo.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/circlo/img/circlo.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/circlo/index.html",
       "disabled": false
     },
@@ -532,7 +532,7 @@
     {
       "appName": "Doodle Jump",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/doodle-jump/doodle.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/doodle-jump/doodle.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/doodle-jump/index.html",
       "disabled": false
     },
@@ -544,44 +544,44 @@
       "disabled": false
     },
     {
-      "appName": "Geometry Dash",
+      "appName": "Geometry Dash Lite",
       "desc": "Ball/Platformer Games",
       "icon": "/assets/img/geometrydash.webp",
-      "url": "https://lnageo.github.io/a77/geometry-dash/",
+      "url": "https://geometrydash-lite.io/",
       "disabled": false
     },
     {
       "appName": "Happy Wheels",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/happywheels.jpeg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/happywheels.jpeg",
       "url": "https://games-online.io/game/HappyWheels",
       "disabled": false
     },
     {
       "appName": "Henry Stickmin: Breaking the Bank",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/breakingthebank/breakingthebank.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/breakingthebank/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/breakingthebank/breakingthebank.png",
+      "url": "https://dogeub-assets.ftp.sh/breakingthebank/index.html",
       "disabled": false
     },
     {
       "appName": "Henry Stickmin: Escaping The Prision",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/escapingtheprison/escapingtheprison.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/escapingtheprison/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/escapingtheprison/escapingtheprison.jpg",
+      "url": "https://dogeub-assets.ftp.sh/escapingtheprison/index.html",
       "disabled": false
     },
     {
       "appName": "Henry Stickmin: Fleeing The Complex",
       "desc": "Ball/Platformer Games",
       "icon": "/assets/img/fleeingthecomplex.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fleeingthecomplex/index.html",
+      "url": "https://dogeub-assets.ftp.sh/fleeingthecomplex/index.html",
       "disabled": false
     },
     {
       "appName": "Offline Paradise",
       "desc": "Ball/Platformer Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/offline-paradise/assets/icon.webp",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/offline-paradise/assets/icon.webp",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/offline-paradise/index.html",
       "disabled": false
     },
@@ -595,15 +595,15 @@
     {
       "appName": "Rolling Forests",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rolling-forests/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rolling-forests/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/rolling-forests/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/rolling-forests/index.html",
       "disabled": false
     },
     {
       "appName": "Rolly Vortex",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rolly-vortex/icon-256.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rolly-vortex/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/rolly-vortex/icon-256.png",
+      "url": "https://dogeub-assets.ftp.sh/rolly-vortex/index.html",
       "disabled": false
     },
     {
@@ -624,21 +624,21 @@
       "appName": "Slope",
       "desc": "Ball/Platformer Games",
       "icon": "/assets/img/slope.webp",
-      "url": "https://derpmandev.github.io/unblocked-games/slope",
+      "url": "https://dogeub-assets.ftp.sh/slope/",
       "disabled": false
     },
     {
       "appName": "Slope 2",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/slope-2/slope-2-logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/slope-2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/slope-2/slope-2-logo.png",
+      "url": "https://dogeub-assets.ftp.sh/slope-2/index.html",
       "disabled": false
     },
     {
       "appName": "Slope Ball",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/slope-ball/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/slope-ball/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/slope-ball/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/slope-ball/index.html",
       "disabled": false
     },
     {
@@ -679,21 +679,21 @@
     {
       "appName": "10 Minutes Till dawn",
       "desc": "Domination Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/tmtd.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/tmtd.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/10-minutes-till-dawn/index.html",
       "disabled": false
     },
     {
       "appName": "Ages of Conflict",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ages-of-conflict/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ages-of-conflict/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ages-of-conflict/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/ages-of-conflict/index.html",
       "disabled": false
     },
     {
       "appName": "Alien Hominid",
       "desc": "Domination Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/alienhominid/alienhominid.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/alienhominid/alienhominid.jpg",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/alienhominid/index.html",
       "disabled": false
     },
@@ -708,7 +708,7 @@
       "appName": "Amongus",
       "desc": "Domination Games",
       "icon": "https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/among-us/index.html",
+      "url": "https://dogeub-assets.ftp.sh/among-us/index.html",
       "disabled": false
     },
     {
@@ -756,15 +756,15 @@
     {
       "appName": "Knife Master",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/knife-master/512x512.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/knife-master/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/knife-master/512x512.jpg",
+      "url": "https://dogeub-assets.ftp.sh/knife-master/index.html",
       "disabled": false
     },
     {
       "appName": "Om-Nom Bounce",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/om-bounce/assets/icon.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/om-bounce/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/om-bounce/assets/icon.webp",
+      "url": "https://dogeub-assets.ftp.sh/om-bounce/index.html",
       "disabled": false
     },
     {
@@ -777,21 +777,21 @@
     {
       "appName": "Rabbit Samurai",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rabbit-samurai/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rabbit-samurai/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/rabbit-samurai/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/rabbit-samurai/index.html",
       "disabled": false
     },
     {
       "appName": "Rabbit Samurai 2",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rabbit-samurai2/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/rabbit-samurai2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/rabbit-samurai2/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/rabbit-samurai2/index.html",
       "disabled": false
     },
     {
       "appName": "Radius Raid",
       "desc": "Domination Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/radiusraid.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/radiusraid.jpg",
       "url": "https://jackrugile.com/radius-raid/",
       "disabled": false
     },
@@ -805,8 +805,8 @@
     {
       "appName": "Snowbattle.io",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/snowbattle/img/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/snowbattle/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/snowbattle/img/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/snowbattle/index.html",
       "disabled": false
     },
     {
@@ -819,8 +819,8 @@
     {
       "appName": "Stickman Survival",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/Stickman-Survival/Icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/Stickman-Survival/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/Stickman-Survival/Icon.png",
+      "url": "https://dogeub-assets.ftp.sh/Stickman-Survival/index.html",
       "disabled": false
     },
     {
@@ -833,7 +833,7 @@
     {
       "appName": "The Chroma Incident",
       "desc": "Domination Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/thechromaincident.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/thechromaincident.png",
       "url": "https://js13kgames.com/games/the-chroma-incident/index.html",
       "disabled": false
     },
@@ -841,7 +841,7 @@
       "appName": "Veloce",
       "desc": "Domination Games",
       "icon": "https://img.itch.zone/aW1nLzI1NjI0MjgucG5n/original/qN6zkD.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/veloce/index.html",
+      "url": "https://dogeub-assets.ftp.sh/veloce/index.html",
       "disabled": false
     },
     {
@@ -854,22 +854,22 @@
     {
       "appName": "Avalanche",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/avalanche/avalanche.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/avalanche/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/avalanche/avalanche.png",
+      "url": "https://dogeub-assets.ftp.sh/avalanche/index.html",
       "disabled": false
     },
     {
       "appName": "Backrooms",
       "desc": "Running Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/backrooms.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/backrooms/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/backrooms.jpg",
+      "url": "https://dogeub-assets.ftp.sh/backrooms/index.html",
       "disabled": false
     },
     {
       "appName": "Chrome Dino",
       "desc": "Running Games",
       "icon": "/assets/img/chromedino.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/chrome-dino/index.html",
+      "url": "https://dogeub-assets.ftp.sh/chrome-dino/index.html",
       "disabled": false
     },
     {
@@ -882,7 +882,7 @@
     {
       "appName": "Crossy Road",
       "desc": "Running Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/crossy-road/icon.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/crossy-road/icon.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/crossy-road/index.html",
       "disabled": false
     },
@@ -896,56 +896,56 @@
     {
       "appName": "Death Run 3D",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/death-run-3d/img/death.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/death-run-3d/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/death-run-3d/img/death.png",
+      "url": "https://dogeub-assets.ftp.sh/death-run-3d/index.html",
       "disabled": false
     },
     {
       "appName": "Dino Run 3d",
       "desc": "Running Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/dino3d.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/dino3d.jpg",
       "url": "https://russell2259.github.io/dino3d/",
       "disabled": false
     },
     {
       "appName": "Ducklife",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife1/ducklife.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife1/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ducklife1/ducklife.png",
+      "url": "https://dogeub-assets.ftp.sh/ducklife1/index.html",
       "disabled": false
     },
     {
       "appName": "Ducklife 2",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife2/ducklife2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ducklife2/ducklife2.png",
+      "url": "https://dogeub-assets.ftp.sh/ducklife2/index.html",
       "disabled": false
     },
     {
       "appName": "Ducklife 3",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife3/duck.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife3/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ducklife3/duck.png",
+      "url": "https://dogeub-assets.ftp.sh/ducklife3/index.html",
       "disabled": false
     },
     {
       "appName": "Ducklife 4",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife4/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ducklife4/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ducklife4/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/ducklife4/index.html",
       "disabled": false
     },
     {
       "appName": "Getaway Shootout",
       "desc": "Running Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/getaway-shootout/img/index.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/getaway-shootout/img/index.jpg",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/getaway-shootout/index.html",
       "disabled": false
     },
     {
       "appName": "Jetpack Joyride",
       "desc": "Running Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/jetpack-joyride/splash.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/jetpack-joyride/splash.jpg",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/jetpack-joyride/index.html",
       "disabled": false
     },
@@ -973,15 +973,15 @@
     {
       "appName": "Papery Planes",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/papery-planes/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/papery-planes/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/papery-planes/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/papery-planes/index.html",
       "disabled": false
     },
     {
       "appName": "Polybranch",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/polybranch/img/pic1.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/polybranch/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/polybranch/img/pic1.png",
+      "url": "https://dogeub-assets.ftp.sh/polybranch/index.html",
       "disabled": false
     },
     {
@@ -995,14 +995,14 @@
       "appName": "Subway Surfers",
       "desc": "Running Games",
       "icon": "/assets/img/subway.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/subway-surfers/index.html",
+      "url": "https://dogeub-assets.ftp.sh/subway-surfers/index.html",
       "disabled": false
     },
     {
       "appName": "Subway Surfers: New York",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/subway-surfers-ny/NewYorkIcon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/subway-surfers-ny/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/subway-surfers-ny/NewYorkIcon.png",
+      "url": "https://dogeub-assets.ftp.sh/subway-surfers-ny/index.html",
       "disabled": false
     },
     {
@@ -1023,14 +1023,14 @@
       "appName": "Temple Run 2",
       "desc": "Running Games",
       "icon": "https://upload.wikimedia.org/wikipedia/en/9/98/Temple_Run_2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/temple-run-2/index.html",
+      "url": "https://dogeub-assets.ftp.sh/temple-run-2/index.html",
       "disabled": false
     },
     {
       "appName": "Tube Jumpers",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tube-jumpers/img/shark.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tube-jumpers/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tube-jumpers/img/shark.jpg",
+      "url": "https://dogeub-assets.ftp.sh/tube-jumpers/index.html",
       "disabled": false
     },
     {
@@ -1044,7 +1044,7 @@
       "appName": "Vex 3",
       "desc": "Running Games",
       "icon": "/assets/img/vex3.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/vex3/index.html",
+      "url": "https://dogeub-assets.ftp.sh/vex3/index.html",
       "disabled": false
     },
     {
@@ -1064,7 +1064,7 @@
     {
       "appName": "Vex 6",
       "desc": "Running Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/vex-6.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/vex-6.png",
       "url": "https://html5.gamedistribution.com/rvvASMiM/4925e12574364121a48c61c35f649c36/?gd_sdk_referrer_url=https://gamedistribution.com/games/vex-6",
       "disabled": false
     },
@@ -1085,15 +1085,15 @@
     {
       "appName": "Asphalt Retro",
       "desc": "Car/Racing Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/asr.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/asr.jpg",
       "url": "https://html5.gamedistribution.com/rvvASMiM/2c122cee7ef04222a962449e32a34e98/?gd_sdk_referrer_url=https://gamedistribution.com/games/asphalt-retro",
       "disabled": false
     },
     {
       "appName": "Cars Simulator",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cars-simulator/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cars-simulator/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/cars-simulator/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/cars-simulator/index.html",
       "disabled": false
     },
     {
@@ -1106,7 +1106,7 @@
     {
       "appName": "Drift Boss",
       "desc": "Car/Racing Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/driftboss.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/driftboss.png",
       "url": "https://www.mathplayground.com/drift-boss-v3/index.html",
       "disabled": false
     },
@@ -1141,22 +1141,22 @@
     {
       "appName": "Madalin Stunt Cars 2",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/madalin-stunt-cars-2/img/logo.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/madalin-stunt-cars-2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/madalin-stunt-cars-2/img/logo.jpg",
+      "url": "https://dogeub-assets.ftp.sh/madalin-stunt-cars-2/index.html",
       "disabled": false
     },
     {
       "appName": "Madalin Stunt Cars 3",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/madalin-stunt-cars-3/img/index.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/madalin-stunt-cars-3/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/madalin-stunt-cars-3/img/index.jpg",
+      "url": "https://dogeub-assets.ftp.sh/madalin-stunt-cars-3/index.html",
       "disabled": false
     },
     {
       "appName": "Monster Tracks",
       "desc": "Car/Racing Games",
       "icon": "/assets/img/monstertracks.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/monster-tracks/index.html",
+      "url": "https://dogeub-assets.ftp.sh/monster-tracks/index.html",
       "disabled": false
     },
     {
@@ -1176,21 +1176,21 @@
     {
       "appName": "Moto X3M Pool Party",
       "desc": "Car/Racing Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/motox3m-pool/splash.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/motox3m-pool/splash.jpg",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/motox3m-pool/index.html",
       "disabled": false
     },
     {
       "appName": "Moto X3M Spooky",
       "desc": "Car/Racing Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/motox3m-spooky/splash.jpeg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/motox3m-spooky/splash.jpeg",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/motox3m-spooky/index.html",
       "disabled": false
     },
     {
       "appName": "Moto X3M Winter",
       "desc": "Car/Racing Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/motox3m-winter/download.jpeg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/motox3m-winter/download.jpeg",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/motox3m-winter/index.html",
       "disabled": false
     },
@@ -1211,15 +1211,15 @@
     {
       "appName": "Swerve",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/swerve/img/favicon.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/swerve/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/swerve/img/favicon.jpg",
+      "url": "https://dogeub-assets.ftp.sh/swerve/index.html",
       "disabled": false
     },
     {
       "appName": "2048",
       "desc": "Brain Games",
       "icon": "/assets/img/2048.webp",
-      "url": "https://derpmandev.github.io/unblocked-games/2048",
+      "url": "https://dogeub-assets.ftp.sh/2048/index.html",
       "disabled": false
     },
     {
@@ -1232,42 +1232,42 @@
     {
       "appName": "Bad Ice Cream",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bad-ice-cream/bad-ice-cream.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bad-ice-cream/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/bad-ice-cream/bad-ice-cream.png",
+      "url": "https://dogeub-assets.ftp.sh/bad-ice-cream/index.html",
       "disabled": false
     },
     {
       "appName": "Bad Ice Cream 2",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bad-ice-cream-2/bad-ice-cream-2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bad-ice-cream-2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/bad-ice-cream-2/bad-ice-cream-2.png",
+      "url": "https://dogeub-assets.ftp.sh/bad-ice-cream-2/index.html",
       "disabled": false
     },
     {
       "appName": "Bad Ice Cream 3",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bad-ice-cream-3/bad-ice-cream-3.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bad-ice-cream-3/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/bad-ice-cream-3/bad-ice-cream-3.png",
+      "url": "https://dogeub-assets.ftp.sh/bad-ice-cream-3/index.html",
       "disabled": false
     },
     {
       "appName": "Bitlife",
       "desc": "Brain Games",
       "icon": "/assets/img/bitlife.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bitlife/index.html",
+      "url": "https://dogeub-assets.ftp.sh/bitlife/index.html",
       "disabled": false
     },
     {
       "appName": "Black Hole Square",
       "desc": "Brain Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/blackholesquare.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/blackholesquare.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/black-hole-square/index.html",
       "disabled": false
     },
     {
       "appName": "Bloxorz",
       "desc": "Brain Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/bloxorz.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/bloxorz.png",
       "url": "https://raw.githack.com/Skoolgq/flashgamedump/main/bloxorz.html",
       "disabled": false
     },
@@ -1281,64 +1281,64 @@
     {
       "appName": "Connect 3",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/connect3/connect3.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/connect3/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/connect3/connect3.png",
+      "url": "https://dogeub-assets.ftp.sh/connect3/index.html",
       "disabled": false
     },
     {
       "appName": "Core Ball",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/core-ball/pr_source.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/core-ball/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/core-ball/pr_source.png",
+      "url": "https://dogeub-assets.ftp.sh/core-ball/index.html",
       "disabled": false
     },
     {
       "appName": "Cut the Rope",
       "desc": "Brain Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/ctr.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/ctr.png",
+      "url": "https://dogeub-assets.ftp.sh/ctr/index.html",
       "disabled": false
     },
     {
       "appName": "Cut the Rope Holiday",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-holiday/Holiday_Gift.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-holiday/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ctr-holiday/Holiday_Gift.webp",
+      "url": "https://dogeub-assets.ftp.sh/ctr-holiday/index.html",
       "disabled": false
     },
     {
       "appName": "Cut the Rope Time Travel",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-tr/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-tr/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ctr-tr/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/ctr-tr/index.html",
       "disabled": false
     },
     {
       "appName": "Google Feud",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/google-feud/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/google-feud/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/google-feud/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/google-feud/index.html",
       "disabled": false
     },
     {
       "appName": "Grey Box",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/greybox/ico.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/greybox/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/greybox/ico.png",
+      "url": "https://dogeub-assets.ftp.sh/greybox/index.html",
       "disabled": false
     },
     {
       "appName": "Hacker Tetris",
       "desc": "Brain Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/hackertetris.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/twitch-tetris/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/hackertetris.png",
+      "url": "https://dogeub-assets.ftp.sh/twitch-tetris/index.html",
       "disabled": false
     },
     {
       "appName": "Hextris",
       "desc": "Brain Games",
       "icon": "/assets/img/hextris.webp",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hextris/index.html",
+      "url": "https://dogeub-assets.ftp.sh/hextris/index.html",
       "disabled": false
     },
     {
@@ -1365,50 +1365,50 @@
     {
       "appName": "Riddle School",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool/riddleschool.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/riddleschool/riddleschool.png",
+      "url": "https://dogeub-assets.ftp.sh/riddleschool/index.html",
       "disabled": false
     },
     {
       "appName": "Riddle School 2",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool2/riddleschool2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/riddleschool2/riddleschool2.png",
+      "url": "https://dogeub-assets.ftp.sh/riddleschool2/index.html",
       "disabled": false
     },
     {
       "appName": "Riddle School 3",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool3/riddleschool3.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool3/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/riddleschool3/riddleschool3.png",
+      "url": "https://dogeub-assets.ftp.sh/riddleschool3/index.html",
       "disabled": false
     },
     {
       "appName": "Riddle School 4",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool4/riddleschool4.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool4/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/riddleschool4/riddleschool4.png",
+      "url": "https://dogeub-assets.ftp.sh/riddleschool4/index.html",
       "disabled": false
     },
     {
       "appName": "Riddle School 5",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool5/riddleschool5.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddleschool5/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/riddleschool5/riddleschool5.png",
+      "url": "https://dogeub-assets.ftp.sh/riddleschool5/index.html",
       "disabled": false
     },
     {
       "appName": "Riddle Transfer",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddletransfer/riddletransfer.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddletransfer/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/riddletransfer/riddletransfer.png",
+      "url": "https://dogeub-assets.ftp.sh/riddletransfer/index.html",
       "disabled": false
     },
     {
       "appName": "Riddle Transfer 2",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddletransfer2/riddletransfer2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/riddletransfer2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/riddletransfer2/riddletransfer2.png",
+      "url": "https://dogeub-assets.ftp.sh/riddletransfer2/index.html",
       "disabled": false
     },
     {
@@ -1428,36 +1428,36 @@
     {
       "appName": "World's Hardest Game 2",
       "desc": "Brain Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/worlds-hardest-game-2/index.html",
       "disabled": false
     },
     {
       "appName": "osu!",
       "desc": "Brain Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/osu.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/osu/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/osu.png",
+      "url": "https://dogeub-assets.ftp.sh/osu%21/index.html",
       "disabled": false
     },
     {
       "appName": "xx142-b2.exe",
       "desc": "Brain Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/xx142-b2exe/splash.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/xx142-b2exe/splash.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/xx142-b2exe/index.html",
       "disabled": false
     },
     {
       "appName": "Adventure Capitalist",
       "desc": "Idle/Clicking Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/adventurecapitalist.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/adventurecapitalist.png",
       "url": "https://than1089.github.io/adventure-capitalist/",
       "disabled": false
     },
     {
       "appName": "Bloons TD",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bloonstd/bloonstd.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bloonstd/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/bloonstd/bloonstd.jpg",
+      "url": "https://dogeub-assets.ftp.sh/bloonstd/index.html",
       "disabled": false
     },
     {
@@ -1477,15 +1477,15 @@
     {
       "appName": "DogeMiner",
       "desc": "Idle/Clicking Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/dogeminer.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/DogeMiner/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/dogeminer.png",
+      "url": "https://dogeub-assets.ftp.sh/DogeMiner/index.html",
       "disabled": false
     },
     {
       "appName": "Flappy Bird",
       "desc": "Idle/Clicking Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/fp.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flappybird/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/fp.png",
+      "url": "https://dogeub-assets.ftp.sh/flappybird/index.html",
       "disabled": false
     },
     {
@@ -1505,8 +1505,8 @@
     {
       "appName": "Papa's Burgeria",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/papasburgeria/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/papasburgeria/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/papasburgeria/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/papasburgeria/index.html",
       "disabled": false
     },
     {
@@ -1519,8 +1519,8 @@
     {
       "appName": "Papa's Pizzeria",
       "desc": "Idle/Clicking Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/pizzeria.jpeg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/papaspizzaria/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/pizzeria.jpeg",
+      "url": "https://dogeub-assets.ftp.sh/papaspizzaria/index.html",
       "disabled": false
     },
     {
@@ -1533,8 +1533,8 @@
     {
       "appName": "Slime Rush TD",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/slime-rush-td/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/slime-rush-td/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/slime-rush-td/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/slime-rush-td/index.html",
       "disabled": false
     },
     {
@@ -1547,8 +1547,8 @@
     {
       "appName": "Bloons TD 2",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/btd2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bloonstd2/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/btd2.png",
+      "url": "https://dogeub-assets.ftp.sh/bloonstd2/index.html",
       "disabled": false
     },
     {
@@ -1575,43 +1575,43 @@
     {
       "appName": "Cell Machine",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cell-machine/img/te9nDu.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cell-machine/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/cell-machine/img/te9nDu.png",
+      "url": "https://dogeub-assets.ftp.sh/cell-machine/index.html",
       "disabled": false
     },
     {
       "appName": "Dante",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/dante/splash.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/dante/splash.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/dante/index.html",
       "disabled": false
     },
     {
       "appName": "Friday Night Funkin'",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/fnf.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/fnf.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/fridaynightfunkin/index.html",
       "disabled": false
     },
     {
       "appName": "Fruit Ninja",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/fruit-ninja/FruitNinjaTeaser.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fruitninja/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/fruit-ninja/FruitNinjaTeaser.jpg",
+      "url": "https://dogeub-assets.ftp.sh/fruitninja/index.html",
       "disabled": false
     },
     {
       "appName": "Glass City",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/glass-city/image.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/glass-city/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/glass-city/image.png",
+      "url": "https://dogeub-assets.ftp.sh/glass-city/index.html",
       "disabled": false
     },
     {
       "appName": "Google Snake",
       "desc": "Sandbox/Arcade Games",
       "icon": "https://play-lh.googleusercontent.com/p19u9SINIT3SZUQ8NcdcX5ROSFeEgTBc8J2okk8TsqSz2cq6eFJ0ekT-TwwqEXAKrQ",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/google-snake/index.html",
+      "url": "https://dogeub-assets.ftp.sh/google-snake/index.html",
       "disabled": false
     },
     {
@@ -1631,15 +1631,15 @@
     {
       "appName": "Learn To Fly",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/learntofly.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/learntofly/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/learntofly.png",
+      "url": "https://dogeub-assets.ftp.sh/learntofly/index.html",
       "disabled": false
     },
     {
       "appName": "Learn To Fly 2",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/ltf2.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/learntofly2/index.html",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/ltf2.jpg",
+      "url": "https://dogeub-assets.ftp.sh/learntofly2/index.html",
       "disabled": false
     },
     {
@@ -1673,7 +1673,7 @@
     {
       "appName": "Mindustry",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/mindustry/splash.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/mindustry/splash.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/mindustry/index.html",
       "disabled": false
     },
@@ -1694,29 +1694,29 @@
     {
       "appName": "Portal",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/portalflash/portaltheflashversion.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/portalflash/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/portalflash/portaltheflashversion.jpg",
+      "url": "https://dogeub-assets.ftp.sh/portalflash/index.html",
       "disabled": false
     },
     {
       "appName": "Rise Higher",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/risehigher.jpg",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/risehigher.jpg",
       "url": "https://www.mathplayground.com/rise-higher/index.html",
       "disabled": false
     },
     {
       "appName": "Stack",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stack/stack.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stack/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stack/stack.png",
+      "url": "https://dogeub-assets.ftp.sh/stack/index.html",
       "disabled": false
     },
     {
       "appName": "Stack Bump 3D",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stack-bump-3d/thumbnail.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stack-bump-3d/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stack-bump-3d/thumbnail.jpg",
+      "url": "https://dogeub-assets.ftp.sh/stack-bump-3d/index.html",
       "disabled": false
     },
     {
@@ -1729,14 +1729,14 @@
     {
       "appName": "The Final Earth",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/the-final-earth/images.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/the-final-earth/images.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/the-final-earth/index.html",
       "disabled": false
     },
     {
       "appName": "The Final Earth 2",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/the-final-earth-2/thumb.png",
+      "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/the-final-earth-2/thumb.png",
       "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/the-final-earth-2/index.html",
       "disabled": false
     },
@@ -1757,1058 +1757,1044 @@
     {
       "appName": "100ng",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/100ng/100ng-logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/100ng/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/100ng/100ng-logo.png",
+      "url": "https://dogeub-assets.ftp.sh/100ng/index.html",
       "disabled": false
     },
     {
       "appName": "2048 Multitask",
       "desc": "Brain Games",
       "icon": "https://lh3.googleusercontent.com/x7qbQKPHcGheSAiY0Ehyb_9wianRS91C4uiRI3Llr8PBx1Fbg5I5372WjHzNfBCajISDG0O_p2U_VgM_oHTa7X6uyw=s128-rj-sc0x00ffffff",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/2048-multitask/index.html",
+      "url": "https://dogeub-assets.ftp.sh/2048-multitask/index.html",
       "disabled": false
     },
     {
       "appName": "9007199254740992",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/9007199254740992/logo-4.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/9007199254740992/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/9007199254740992/logo-4.png",
+      "url": "https://dogeub-assets.ftp.sh/9007199254740992/index.html",
       "disabled": false
     },
     {
       "appName": "A Dance of Fire and Ice",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/a-dance-of-fire-and-ice/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/a-dance-of-fire-and-ice/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/a-dance-of-fire-and-ice/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/a-dance-of-fire-and-ice/index.html",
       "disabled": false
     },
     {
       "appName": "A Dark Room",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adarkroom/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adarkroom/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/adarkroom/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/adarkroom/index.html",
       "disabled": false
     },
     {
       "appName": "Adrenaline Challenge",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adrenalinechallenge/adrenalinechallenge.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adrenalinechallenge/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/adrenalinechallenge/adrenalinechallenge.jpg",
+      "url": "https://dogeub-assets.ftp.sh/adrenalinechallenge/index.html",
       "disabled": false
     },
     {
       "appName": "Adventure Drivers",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adventure-drivers/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/adventure-drivers/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/adventure-drivers/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/adventure-drivers/index.html",
       "disabled": false
     },
     {
       "appName": "Align 4",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/align-4/board.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/align-4/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/align-4/board.png",
+      "url": "https://dogeub-assets.ftp.sh/align-4/index.html",
       "disabled": false
     },
     {
       "appName": "Angry Sharks",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/angry-sharks/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/angry-sharks/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/angry-sharks/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/angry-sharks/index.html",
       "disabled": false
     },
     {
       "appName": "Aquapark Slides",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/aquapark-slides/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/aquapark-slides/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/aquapark-slides/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/aquapark-slides/index.html",
       "disabled": false
     },
     {
       "appName": "Astray",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/astray/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/astray/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/astray/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/astray/index.html",
       "disabled": false
     },
     {
       "appName": "Baldi's Basics",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/baldis-basics/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/baldis-basics/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/baldis-basics/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/baldis-basics/index.html",
       "disabled": false
     },
     {
       "appName": "Ball Dodge",
       "desc": "Running Games",
       "icon": "https://cdn-icons-png.flaticon.com/512/5930/5930147.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ball-dodge/index.html",
+      "url": "https://dogeub-assets.ftp.sh/ball-dodge/index.html",
       "disabled": false
     },
     {
       "appName": "Ballistic Chickens",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ballistic-chickens/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ballistic-chickens/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ballistic-chickens/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/ballistic-chickens/index.html",
       "disabled": false
     },
     {
       "appName": "Battle for Gondor",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/battleforgondor/battleforgondor.JPG",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/battleforgondor/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/battleforgondor/battleforgondor.JPG",
+      "url": "https://dogeub-assets.ftp.sh/battleforgondor/index.html",
       "disabled": false
     },
     {
       "appName": "Big Red Button",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bigredbutton/bigredbutton.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/bigredbutton/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/bigredbutton/bigredbutton.png",
+      "url": "https://dogeub-assets.ftp.sh/bigredbutton/index.html",
       "disabled": false
     },
     {
       "appName": "Black Knight",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/blackknight/blackknight.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/blackknight/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/blackknight/blackknight.png",
+      "url": "https://dogeub-assets.ftp.sh/blackknight/index.html",
       "disabled": false
     },
     {
       "appName": "Boxhead 2Play",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxhead2play/boxhead2play.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxhead2play/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/boxhead2play/boxhead2play.jpg",
+      "url": "https://dogeub-assets.ftp.sh/boxhead2play/index.html",
       "disabled": false
     },
     {
       "appName": "Boxing Random",
       "desc": "Sport Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxing-random/512x340.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/boxing-random/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/boxing-random/512x340.jpg",
+      "url": "https://dogeub-assets.ftp.sh/boxing-random/index.html",
       "disabled": false
     },
     {
       "appName": "Burger & Frights",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/burger-and-frights/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/burger-and-frights/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/burger-and-frights/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/burger-and-frights/index.html",
       "disabled": false
     },
     {
       "appName": "Canyon Defense",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/canyondefense/canyondefense.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/canyondefense/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/canyondefense/canyondefense.png",
+      "url": "https://dogeub-assets.ftp.sh/canyondefense/index.html",
       "disabled": false
     },
     {
       "appName": "Champion Archer",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/championarcher/championarcher.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/championarcher/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/championarcher/championarcher.png",
+      "url": "https://dogeub-assets.ftp.sh/championarcher/index.html",
       "disabled": false
     },
     {
       "appName": "CN Ping Pong",
       "desc": "Sport Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cnpingpong/tabletennisultimate.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cnpingpong/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/cnpingpong/tabletennisultimate.png",
+      "url": "https://dogeub-assets.ftp.sh/cnpingpong/index.html",
       "disabled": false
     },
     {
       "appName": "Craftmine",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/craftmine/craftmine.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/craftmine/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/craftmine/craftmine.png",
+      "url": "https://dogeub-assets.ftp.sh/craftmine/index.html",
       "disabled": false
     },
     {
       "appName": "Creative Kill Chamber",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/creativekillchamber/creativekillchamber.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/creativekillchamber/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/creativekillchamber/creativekillchamber.jpg",
+      "url": "https://dogeub-assets.ftp.sh/creativekillchamber/index.html",
       "disabled": false
     },
     {
       "appName": "CS:GO Clicker",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/csgo-clicker/case1.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/csgo-clicker/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/csgo-clicker/case1.png",
+      "url": "https://dogeub-assets.ftp.sh/csgo-clicker/index.html",
       "disabled": false
     },
     {
       "appName": "Cubefield",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cubefield/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cubefield/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/cubefield/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/cubefield/index.html",
       "disabled": false
     },
     {
       "appName": "Cupcake 2048",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cupcake2048/favicon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/cupcake2048/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/cupcake2048/favicon.png",
+      "url": "https://dogeub-assets.ftp.sh/cupcake2048/index.html",
       "disabled": false
     },
     {
       "appName": "Deal or No Deal",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/deal-or-no-deal/index.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/deal-or-no-deal/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/deal-or-no-deal/index.jpg",
+      "url": "https://dogeub-assets.ftp.sh/deal-or-no-deal/index.html",
       "disabled": false
     },
     {
       "appName": "Defend The Tank",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/defend-the-tank/landscape.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/defend-the-tank/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/defend-the-tank/landscape.jpg",
+      "url": "https://dogeub-assets.ftp.sh/defend-the-tank/index.html",
       "disabled": false
     },
     {
       "appName": "Doctor Acorn 2",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doctor-acorn2/loading-logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doctor-acorn2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/doctor-acorn2/loading-logo.png",
+      "url": "https://dogeub-assets.ftp.sh/doctor-acorn2/index.html",
       "disabled": false
     },
     {
       "appName": "Doge 2048",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doge2048/doge1.jpeg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doge2048/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/doge2048/doge1.jpeg",
+      "url": "https://dogeub-assets.ftp.sh/doge2048/index.html",
       "disabled": false
     },
     {
       "appName": "Double Wires",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doublewires/doublewires.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/doublewires/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/doublewires/doublewires.png",
+      "url": "https://dogeub-assets.ftp.sh/doublewires/index.html",
       "disabled": false
     },
     {
       "appName": "Dragon vs Bricks",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/dragon-vs-bricks/icon.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/dragon-vs-bricks/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/dragon-vs-bricks/icon.jpg",
+      "url": "https://dogeub-assets.ftp.sh/dragon-vs-bricks/index.html",
       "disabled": false
     },
     {
       "appName": "Edge Not Found",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/edgenotfound/edge.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/edgenotfound/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/edgenotfound/edge.png",
+      "url": "https://dogeub-assets.ftp.sh/edgenotfound/index.html",
       "disabled": false
     },
     {
       "appName": "Eel Slap",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/eel-slap/eel-slap.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/eel-slap/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/eel-slap/eel-slap.png",
+      "url": "https://dogeub-assets.ftp.sh/eel-slap/index.html",
       "disabled": false
     },
     {
       "appName": "Elastic Man",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/elasticman/elasticman.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/elasticman/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/elasticman/elasticman.jpg",
+      "url": "https://dogeub-assets.ftp.sh/elasticman/index.html",
       "disabled": false
     },
     {
       "appName": "Endless War 3",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/endlesswar3/endlesswar3.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/endlesswar3/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/endlesswar3/endlesswar3.png",
+      "url": "https://dogeub-assets.ftp.sh/endlesswar3/index.html",
       "disabled": false
     },
     {
       "appName": "Evil Glitch",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evil-glitch/icon.jpeg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evil-glitch/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/evil-glitch/icon.jpeg",
+      "url": "https://dogeub-assets.ftp.sh/evil-glitch/index.html",
       "disabled": false
     },
     {
       "appName": "Evolution",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evolution/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/evolution/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/evolution/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/evolution/index.html",
       "disabled": false
     },
     {
       "appName": "Exo",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/exo/small.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/exo/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/exo/small.jpg",
+      "url": "https://dogeub-assets.ftp.sh/exo/index.html",
       "disabled": false
     },
     {
       "appName": "Factory Balls",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/factoryballs/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/factoryballs/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/factoryballs/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/factoryballs/index.html",
       "disabled": false
     },
     {
       "appName": "Fair Squares",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fairsquares/index.apple-touch-icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fairsquares/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/fairsquares/index.apple-touch-icon.png",
+      "url": "https://dogeub-assets.ftp.sh/fairsquares/index.html",
       "disabled": false
     },
     {
       "appName": "Fake Virus",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fake-virus/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fake-virus/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/fake-virus/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/fake-virus/index.html",
       "disabled": false
     },
     {
       "appName": "Fancy Pants Adventures",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fancypantsadventures/fancypantsadventure.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fancypantsadventures/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/fancypantsadventures/fancypantsadventure.png",
+      "url": "https://dogeub-assets.ftp.sh/fancypantsadventures/index.html",
       "disabled": false
     },
     {
       "appName": "Flappy 2048",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flappy-2048/ClearSans-Bold-webfont.svg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flappy-2048/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/flappy-2048/ClearSans-Bold-webfont.svg",
+      "url": "https://dogeub-assets.ftp.sh/flappy-2048/index.html",
       "disabled": false
     },
     {
       "appName": "Flash Tetris",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flashtetris/flashtetris.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flashtetris/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/flashtetris/flashtetris.png",
+      "url": "https://dogeub-assets.ftp.sh/flashtetris/index.html",
       "disabled": false
     },
     {
       "appName": "Flippy Fish",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flippy-fish/2022_10_28_0jt_Kleki.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/flippy-fish/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/flippy-fish/2022_10_28_0jt_Kleki.png",
+      "url": "https://dogeub-assets.ftp.sh/flippy-fish/index.html",
       "disabled": false
     },
     {
       "appName": "FNAW",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fnaw/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fnaw/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/fnaw/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/fnaw/index.html",
       "disabled": false
     },
     {
       "appName": "Froggy's Battle",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/froggys-battle/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/froggys-battle/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/froggys-battle/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/froggys-battle/index.html",
       "disabled": false
     },
     {
       "appName": "Frying Nemo",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/frying-nemo/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/frying-nemo/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/frying-nemo/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/frying-nemo/index.html",
       "disabled": false
     },
     {
       "appName": "Game Inside",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/game-inside/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/game-inside/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/game-inside/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/game-inside/index.html",
       "disabled": false
     },
     {
       "appName": "Generic Fishing Game",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/generic-fishing-game/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/generic-fishing-game/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/generic-fishing-game/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/generic-fishing-game/index.html",
       "disabled": false
     },
     {
       "appName": "George and the Printer",
       "desc": "Ball/Platformer Games",
       "icon": "https://img.itch.zone/aW1nLzQyODUxNTUucG5n/original/nUotXS.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/georgeandtheprinter/index.html",
+      "url": "https://dogeub-assets.ftp.sh/georgeandtheprinter/index.html",
       "disabled": false
     },
     {
       "appName": "Gimme The Airpod",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gimme-the-airpod/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gimme-the-airpod/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/gimme-the-airpod/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/gimme-the-airpod/index.html",
       "disabled": false
     },
     {
       "appName": "Go Ball",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/go-ball/loading-logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/go-ball/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/go-ball/loading-logo.png",
+      "url": "https://dogeub-assets.ftp.sh/go-ball/index.html",
       "disabled": false
     },
     {
       "appName": "Goodnight",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/goodnight/goodnight.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/goodnight/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/goodnight/goodnight.jpg",
+      "url": "https://dogeub-assets.ftp.sh/goodnight/index.html",
       "disabled": false
     },
     {
       "appName": "Gravity Soccer",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gravity-soccer/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/gravity-soccer/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/gravity-soccer/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/gravity-soccer/index.html",
       "disabled": false
     },
     {
       "appName": "Grindcraft",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/grindcraft/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/grindcraft/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/grindcraft/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/grindcraft/index.html",
       "disabled": false
     },
     {
       "appName": "Hacker Typer",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hackertype/logo192.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hackertype/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/hackertype/logo192.png",
+      "url": "https://dogeub-assets.ftp.sh/hackertype/index.html",
       "disabled": false
     },
     {
       "appName": "Handshakes",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/handshakes/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/handshakes/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/handshakes/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/handshakes/index.html",
       "disabled": false
     },
     {
       "appName": "Happy Hop",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/happy-hop/loading-logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/happy-hop/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/happy-hop/loading-logo.png",
+      "url": "https://dogeub-assets.ftp.sh/happy-hop/index.html",
       "disabled": false
     },
     {
       "appName": "Helicopter",
       "desc": "Running Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/helicopter/helicopter.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/helicopter/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/helicopter/helicopter.png",
+      "url": "https://dogeub-assets.ftp.sh/helicopter/index.html",
       "disabled": false
     },
     {
       "appName": "Hex Empire",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hexempire/hexempire.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hexempire/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/hexempire/hexempire.jpg",
+      "url": "https://dogeub-assets.ftp.sh/hexempire/index.html",
       "disabled": false
     },
     {
       "appName": "Hungry Lamu",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hungry-lamu/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/hungry-lamu/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/hungry-lamu/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/hungry-lamu/index.html",
       "disabled": false
     },
     {
       "appName": "Idle Shark",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/idle-shark/favicon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/idle-shark/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/idle-shark/favicon.png",
+      "url": "https://dogeub-assets.ftp.sh/idle-shark/index.html",
       "disabled": false
     },
     {
       "appName": "Impossible Quiz",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/impossiblequiz/impossiblequiz.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/impossiblequiz/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/impossiblequiz/impossiblequiz.png",
+      "url": "https://dogeub-assets.ftp.sh/impossiblequiz/index.html",
       "disabled": false
     },
     {
       "appName": "Interactive Buddy",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/interactivebuddy/interactivebuddy.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/interactivebuddy/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/interactivebuddy/interactivebuddy.jpg",
+      "url": "https://dogeub-assets.ftp.sh/interactivebuddy/index.html",
       "disabled": false
     },
     {
       "appName": "Just Fall",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-fall/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-fall/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/just-fall/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/just-fall/index.html",
       "disabled": false
     },
     {
       "appName": "Just One Boss",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-one-boss/pv1Gr5.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/just-one-boss/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/just-one-boss/pv1Gr5.png",
+      "url": "https://dogeub-assets.ftp.sh/just-one-boss/index.html",
       "disabled": false
     },
     {
       "appName": "Kitchen Gun Game",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kitchen-gun-game/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kitchen-gun-game/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/kitchen-gun-game/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/kitchen-gun-game/index.html",
       "disabled": false
     },
     {
       "appName": "Kitten Cannon",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kittencannon/kittencannon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/kittencannon/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/kittencannon/kittencannon.png",
+      "url": "https://dogeub-assets.ftp.sh/kittencannon/index.html",
       "disabled": false
     },
     {
       "appName": "Marvin Spectrum",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/marvinspectrum/marvinspectrum.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/marvinspectrum/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/marvinspectrum/marvinspectrum.png",
+      "url": "https://dogeub-assets.ftp.sh/marvinspectrum/index.html",
       "disabled": false
     },
     {
       "appName": "Matrix Rampage",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/matrixrampage/matrixrampage.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/matrixrampage/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/matrixrampage/matrixrampage.jpg",
+      "url": "https://dogeub-assets.ftp.sh/matrixrampage/index.html",
       "disabled": false
     },
     {
       "appName": "Meme 2048",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/meme2048/advice_dog_background.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/meme2048/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/meme2048/advice_dog_background.jpg",
+      "url": "https://dogeub-assets.ftp.sh/meme2048/index.html",
       "disabled": false
     },
     {
       "appName": "Merge Round Racers",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/merge-round-racers/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/merge-round-racers/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/merge-round-racers/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/merge-round-racers/index.html",
       "disabled": false
     },
     {
       "appName": "Mine Blocks",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/mineblocks/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/mineblocks/index.html",
-      "disabled": false
-    },
-    {
-      "appName": "Minecraft 1.5",
-      "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-15/splash.jpeg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-15/index.html",
-      "disabled": false
-    },
-    {
-      "appName": "Minecraft 1.8",
-      "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-18/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-18/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/mineblocks/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/mineblocks/index.html",
       "disabled": false
     },
     {
       "appName": "Minecraft Classic",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-classic/pack.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraft-classic/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/minecraft-classic/pack.png",
+      "url": "https://dogeub-assets.ftp.sh/minecraft-classic/index.html",
       "disabled": false
     },
     {
       "appName": "Minecraft Beta",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraftbeta/bg_main.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minecraftbeta/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/minecraftbeta/bg_main.png",
+      "url": "https://dogeub-assets.ftp.sh/minecraftbeta/index.html",
       "disabled": false
     },
     {
       "appName": "Minesweeper",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minesweeper/minesweeper.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/minesweeper/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/minesweeper/minesweeper.png",
+      "url": "https://dogeub-assets.ftp.sh/minesweeper/index.html",
       "disabled": false
     },
     {
       "appName": "Mini Putt",
       "desc": "Sport Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/miniputt/miniputt.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/miniputt/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/miniputt/miniputt.png",
+      "url": "https://dogeub-assets.ftp.sh/miniputt/index.html",
       "disabled": false
     },
     {
       "appName": "My Rusty Submarine",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/my-rusty-submarine/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/my-rusty-submarine/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/my-rusty-submarine/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/my-rusty-submarine/index.html",
       "disabled": false
     },
     {
       "appName": "n-gon",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/n-gon/bot.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/n-gon/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/n-gon/bot.png",
+      "url": "https://dogeub-assets.ftp.sh/n-gon/index.html",
       "disabled": false
     },
     {
       "appName": "Ninja",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninja/logo1.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninja/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ninja/logo1.png",
+      "url": "https://dogeub-assets.ftp.sh/ninja/index.html",
       "disabled": false
     },
     {
       "appName": "Ninja vs Evilcorp",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninjavsevilcorp/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ninjavsevilcorp/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ninjavsevilcorp/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/ninjavsevilcorp/index.html",
       "disabled": false
     },
     {
       "appName": "Noob Steve Parkour",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/noob-steve-parkour/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/noob-steve-parkour/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/noob-steve-parkour/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/noob-steve-parkour/index.html",
       "disabled": false
     },
     {
       "appName": "NS Shaft",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ns-shaft/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ns-shaft/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ns-shaft/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/ns-shaft/index.html",
       "disabled": false
     },
     {
       "appName": "NS Resurgence",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/nsresurgence/neon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/nsresurgence/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/nsresurgence/neon.png",
+      "url": "https://dogeub-assets.ftp.sh/nsresurgence/index.html",
       "disabled": false
     },
     {
       "appName": "Pandemic 2",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pandemic2/pandemic2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pandemic2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/pandemic2/pandemic2.png",
+      "url": "https://dogeub-assets.ftp.sh/pandemic2/index.html",
       "disabled": false
     },
     {
       "appName": "Paper.io 2",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/paperio2/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/paperio2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/paperio2/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/paperio2/index.html",
       "disabled": false
     },
     {
       "appName": "Particle Clicker",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/particle-clicker/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/particle-clicker/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/particle-clicker/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/particle-clicker/index.html",
       "disabled": false
     },
     {
       "appName": "Physibox",
       "desc": "Sandbox/Arcade Games",
       "icon": "https://cdn-icons-png.flaticon.com/512/5930/5930147.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/physibox/index.html",
+      "url": "https://dogeub-assets.ftp.sh/physibox/index.html",
       "disabled": false
     },
     {
       "appName": "Pixel Gun Survival",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pixel-gun-survival/512x384.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/pixel-gun-survival/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/pixel-gun-survival/512x384.jpg",
+      "url": "https://dogeub-assets.ftp.sh/pixel-gun-survival/index.html",
       "disabled": false
     },
     {
       "appName": "Popcat Classic",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/popcat-classic/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/popcat-classic/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/popcat-classic/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/popcat-classic/index.html",
       "disabled": false
     },
     {
       "appName": "Precision Client",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/precision-client/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/precision-client/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/precision-client/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/precision-client/index.html",
       "disabled": false
     },
     {
       "appName": "Protektor",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/protektor/loading-logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/protektor/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/protektor/loading-logo.png",
+      "url": "https://dogeub-assets.ftp.sh/protektor/index.html",
       "disabled": false
     },
     {
       "appName": "Push The Square",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-the-square/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-the-square/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/push-the-square/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/push-the-square/index.html",
       "disabled": false
     },
     {
       "appName": "Push Your Luck",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-your-luck/Bg.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/push-your-luck/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/push-your-luck/Bg.jpg",
+      "url": "https://dogeub-assets.ftp.sh/push-your-luck/index.html",
       "disabled": false
     },
     {
       "appName": "Resent Client",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/resent-client/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/resent-client/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/resent-client/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/resent-client/index.html",
       "disabled": false
     },
     {
       "appName": "Ruffle",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ruffle/logo.svg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ruffle/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/ruffle/logo.svg",
+      "url": "https://dogeub-assets.ftp.sh/ruffle/index.html",
       "disabled": false
     },
     {
       "appName": "Sand Game",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sand-game/sand-game.PNG",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sand-game/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/sand-game/sand-game.PNG",
+      "url": "https://dogeub-assets.ftp.sh/sand-game/index.html",
       "disabled": false
     },
     {
       "appName": "Sandboxels",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sandboxels/sandboxels.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sandboxels/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/sandboxels/sandboxels.jpg",
+      "url": "https://dogeub-assets.ftp.sh/sandboxels/index.html",
       "disabled": false
     },
     {
       "appName": "Santy Is Home",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/santy-is-home/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/santy-is-home/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/santy-is-home/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/santy-is-home/index.html",
       "disabled": false
     },
     {
       "appName": "Scrap Metal",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/scrapmetal/1run4progresslogo-light_orig.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/scrapmetal/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/scrapmetal/1run4progresslogo-light_orig.png",
+      "url": "https://dogeub-assets.ftp.sh/scrapmetal/index.html",
       "disabled": false
     },
     {
       "appName": "Shell Shockers",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shellshockers/favicon.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shellshockers/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/shellshockers/favicon.jpg",
+      "url": "https://dogeub-assets.ftp.sh/shellshockers/index.html",
       "disabled": false
     },
     {
       "appName": "Shot in the Dark",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shotinthedark/shot.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shotinthedark/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/shotinthedark/shot.png",
+      "url": "https://dogeub-assets.ftp.sh/shotinthedark/index.html",
       "disabled": false
     },
     {
       "appName": "Shuttle Deck",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shuttledeck/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/shuttledeck/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/shuttledeck/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/shuttledeck/index.html",
       "disabled": false
     },
     {
       "appName": "Sky Car Stunt",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sky-car-stunt/512x384.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sky-car-stunt/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/sky-car-stunt/512x384.jpg",
+      "url": "https://dogeub-assets.ftp.sh/sky-car-stunt/index.html",
       "disabled": false
     },
     {
       "appName": "Sleeping Beauty",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sleepingbeauty/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sleepingbeauty/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/sleepingbeauty/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/sleepingbeauty/index.html",
       "disabled": false
     },
     {
       "appName": "Smoking Barrels",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/smokingbarrels/smokingbarrels.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/smokingbarrels/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/smokingbarrels/smokingbarrels.jpg",
+      "url": "https://dogeub-assets.ftp.sh/smokingbarrels/index.html",
       "disabled": false
     },
     {
       "appName": "Soldier Legend",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/soldier-legend/logo.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/soldier-legend/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/soldier-legend/logo.jpg",
+      "url": "https://dogeub-assets.ftp.sh/soldier-legend/index.html",
       "disabled": false
     },
     {
       "appName": "Solitaire",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/solitaire/screen-shot-win.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/solitaire/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/solitaire/screen-shot-win.png",
+      "url": "https://dogeub-assets.ftp.sh/solitaire/index.html",
       "disabled": false
     },
     {
       "appName": "Sort the Court",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sort-the-court/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sort-the-court/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/sort-the-court/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/sort-the-court/index.html",
       "disabled": false
     },
     {
       "appName": "Space Company",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/space-company/whiteLogo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/space-company/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/space-company/whiteLogo.png",
+      "url": "https://dogeub-assets.ftp.sh/space-company/index.html",
       "disabled": false
     },
     {
       "appName": "Space Garden",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spacegarden/spl.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spacegarden/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/spacegarden/spl.png",
+      "url": "https://dogeub-assets.ftp.sh/spacegarden/index.html",
       "disabled": false
     },
     {
       "appName": "Spinning Rat",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spinningrat/apple-touch-icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/spinningrat/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/spinningrat/apple-touch-icon.png",
+      "url": "https://dogeub-assets.ftp.sh/spinningrat/index.html",
       "disabled": false
     },
     {
       "appName": "Starve",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/starve/favicon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/starve/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/starve/favicon.png",
+      "url": "https://dogeub-assets.ftp.sh/starve/index.html",
       "disabled": false
     },
     {
       "appName": "Stick Duel Battle",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-duel-battle/512x340.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stick-duel-battle/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stick-duel-battle/512x340.jpg",
+      "url": "https://dogeub-assets.ftp.sh/stick-duel-battle/index.html",
       "disabled": false
     },
     {
       "appName": "Stickman Boost",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-boost/icon-256.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-boost/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stickman-boost/icon-256.png",
+      "url": "https://dogeub-assets.ftp.sh/stickman-boost/index.html",
       "disabled": false
     },
     {
       "appName": "Stickman Golf",
       "desc": "Sport Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-golf/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickman-golf/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stickman-golf/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/stickman-golf/index.html",
       "disabled": false
     },
     {
       "appName": "Stick War",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickwar/stickwar.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stickwar/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stickwar/stickwar.jpg",
+      "url": "https://dogeub-assets.ftp.sh/stickwar/index.html",
       "disabled": false
     },
     {
       "appName": "Storm the House 2",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stormthehouse2/stormthehouse2.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/stormthehouse2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/stormthehouse2/stormthehouse2.jpg",
+      "url": "https://dogeub-assets.ftp.sh/stormthehouse2/index.html",
       "disabled": false
     },
     {
       "appName": "Super Mario Construct",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/supermarioconstruct/textareaimage.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/supermarioconstruct/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/supermarioconstruct/textareaimage.png",
+      "url": "https://dogeub-assets.ftp.sh/supermarioconstruct/index.html",
       "disabled": false
     },
     {
       "appName": "Surviv.io",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/surviv/favicon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/surviv/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/surviv/favicon.png",
+      "url": "https://dogeub-assets.ftp.sh/surviv/index.html",
       "disabled": false
     },
     {
       "appName": "Sushi Unroll",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sushi-unroll/favicon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/sushi-unroll/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/sushi-unroll/favicon.png",
+      "url": "https://dogeub-assets.ftp.sh/sushi-unroll/index.html",
       "disabled": false
     },
     {
       "appName": "Synesthesia",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/synesthesia/index.apple-touch-icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/synesthesia/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/synesthesia/index.apple-touch-icon.png",
+      "url": "https://dogeub-assets.ftp.sh/synesthesia/index.html",
       "disabled": false
     },
     {
       "appName": "Tactical Weapon Pack 2",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tactical-weapon-pack-2/splash.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tactical-weapon-pack-2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tactical-weapon-pack-2/splash.jpg",
+      "url": "https://dogeub-assets.ftp.sh/tactical-weapon-pack-2/index.html",
       "disabled": false
     },
     {
       "appName": "Tactical Assassin 2",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tacticalassasin2/tacticalassassin2.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tacticalassasin2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tacticalassasin2/tacticalassassin2.png",
+      "url": "https://dogeub-assets.ftp.sh/tacticalassasin2/index.html",
       "disabled": false
     },
     {
       "appName": "Tank Trouble 2",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tank-trouble-2/loading-logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tank-trouble-2/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tank-trouble-2/loading-logo.png",
+      "url": "https://dogeub-assets.ftp.sh/tank-trouble-2/index.html",
       "disabled": false
     },
     {
       "appName": "Tanuki Sunset",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tanuki-sunset/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tanuki-sunset/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tanuki-sunset/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/tanuki-sunset/index.html",
       "disabled": false
     },
     {
       "appName": "The Hotel",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/the-hotel/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/the-hotel/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/the-hotel/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/the-hotel/index.html",
       "disabled": false
     },
     {
       "appName": "The Battle",
       "desc": "Domination Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thebattle/thebattle.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thebattle/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/thebattle/thebattle.png",
+      "url": "https://dogeub-assets.ftp.sh/thebattle/index.html",
       "disabled": false
     },
     {
       "appName": "The Heist",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/theheist/theheist.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/theheist/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/theheist/theheist.jpg",
+      "url": "https://dogeub-assets.ftp.sh/theheist/index.html",
       "disabled": false
     },
     {
       "appName": "This Is The Only Level",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thisistheonlylevel/thisistheonlylevel.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/thisistheonlylevel/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/thisistheonlylevel/thisistheonlylevel.png",
+      "url": "https://dogeub-assets.ftp.sh/thisistheonlylevel/index.html",
       "disabled": false
     },
     {
       "appName": "Tiny Islands",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tiny-islands/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tiny-islands/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tiny-islands/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/tiny-islands/index.html",
       "disabled": false
     },
     {
       "appName": "Toss the Turtle",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tosstheturtle/tosstheturtle.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tosstheturtle/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tosstheturtle/tosstheturtle.png",
+      "url": "https://dogeub-assets.ftp.sh/tosstheturtle/index.html",
       "disabled": false
     },
     {
       "appName": "Townscaper",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/townscaper/WebGL.jpg",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/townscaper/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/townscaper/WebGL.jpg",
+      "url": "https://dogeub-assets.ftp.sh/townscaper/index.html",
       "disabled": false
     },
     {
       "appName": "TV Static",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tv-static/static.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/tv-static/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/tv-static/static.png",
+      "url": "https://dogeub-assets.ftp.sh/tv-static/index.html",
       "disabled": false
     },
     {
       "appName": "Wall Smash",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wallsmash/thumb.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wallsmash/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/wallsmash/thumb.png",
+      "url": "https://dogeub-assets.ftp.sh/wallsmash/index.html",
       "disabled": false
     },
     {
       "appName": "Waterworks",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/waterworks/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/waterworks/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/waterworks/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/waterworks/index.html",
       "disabled": false
     },
     {
       "appName": "Weave Silk",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/weavesilk/thumb.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/weavesilk/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/weavesilk/thumb.png",
+      "url": "https://dogeub-assets.ftp.sh/weavesilk/index.html",
       "disabled": false
     },
     {
       "appName": "WebGL Fluid Simulation",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webgl-fluid-simulation/logo.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webgl-fluid-simulation/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/webgl-fluid-simulation/logo.png",
+      "url": "https://dogeub-assets.ftp.sh/webgl-fluid-simulation/index.html",
       "disabled": false
     },
     {
       "appName": "WebRetro",
       "desc": "Sandbox/Arcade Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webretro/Flint_sprite.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/webretro/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/webretro/Flint_sprite.png",
+      "url": "https://dogeub-assets.ftp.sh/webretro/index.html",
       "disabled": false
     },
     {
       "appName": "Win the Whitehouse",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/win-the-whitehouse/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/win-the-whitehouse/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/win-the-whitehouse/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/win-the-whitehouse/index.html",
       "disabled": false
     },
     {
       "appName": "Wordle",
       "desc": "Brain Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wordle/logo_144x144.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/wordle/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/wordle/logo_144x144.png",
+      "url": "https://dogeub-assets.ftp.sh/wordle/index.html",
       "disabled": false
     },
     {
       "appName": "X Trial Racing",
       "desc": "Car/Racing Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/x-trial-racing/splash.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/x-trial-racing/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/x-trial-racing/splash.png",
+      "url": "https://dogeub-assets.ftp.sh/x-trial-racing/index.html",
       "disabled": false
     },
     {
       "appName": "Yoshi Fabrication",
       "desc": "Ball/Platformer Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/yoshifabrication/flowwatertm0.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/yoshifabrication/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/yoshifabrication/flowwatertm0.png",
+      "url": "https://dogeub-assets.ftp.sh/yoshifabrication/index.html",
       "disabled": false
     },
     {
       "appName": "You Are Bezos",
       "desc": "Idle/Clicking Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/you-are-bezos/icon.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/you-are-bezos/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/you-are-bezos/icon.png",
+      "url": "https://dogeub-assets.ftp.sh/you-are-bezos/index.html",
       "disabled": false
     },
     {
       "appName": "Zombs Royale",
       "desc": "Shooter Games",
-      "icon": "https://www.3kh0-assets.silvereen.net/3kh0-assets/zombs-royale/zomb.png",
-      "url": "https://www.3kh0-assets.silvereen.net/3kh0-assets/zombs-royale/index.html",
+      "icon": "https://dogeub-assets.ftp.sh/zombs-royale/zomb.png",
+      "url": "https://dogeub-assets.ftp.sh/zombs-royale/index.html",
       "disabled": false
     },
     {
@@ -2816,6 +2802,311 @@
       "desc": "Sandbox/Arcade Games",
       "icon": "https://img.tapimg.net/market/images/f3f8c0d88767c8b847dd476179ff5634.png?imageView2/0/h/270/format/jpg/interlace/1/ignore-error/1&t=1",
       "url": "https://html-classic.itch.zone/html/14803006/ppg/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Amanda The Adventurer",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/450.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/amanda-the-adventurer/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Baldi's Basics Plus",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/467.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/baldi-plus/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Bendy and the Ink Machine",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/215.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bendy/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Bergentruck 201x",
+      "desc": "Car/Racing Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/455.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bergentruck/BERGENTRUCK_201X.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "BLOODMONEY!",
+      "desc": "Idle/Clicking Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/454.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bloodmoney/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Buckshot Roulette",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/205.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/buckshot-roulette/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Class of '09",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/259.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/class-of-09/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Cuphead",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/465.png",
+      "url": "https://rawcdn.githack.com/web-ports/cuphead/734089aa8d8a82017733717dece88c83ba952a98/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Deltarune",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/425.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/deltarune/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Five Nights at Freddy's",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/38.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/1/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 2",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/39.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/2/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 3",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/40.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/3/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 4",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/41.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/4/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Five Nights at Freddy's 4 (Halloween Edition)",
+      "desc": "Domination Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/428.png",
+      "url": "https://rawcdn.githack.com/genizy/fnaf/7be68ae3d98c60a9a62b4164c2d61a416a0beb1a/4-halloween/index.html",
+      "disabled": false
+    },
+    {
+      "appName": "Raft",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/457.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/raft/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "R.E.P.O (REPO)",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/195.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/repo/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Undertale",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/184.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/undertale/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Undertale (Yellow)",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/456.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/undertale-yellow/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "WebFishing",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/423.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/webfishing/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Andy's Apple Farm",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/426.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/andys-apple-farm/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Baldi's Basics Classic Remastered",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/466.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/baldi-remaster/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Dead Plate",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/462.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/dead-plate/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "The Deadseat",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/458.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/deadseat/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Do NOT Take This Cat Home",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/193.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/donottakethiscathome/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Fears to Fathom: Home Alone",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/460.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/fears-to-fathom/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Happy Sheepies",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/351.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/happy-sheepies/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Hotline Miami",
+      "desc": "Shooter Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/217.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/hotline-miami/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Human Expenditure Program",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/482.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/human-expenditure-program/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Kindergarten",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/445.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/kindergarten/1/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Kindergarten 2",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/446.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/kindergarten/2/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Lacey's Flash Games",
+      "desc": "Brain Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/463.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/lacysflashgames/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Omori",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/427.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/omori-fixed/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Slender: The Eight Pages",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/451.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/slender/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Speed Stars",
+      "desc": "Running Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/266.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/speed-stars/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "That's Not My Neighbor",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/216.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/thats-not-my-neighbor/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "The Man From The Window",
+      "desc": "Survival/Horror Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/459.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/the-man-in-the-window/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "ULTRAKILL",
+      "desc": "Shooter Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/196.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/ultrakill/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Yume Nikki",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/433.png",
+      "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/yume-nikki/index.html",
+      "disabled": false,
+      "local": true
+    },
+    {
+      "appName": "Crazy Cattle 3D",
+      "desc": "Sandbox/Arcade Games",
+      "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/164.png",
+      "url": "https://1games.io/game/crazy-cattle-3d/",
       "disabled": false
     }
   ]
