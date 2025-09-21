@@ -89,21 +89,21 @@
     {
       "appName": "Discord",
       "desc": "Chat, voice, and communities all in one place.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=discord.com",
+      "icon": "/assets/img/discord.webp",
       "url": "https://discord.com/app",
       "disabled": false
     },
     {
       "appName": "YouTube",
       "desc": "Watch, create, and share videos worldwide.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=youtube.com",
+      "icon": "/assets/img/youtube.webp",
       "url": "https://youtube.com",
       "disabled": false
     },
     {
       "appName": "Reddit",
       "desc": "Community discussion, news, memes, and more.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=reddit.com",
+      "icon": "/assets/img/reddit.webp",
       "url": "https://reddit.com",
       "disabled": false
     },
@@ -152,7 +152,7 @@
     {
       "appName": "X (Twitter)",
       "desc": "Real-time news and social conversations.",
-      "icon": "https://www.google.com/s2/favicons?sz=128&domain=x.com",
+      "icon": "/assets/img/twitter-x.webp",
       "url": "https://x.com/i/flow/login",
       "disabled": false
     },
@@ -2044,7 +2044,7 @@
     {
       "appName": "Factory Balls",
       "desc": "Brain Games",
-      "icon": "https://dogeub-assets.ftp.sh/factoryballs/splash.png",
+      "icon": "https://play-lh.googleusercontent.com/s2kqCYcsYoDKz18p7EvCW7FAkE4tKoABJJg5Zvo5EQxUfmQXX01bXs7wYyZVjM7puQ=w240-h480-rw",
       "url": "https://dogeub-assets.ftp.sh/factoryballs/index.html",
       "disabled": false
     },
@@ -2310,7 +2310,7 @@
     {
       "appName": "Minesweeper",
       "desc": "Brain Games",
-      "icon": "https://dogeub-assets.ftp.sh/minesweeper/minesweeper.png",
+      "icon": "hthttps://play-lh.googleusercontent.com/eX5S3Tv3eSO1aWDMQ7MGRO1AaZM-mF0EvRbNsUM887kJVHj0aKv4GnDNj6ds_qvhpakg",
       "url": "https://dogeub-assets.ftp.sh/minesweeper/index.html",
       "disabled": false
     },
