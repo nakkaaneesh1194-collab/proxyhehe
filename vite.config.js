@@ -9,6 +9,7 @@ import { createBareServer } from "@tomphttp/bare-server-node";
 import { bareModulePath } from '@mercuryworkshop/bare-as-module3';
 import { libcurlPath } from '@mercuryworkshop/libcurl-transport';
 import { baremuxPath } from '@mercuryworkshop/bare-mux/node';
+import { scramjetPath } from "@mercuryworkshop/scramjet/path";
 import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
 import dotenv from "dotenv";
 
@@ -66,6 +67,7 @@ export default defineConfig(({ command }) => {
         targets: [
           { src: [normalizePath(resolve(libcurlPath, '*'))], dest: 'libcurl' },
           { src: [normalizePath(resolve(baremuxPath, '*'))], dest: 'baremux' },
+          { src: [normalizePath(resolve(scramjetPath, '*'))], dest: 'scram' },
           useBare && { src: [normalizePath(resolve(bareModulePath, '*'))], dest: 'baremod' },
           {
             src: [

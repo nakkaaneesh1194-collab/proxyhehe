@@ -22,6 +22,7 @@
     "@mercuryworkshop/wisp-js": "^0.3.3",
     "@mui/material": "^7.3.1",
     "@titaniumnetwork-dev/ultraviolet": "3.2.7",
+    "@mercuryworkshop/scramjet": "https://github.com/MercuryWorkshop/scramjet/releases/download/latest/mercuryworkshop-scramjet-2.0.0-alpha.tgz",
     "@tomphttp/bare-server-node": "^2.0.5",
     "basecoat-css": "^0.3.1",
     "clsx": "^2.1.1",

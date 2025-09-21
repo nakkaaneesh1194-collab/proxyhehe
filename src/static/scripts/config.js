@@ -12,10 +12,11 @@ export const CONFIG = {
   ws: `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/wisp/`,
   transport: '/libcurl/index.mjs',
   baremod: '/baremod/index.mjs',
-  unsupported: ['spotify.com'],
+  unsupported: [],
   filter: [
     { url: 'neal.fun', type: 'scr' },
     { url: 'geforcenow.com', type: 'scr' },
+    { url: 'spotify.com', type: 'scr' },
     ...gFilters,
   ],
 };
