@@ -450,11 +450,12 @@ window.addEventListener('load', async () => {
   };
 
   const ws = getOption('wServer', CONFIG.ws);
-  const transport = (location.hostname.endsWith('.vercel.app') ? CONFIG.baremod : CONFIG.transport);
+  const vercel = location.hostname.endsWith('.vercel.app');
+  const transport = (vercel ? CONFIG.baremod : CONFIG.transport);
   let c = self.__uv$config;
 
   const setTransport = async () => {
-    try { await connection.setTransport(transport, [{ wisp: ws }]); log(`Set transport: ${transport}`); }
+    try { await connection.setTransport(transport, [vercel ? `${location.protocol}//${location.host + CONFIG.bUrl}` : { wisp: ws }]); log(`Set transport: ${transport}`); }
     catch (e) { error('setTransport failed:', e); throw e; }
   };
 
