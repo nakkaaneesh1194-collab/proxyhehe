@@ -16,7 +16,7 @@ logging.set_level(logging.NONE);
 
 Object.assign(wisp.options, {
   dns_method: "resolve",
-  dns_servers: ["94.140.14.14", "94.140.15.15"],
+  dns_servers: ["1.1.1.3", "1.0.0.3"],
   dns_result_order: "ipv4first",
 });
 
