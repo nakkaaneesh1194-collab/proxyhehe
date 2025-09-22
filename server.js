@@ -3,14 +3,16 @@ import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import fastifyCookie from "@fastify/cookie";
 import { join } from "node:path";
+import { createServer, ServerResponse } from "node:http";
 import { logging, server as wisp } from "@mercuryworkshop/wisp-js/server";
 import { createBareServer } from "@tomphttp/bare-server-node";
 import { MasqrMiddleware } from "./masqr.js";
 
 dotenv.config();
-logging.set_level(logging.NONE);
+ServerResponse.prototype.setMaxListeners(50);
 
-const bare = process.env.BARE !== "false" ? createBareServer("/seal/") : null;
+const port = process.env.PORT || 2345, server = createServer(), bare = process.env.BARE !== "false" ? createBareServer("/seal/") : null;
+logging.set_level(logging.NONE);
 
 Object.assign(wisp.options, {
   dns_method: "resolve",
@@ -18,51 +20,51 @@ Object.assign(wisp.options, {
   dns_result_order: "ipv4first",
 });
 
-const app = Fastify({ logger: false });
+server.on("upgrade", (req, sock, head) =>
+  bare?.shouldRoute(req) ? bare.routeUpgrade(req, sock, head)
+  : req.url.endsWith("/wisp/") ? wisp.routeRequest(req, sock, head)
+  : sock.end()
+);
 
-await app.register(fastifyCookie);
-await app.register(fastifyStatic, {
-  root: join(process.cwd(), "dist"),
-  prefix: "/",
-  decorateReply: true,
+const app = Fastify({
+  serverFactory: h => (server.on("request", (req,res) =>
+    bare?.shouldRoute(req) ? bare.routeRequest(req,res) : h(req,res)), server),
+  logger: false
 });
 
-if (process.env.MASQR === "true") app.addHook("onRequest", MasqrMiddleware);
+await app.register(fastifyCookie);
 
-const proxy = (url, type = "application/javascript") => async (req, reply) => {
+app.register(fastifyStatic, {
+  root: join(import.meta.dirname, "dist"),
+  prefix: "/",
+  decorateReply: true
+});
+
+if (process.env.MASQR === "true")
+  app.addHook("onRequest", MasqrMiddleware);
+
+const proxy = (url, type="application/javascript") => async (req, reply) => {
   try {
-    const res = await fetch(url(req));
-    if (!res.ok) return reply.code(res.status).send();
-    reply.type(res.headers.get("content-type") || type);
+    const res = await fetch(url(req)); if (!res.ok) return reply.code(res.status).send();
+    if (res.headers.get("content-type")) reply.type(res.headers.get("content-type")); else reply.type(type);
     return reply.send(Buffer.from(await res.arrayBuffer()));
-  } catch {
-    return reply.code(500).send();
-  }
+  } catch { return reply.code(500).send(); }
 };
 
-app.get("/assets/img/*", proxy(req => `https://dogeub-assets.pages.dev/img/${req.params["*"]}`));
-app.get("/js/script.js", proxy(() => "https://byod.privatedns.org/js/script.js"));
+app.get("/assets/img/*", proxy(req => `https://dogeub-assets.pages.dev/img/${req.params["*"]}`, ""));
+app.get("/js/script.js", proxy(()=> "https://byod.privatedns.org/js/script.js"));
 
 app.get("/return", async (req, reply) =>
   req.query?.q
     ? fetch(`https://duckduckgo.com/ac/?q=${encodeURIComponent(req.query.q)}`)
-        .then(r => r.json())
-        .catch(() => reply.code(500).send({ error: "request failed" }))
+        .then(r => r.json()).catch(()=>reply.code(500).send({error:"request failed"}))
     : reply.code(401).send({ error: "query parameter?" })
 );
 
 app.setNotFoundHandler((req, reply) =>
-  req.raw.method === "GET" && req.headers.accept?.includes("text/html")
+  req.raw.method==="GET" && req.headers.accept?.includes("text/html")
     ? reply.sendFile("index.html")
     : reply.code(404).send({ error: "Not Found" })
 );
 
-// Vercel Node.js Serverless Export
-export default async function handler(req, res) {
-  // Handle upgrades for Bare/Wisp
-  if (bare?.shouldRoute(req)) return bare.routeRequest(req, res);
-  if (req.url.endsWith("/wisp/")) return wisp.routeRequest(req, res);
-  
-  await app.ready();
-  app.server.emit("request", req, res);
-}
+app.listen({ port }).then(()=>console.log(`Server running on ${port}`));
