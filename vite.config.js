@@ -106,6 +106,20 @@ export default defineConfig(({ command }) => {
           });
         },
       },
+      {
+        name: 'redirect',
+        apply: 'serve',
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            if (req.url === '/ds') {
+              res.writeHead(302, { Location: 'https://discord.gg/ZBef7HnAeg' });
+              res.end();
+            } else {
+              next();
+            }
+          });
+        },
+      }
     ],
     build: {
       esbuild: { legalComments: 'none' },
