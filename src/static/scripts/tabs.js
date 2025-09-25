@@ -462,11 +462,10 @@ window.addEventListener('load', async () => {
   const setTransport = async () => {
     try {
       await connection.setTransport(transport, [{ wisp: ws }])
-        .then(() => log(`Set transport: ${transport}`));
+        .then((e) => log(`Set transport: ${transport}`));
     }
     catch (e) { error('setTransport failed:', e); throw e; }
   };
-
 
   window.scr = new ScramjetController({
     files: {
@@ -481,7 +480,6 @@ window.addEventListener('load', async () => {
 
   const sws = [
     { path: '/s_sw.js', scope: '/scramjet/' },
-    // { path: '/lab.js', scope: '/assignments/' },
     { path: '/uv/sw.js' },
   ];
 
@@ -489,9 +487,6 @@ window.addEventListener('load', async () => {
     try { await navigator.serviceWorker.register(sw.path, sw.scope ? { scope: sw.scope } : undefined); }
     catch (err) { warn(`SW reg err (${sw.path}):`, err); }
   }
-
-  await setTransport();
-  setInterval(setTransport, 30000);
 
   let tabManager;
   try {
@@ -518,4 +513,7 @@ window.addEventListener('load', async () => {
 
   (tabManager.options.showTb ?? true) && domMap['tabs-btn']();
   Object.entries(domMap).forEach(([id, fn]) => document.getElementById(id)?.addEventListener('click', fn));
+
+  await setTransport();
+  setInterval(setTransport, 30000);
 });
