@@ -3,6 +3,7 @@ import * as contentObserver from './content_observer';
 import { setupHotkeys } from './hotkeys';
 import { CONFIG } from './config';
 import { logUtils } from '/src/utils/utils';
+import 'movement.css';
 
 const createIframe = (url, manager, tab, srcPrefix = '') => {
   const f = document.createElement('iframe');
@@ -317,7 +318,7 @@ class TabManager {
   add = () => {
     if (this.tabs.length >= this.maxTabs) return;
     this.tabs.forEach(t => t.active = false);
-    const t = { id: this.nextId++, title: this.newTabTitle, url: this.newTabUrl, active: true };
+    const t = { id: this.nextId++, title: this.newTabTitle, url: this.newTabUrl, active: true, justAdded: true };
     this.tabs.push(t);
     this.render();
     this.createIframes();
@@ -325,6 +326,7 @@ class TabManager {
     this.track(t.id);
     if (this.ui) this.ui.value = '';
   };
+
 
   close = (id) => {
     if (this.tabs.length === 1) return;
@@ -427,14 +429,18 @@ class TabManager {
     const w = this.getTabWidth();
     const op = JSON.parse(localStorage.getItem('options') || '{}');
     this.tc.innerHTML = this.tabs
-      .map((t, i) => `
-        <div class="tab-item relative flex items-center rounded-b-none justify-between pl-2.5 pr-1.5 py-[0.28rem] rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${
+      .map((t, i) => {
+        const isNew = t.justAdded;
+        return `<div ${isNew ? 'data-m="bounce-up" data-m-duration="0.2"' : ''} class="tab-item relative flex items-center rounded-b-none justify-between pl-2.5 pr-1.5 py-[0.28rem] rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${
           t.active ? `border border-b-0 text-[${op.bodyText || '#8a9bb8'}]` : 'hover:bg-[#cccccc2f]'
         } ${i === 0 ? 'ml-0' : '-ml-px'}" style="width:${w}px;min-width:${this.minW}px;background-color:${t.active ? op.urlBarBg || '#1d303f' : undefined}" data-tab-id="${t.id}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
           <span class="text-[12px] font-medium truncate flex-1 mr-2 ml-1.5" title="${this.escapeHTML(t.title)}">${this.escapeHTML(t.title)}</span>
           ${this.tabs.length > 1 ? `<button class="close-tab shrink-0 w-4 h-4 rounded-full hover:bg-[#b6bfc748] active:bg-[#d0dbe467] flex items-center justify-center transition-colors" data-tab-id="${t.id}" title="Close ${this.escapeHTML(t.title)}"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>` : ''}
-        </div>`).join('');
+        </div>`;
+      }).join('');
+    
+    this.tabs.forEach(t => delete t.justAdded);
   };
 }
 
@@ -450,17 +456,17 @@ window.addEventListener('load', async () => {
   };
 
   const ws = getOption('wServer', CONFIG.ws);
-  const vercel = location.hostname.endsWith('.vercel.app');
-  const transport = (vercel ? CONFIG.baremod : CONFIG.transport);
+  const transport = CONFIG.transport;
   let c = self.__uv$config;
 
   const setTransport = async () => {
-    try { await connection.setTransport(transport, [vercel ? `${location.protocol}//${location.host + CONFIG.bUrl}` : { wisp: ws }]); log(`Set transport: ${transport}`); }
+    try {
+      await connection.setTransport(transport, [{ wisp: ws }])
+        .then(() => log(`Set transport: ${transport}`));
+    }
     catch (e) { error('setTransport failed:', e); throw e; }
   };
 
-  await setTransport();
-  setInterval(setTransport, 30000);
 
   window.scr = new ScramjetController({
     files: {
@@ -483,6 +489,9 @@ window.addEventListener('load', async () => {
     try { await navigator.serviceWorker.register(sw.path, sw.scope ? { scope: sw.scope } : undefined); }
     catch (err) { warn(`SW reg err (${sw.path}):`, err); }
   }
+
+  await setTransport();
+  setInterval(setTransport, 30000);
 
   let tabManager;
   try {

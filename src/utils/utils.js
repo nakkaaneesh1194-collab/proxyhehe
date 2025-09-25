@@ -16,14 +16,13 @@ export const resetInstance = () => {
 };
 
 export const ckOff = () => {
-  if (document.title.includes('v5-')) return;
   const op = JSON.parse(localStorage.options || '{}');
   import('./config.js').then(({ meta }) => {
     const { tabName: t, tabIcon: i } = op;
     const { tabName: ogName, tabIcon: ogIcon } = meta[0].value;
     const set = (title, icon) => {
       document.title = title;
-      document.querySelector("link[rel~='icon']").href = icon;
+      document.querySelector("link[rel~='icon']")?.setAttribute("href", icon);
     };
     blur && window.removeEventListener('blur', blur);
     focus && window.removeEventListener('focus', focus);
