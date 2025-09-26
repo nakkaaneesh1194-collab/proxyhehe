@@ -7,17 +7,21 @@ import 'movement.css';
 
 const createIframe = (url, manager, tab, srcPrefix = '') => {
   const f = document.createElement('iframe');
-  f.id = `iframe-${tab.id}`;
-  f.className = manager.fCss;
-  f.style.zIndex = 10;
-  f.style.opacity = '1';
-  f.style.pointerEvents = 'auto';
-  f.src = srcPrefix + url;
+  Object.assign(f, {
+    id: `iframe-${tab.id}`,
+    className: manager.fCss,
+    src: srcPrefix + url
+  });
+  Object.assign(f.style, {
+    zIndex: '10',
+    opacity: '1',
+    pointerEvents: 'auto'
+  });
   manager.ic.appendChild(f);
   return f;
 };
 
-export const PR_TYPE = {
+export const TYPE = {
   scr: {
     create: (url, manager, tab) => {
       const sf = scr.createFrame();
@@ -55,43 +59,51 @@ export const PR_TYPE = {
   auto: {
     create: (url, manager, tab) => {
       const matched = manager.filter?.find(f => url.toLowerCase().includes(f.url.toLowerCase()));
-      return PR_TYPE[matched?.type || (manager.filter?.some(f => f.type === 'scr' && url.toLowerCase().includes(f.url.toLowerCase())) ? 'scr' : 'uv')].create(url, manager, tab);
+      return TYPE[matched?.type || (manager.filter?.some(f => f.type === 'scr' && url.toLowerCase().includes(f.url.toLowerCase())) ? 'scr' : 'uv')].create(url, manager, tab);
     },
     navigate: (url, manager, tab, iframe) => {
       const matched = manager.filter?.find(f => url.toLowerCase().includes(f.url.toLowerCase()));
-      return PR_TYPE[matched?.type || (manager.filter?.some(f => f.type === 'scr' && url.toLowerCase().includes(f.url.toLowerCase())) ? 'scr' : 'uv')].navigate(url, manager, tab, iframe);
+      return TYPE[matched?.type || (manager.filter?.some(f => f.type === 'scr' && url.toLowerCase().includes(f.url.toLowerCase())) ? 'scr' : 'uv')].navigate(url, manager, tab, iframe);
     },
   },
 };
 
 class TabManager {
   constructor(arr) {
-    this.unsupported = CONFIG.unsupported;
-    this.filter = CONFIG.filter;
-    this.options = JSON.parse(localStorage.getItem('options')) || {};
-    this.prType = this.options.prType || 'auto';
-    this.search = this.options.engine || 'https://www.google.com/search?q=';
-    this.newTabUrl = '/new';
-    this.newTabTitle = 'New Tab';
-    this.enc = arr[0];
-    this.dnc = arr[1];
-    this.frames = {};
-    this.tabs = [{ id: 1, title: this.newTabTitle, url: this.newTabUrl, active: true }];
-    this.nextId = 2;
-    this.maxTabs = 10;
-    this.minW = 50;
-    this.maxW = 200;
+    const stored = JSON.parse(localStorage.getItem('options')) || {};
+    
+    Object.assign(this, {
+      unsupported: CONFIG.unsupported,
+      filter: CONFIG.filter,
+      options: stored,
+      prType: stored.prType || 'auto',
+      search: stored.engine || 'https://www.google.com/search?q=',
+      newTabUrl: '/new',
+      newTabTitle: 'New Tab',
+      enc: arr[0],
+      dnc: arr[1],
+      frames: {},
+      tabs: [{ id: 1, title: 'New Tab', url: '/new', active: true }],
+      history: new Map(),
+      urlTrack: new Map(),
+      nextId: 2,
+      maxTabs: 10,
+      minW: 50,
+      maxW: 200,
+      urlInterval: 1000
+    });
 
-    this.urlTrack = new Map();
-    this.urlInterval = 1000;
-
-    this.tc = document.getElementById('tabs-cont');
-    this.ab = document.getElementById('tab-btn');
-    this.ic = document.getElementById('fcn');
-    this.ui = document.getElementById('url');
-    this.bg = document.getElementById('class-portal');
-    this.fCss =
-      'w-full h-full border-0 absolute top-0 left-0 z-0 transition-opacity duration-200 ease-in-out opacity-0 pointer-events-none';
+    const els = ['tabs-cont', 'tab-btn', 'fcn', 'url', 'class-portal']
+      .reduce((acc, id) => ({ ...acc, [id]: document.getElementById(id) }), {});
+    
+    Object.assign(this, {
+      tc: els['tabs-cont'],
+      ab: els['tab-btn'],
+      ic: els['fcn'],
+      ui: els['url'],
+      bg: els['class-portal'],
+      fCss: 'w-full h-full border-0 absolute top-0 left-0 z-0 transition-opacity duration-200 ease-in-out opacity-0 pointer-events-none'
+    });
 
     this.ab.onclick = () => this.add();
 
@@ -130,20 +142,21 @@ class TabManager {
     window.tabManager = this;
   }
 
-  ex = (url) => {
-    const endpoints = Object.values(PR_TYPE)
-      .map((p) => 
-        p === PR_TYPE.scr ? 'scramjet' : 
-        p === PR_TYPE.uv ? 'uv/service' : 
-        p === PR_TYPE.uv1 ? 'assignments' : 
-        null
-      )
+  ex = (() => {
+    const endpoints = Object.values(TYPE)
+      .map(p => {
+        switch(p) {
+          case TYPE.scr: return 'scramjet';
+          case TYPE.uv: return 'uv/service';
+          case TYPE.uv1: return 'assignments';
+          default: return null;
+        }
+      })
       .filter(Boolean)
       .join('|');
-
     const regex = new RegExp(`^https?:\/\/[^\/]+\/(${endpoints})\/`, 'i');
-    return this.dnc(url.replace(regex, ''));
-  };
+    return (url) => this.dnc(url.replace(regex, ''));
+  })();
 
   showBg = (c) => {
     this.bg.style.opacity = c ? '1' : '0';
@@ -227,15 +240,20 @@ class TabManager {
     const activeTab = this.active();
     if (!activeTab) return;
 
-    const iframe = document.getElementById(`iframe-${activeTab.id}`);
-    if (!iframe || this.isNewTab(activeTab.url)) return;
+    const hist = this.history.get(activeTab.id);
+    if (!hist || hist.position <= 0) {
+      console.info('[info] back(): no history to go back');
+      return;
+    }
 
-    try {
-      const historyLength = iframe.contentWindow.history.length;
-      if (historyLength > 1) iframe.contentWindow.history.back();
-      else console.info('[info] back(): no history to go back');
-    } catch (err) {
-      console.warn('[err] back():', err);
+    hist.position--;
+    const decodedUrl = hist.urls[hist.position];
+    if (decodedUrl) {
+      const handler = TYPE[this.prType] || TYPE.auto;
+      const iframe = document.getElementById(`iframe-${activeTab.id}`);
+      handler.navigate(decodedUrl, this, activeTab, iframe);
+      if (this.ui) this.ui.value = decodedUrl;
+      console.log('[info] back(): navigated to', decodedUrl);
     }
   };
 
@@ -243,14 +261,20 @@ class TabManager {
     const activeTab = this.active();
     if (!activeTab) return;
 
-    const iframe = document.getElementById(`iframe-${activeTab.id}`);
-    if (!iframe || this.isNewTab(activeTab.url)) return;
+    const hist = this.history.get(activeTab.id);
+    if (!hist || hist.position >= hist.urls.length - 1) {
+      console.info('[info] forward(): no history to go forward');
+      return;
+    }
 
-    try {
-      if (iframe.contentWindow.history.length > 1) iframe.contentWindow.history.forward();
-      else console.info('[info] forward(): no history to go forward');
-    } catch (err) {
-      console.warn('[err] forward():', err);
+    hist.position++;
+    const decodedUrl = hist.urls[hist.position];
+    if (decodedUrl) {
+      const handler = TYPE[this.prType] || TYPE.auto;
+      const iframe = document.getElementById(`iframe-${activeTab.id}`);
+      handler.navigate(decodedUrl, this, activeTab, iframe);
+      if (this.ui) this.ui.value = decodedUrl;
+      console.log('[info] forward(): navigated to', decodedUrl);
     }
   };
 
@@ -286,31 +310,50 @@ class TabManager {
   };
 
   checkStudentUrl = (id) => {
-    const t = this.tabs.find((t) => t.id === id);
+    const t = this.tabs.find(t => t.id === id);
     const f = document.getElementById(`iframe-${id}`);
-    if (!t || !f || this.isNewTab(t.url)) return;
+    if (!t?.url || !f || t.url === this.newTabUrl) return;
     try {
-      const newUrl = f.contentWindow.location.href;
+      const { href: newUrl } = f.contentWindow.location;
       if (newUrl && newUrl !== t.url && newUrl !== 'about:blank') {
         this.updateTabMeta(t, f, newUrl);
-        try { contentObserver.unbind(); contentObserver.bind(); } catch {}
+        contentObserver.unbind?.();
+        contentObserver.bind?.();
       }
     } catch { this.addLoadListener(id); }
   };
 
   updateTabMeta = (t, f, newUrl) => {
+    const decodedUrl = this.ex(newUrl);
+    const hist = this.history.get(t.id) || { urls: [decodedUrl], position: 0 };
+    
+    if (!this.history.has(t.id)) {
+      this.history.set(t.id, hist);
+    } else if (hist.urls[hist.position] !== decodedUrl) {
+      hist.urls.length = hist.position + 1;
+      hist.urls.push(decodedUrl);
+      hist.position++;
+    }
+    
     t.url = newUrl;
-    const trySetTitle = (tries = 10) => {
-      const doc = f.contentDocument;
-      const ttl = doc?.title?.trim();
-      if (ttl) t.title = ttl.length > 20 ? ttl.slice(0, 20) + '...' : ttl;
-      else if (tries > 0) setTimeout(() => trySetTitle(tries - 1), 100);
-      else t.title = this.domain(newUrl);
-      this.render();
+    
+    const updateTitle = (tries = 10) => {
+      const ttl = f.contentDocument?.title?.trim();
+      if (ttl) {
+        t.title = ttl.length > 20 ? ttl.slice(0, 20) + '...' : ttl;
+        this.render();
+      } else if (tries > 0) {
+        setTimeout(() => updateTitle(tries - 1), 100);
+      } else {
+        t.title = this.domain(newUrl);
+        this.render();
+      }
     };
-    trySetTitle();
-    if (t.active && this.ui && !this.isNewTab(t.url)) {
-      this.ui.value = this.ex(newUrl);
+    
+    updateTitle();
+    
+    if (t.active && this.ui && t.url !== this.newTabUrl) {
+      this.ui.value = decodedUrl;
       this.showBg(false);
     }
   };
@@ -335,6 +378,7 @@ class TabManager {
     const wasActive = this.tabs[i].active;
     this.tabs.splice(i, 1);
     this.stopTrack(id);
+    this.history.delete(id);
     document.getElementById(`iframe-${id}`)?.remove();
     if (wasActive) {
       const newIdx = Math.min(i, this.tabs.length - 1);
@@ -389,12 +433,12 @@ class TabManager {
 
     const url = this.formatInputUrl(input);
     this.showBg(false);
-    const proxyType = PR_TYPE[this.prType] || PR_TYPE.auto;
+    const handler = TYPE[this.prType] || TYPE.auto;
     const f = document.getElementById(`iframe-${t.id}`);
     if (this.isNewTab(t.url)) {
       document.getElementById(`iframe-${t.id}`)?.remove();
-      proxyType.create(url, this, t);
-    } else proxyType.navigate(url, this, t, f);
+      handler.create(url, this, t);
+    } else handler.navigate(url, this, t, f);
 
     t.url = url;
     try { t.title = new URL(url).hostname.replace('www.', ''); } catch { t.title = input; }
@@ -425,23 +469,31 @@ class TabManager {
     this.ab.title = dis ? `Maximum ${this.maxTabs} tabs allowed` : 'Add new tab';
   };
 
-  render = () => {
-    const w = this.getTabWidth();
-    const op = JSON.parse(localStorage.getItem('options') || '{}');
-    this.tc.innerHTML = this.tabs
-      .map((t, i) => {
-        const isNew = t.justAdded;
-        return `<div ${isNew ? 'data-m="bounce-up" data-m-duration="0.2"' : ''} class="tab-item relative flex items-center rounded-b-none justify-between pl-2.5 pr-1.5 py-[0.28rem] rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${
-          t.active ? `border border-b-0 text-[${op.bodyText || '#8a9bb8'}]` : 'hover:bg-[#cccccc2f]'
-        } ${i === 0 ? 'ml-0' : '-ml-px'}" style="width:${w}px;min-width:${this.minW}px;background-color:${t.active ? op.urlBarBg || '#1d303f' : undefined}" data-tab-id="${t.id}">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-          <span class="text-[12px] font-medium truncate flex-1 mr-2 ml-1.5" title="${this.escapeHTML(t.title)}">${this.escapeHTML(t.title)}</span>
-          ${this.tabs.length > 1 ? `<button class="close-tab shrink-0 w-4 h-4 rounded-full hover:bg-[#b6bfc748] active:bg-[#d0dbe467] flex items-center justify-center transition-colors" data-tab-id="${t.id}" title="Close ${this.escapeHTML(t.title)}"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>` : ''}
-        </div>`;
-      }).join('');
-    
-    this.tabs.forEach(t => delete t.justAdded);
-  };
+  render = (() => {
+    const tabTemplate = (t, w, i, op, showClose) => `
+      <div ${t.justAdded ? 'data-m="bounce-up" data-m-duration="0.2"' : ''} 
+           class="tab-item relative flex items-center rounded-b-none justify-between pl-2.5 pr-1.5 py-[0.28rem] rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${
+             t.active ? `border border-b-0 text-[${op.bodyText || '#8a9bb8'}]` : 'hover:bg-[#cccccc2f]'
+           } ${i === 0 ? 'ml-0' : '-ml-px'}" 
+           style="width:${w}px;min-width:${this.minW}px;background-color:${t.active ? op.urlBarBg || '#1d303f' : undefined}" 
+           data-tab-id="${t.id}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <span class="text-[12px] font-medium truncate flex-1 mr-2 ml-1.5" title="${this.escapeHTML(t.title)}">${this.escapeHTML(t.title)}</span>
+        ${showClose ? `<button class="close-tab shrink-0 w-4 h-4 rounded-full hover:bg-[#b6bfc748] active:bg-[#d0dbe467] flex items-center justify-center transition-colors" data-tab-id="${t.id}" title="Close ${this.escapeHTML(t.title)}"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>` : ''}
+      </div>`.trim();
+
+    return function() {
+      const w = this.getTabWidth();
+      const op = JSON.parse(localStorage.getItem('options') || '{}');
+      const showClose = this.tabs.length > 1;
+      
+      this.tc.innerHTML = this.tabs
+        .map((t, i) => tabTemplate(t, w, i, op, showClose))
+        .join('');
+      
+      this.tabs.forEach(t => delete t.justAdded);
+    };
+  })();
 }
 
 window.addEventListener('load', async () => {
