@@ -467,6 +467,9 @@ window.addEventListener('load', async () => {
     catch (e) { error('setTransport failed:', e); throw e; }
   };
 
+  await setTransport();
+  setInterval(setTransport, 30000);
+
   window.scr = new ScramjetController({
     files: {
       wasm: '/scram/scramjet.wasm.wasm',
@@ -513,7 +516,4 @@ window.addEventListener('load', async () => {
 
   (tabManager.options.showTb ?? true) && domMap['tabs-btn']();
   Object.entries(domMap).forEach(([id, fn]) => document.getElementById(id)?.addEventListener('click', fn));
-
-  await setTransport();
-  setInterval(setTransport, 30000);
 });

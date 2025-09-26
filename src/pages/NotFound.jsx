@@ -25,6 +25,7 @@ const NotFound = () => {
   }, [loc, nav]);
 
   if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/uv/service/')) return null;
+  else location.reload();
 
   return (
     <div
