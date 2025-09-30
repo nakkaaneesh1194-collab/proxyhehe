@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LucideSearch, Earth } from 'lucide-react';
 import { GlowWrapper } from '../utils/Glow';
@@ -11,47 +11,34 @@ import 'movement.css';
 export default function SearchContainer({ logo = true, cls, nav = true }) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
-  const [showResults, setShowResults] = useState(false);
-  const debounceTimeoutRef = useRef(null);
-  const latestQueryRef = useRef('');
+  const debounceRef = useRef(null);
+  const latestQuery = useRef('');
   const navigate = useNavigate();
   const { options } = useOptions();
 
   const fetchResults = useCallback(async (searchQuery) => {
     if (!searchQuery.trim()) {
       setResults([]);
-      setShowResults(false);
       return;
     }
 
-    latestQueryRef.current = searchQuery;
-
+    latestQuery.current = searchQuery;
     try {
       const response = await fetch('/return?q=' + encodeURIComponent(searchQuery));
-
-      if (!response.ok) {
-        if (latestQueryRef.current === searchQuery) {
-          setResults([]);
-          setShowResults(false);
-        }
-        return;
-      }
+      if (!response.ok) return setResults([]);
 
       const data = await response.json();
+      if (latestQuery.current !== searchQuery) return;
 
-      if (latestQueryRef.current === searchQuery) {
-        const validResults = Array.isArray(data)
-          ? data.filter((item) => item.phrase).slice(0, 4)
-          : [];
-
-        setResults(validResults);
-        setShowResults(validResults.length > 0);
-      }
+      const validResults = Array.isArray(data)
+        ? data.reduce((acc, item) => {
+            if (item.phrase && acc.length < 4) acc.push(item);
+            return acc;
+          }, [])
+        : [];
+      setResults(validResults);
     } catch {
-      if (latestQueryRef.current === searchQuery) {
-        setResults([]);
-        setShowResults(false);
-      }
+      if (latestQuery.current === searchQuery) setResults([]);
     }
   }, []);
 
@@ -59,29 +46,26 @@ export default function SearchContainer({ logo = true, cls, nav = true }) {
     const newQuery = e.target.value;
     setQuery(newQuery);
 
+    if (debounceRef.current) clearTimeout(debounceRef.current);
     if (!newQuery.trim()) {
+      latestQuery.current = '';
       setResults([]);
-      latestQueryRef.current = '';
-      setShowResults(false);
-      if (debounceTimeoutRef.current) clearTimeout(debounceTimeoutRef.current);
       return;
     }
-    debounceTimeoutRef.current && clearTimeout(debounceTimeoutRef.current);
 
-    debounceTimeoutRef.current = setTimeout(() => {
-      fetchResults(newQuery);
-    }, 300);
+    debounceRef.current = setTimeout(() => fetchResults(newQuery), 300);
   };
 
-  const handleKeyDown = async (e) => {
-    if (e.key === 'Enter') {
-      const trimmed = query.trim();
-      if (trimmed && nav) {
-        sessionStorage.setItem('query', trimmed);
-        navigate('/indev');
-      } else if (trimmed) {
-        window.parent.tabManager.navigate(trimmed);
-      }
+  const handleKeyDown = (e) => {
+    if (e.key !== 'Enter') return;
+    const trimmed = query.trim();
+    if (!trimmed) return;
+
+    if (nav) {
+      sessionStorage.setItem('query', trimmed);
+      navigate('/indev');
+    } else {
+      window.parent.tabManager.navigate(trimmed);
     }
   };
 
@@ -94,18 +78,21 @@ export default function SearchContainer({ logo = true, cls, nav = true }) {
     }
   };
 
-  // on unmount
   useEffect(() => {
-    return () => {
-      if (debounceTimeoutRef.current) clearTimeout(debounceTimeoutRef.current);
-    };
+    return () => debounceRef.current && clearTimeout(debounceRef.current);
   }, []);
 
-  const placeholder = `Search ${options.engineName || 'Google'} or type URL`;
-  const iconSrc =
-    options.engineIcon === undefined
-      ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Google_Favicon_2025.svg/120px-Google_Favicon_2025.svg.png'
-      : options.engineIcon;
+  const placeholder = useMemo(
+    () => `Search ${options.engineName || 'Google'} or type URL`,
+    [options.engineName],
+  );
+
+  const iconSrc = useMemo(
+    () =>
+      options.engineIcon ??
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Google_Favicon_2025.svg/120px-Google_Favicon_2025.svg.png',
+    [options.engineIcon],
+  );
 
   return (
     <div
@@ -124,7 +111,7 @@ export default function SearchContainer({ logo = true, cls, nav = true }) {
             id="search-div"
             className={clsx(
               'flex items-center gap-3 shadow-xl pl-4 pr-4 w-full h-[3.41rem]',
-              showResults ? 'rounded-t-[14px] rounded-b-none' : 'rounded-[14px]',
+              results.length ? 'rounded-t-[14px] rounded-b-none' : 'rounded-[14px]',
               theme[`searchBarColor`],
               theme[`theme-${options.theme || 'default'}`],
             )}
@@ -148,7 +135,7 @@ export default function SearchContainer({ logo = true, cls, nav = true }) {
             <LucideSearch className="w-[1.08rem] h-[1.08rem] shrink-0" />
           </div>
 
-          {showResults && results.length > 0 && (
+          {results.length > 0 && (
             <div
               className={clsx(
                 'shadow-xl mt-0 p-2 text-[14px] w-full rounded-b-[14px] space-y-1',
@@ -156,9 +143,9 @@ export default function SearchContainer({ logo = true, cls, nav = true }) {
                 theme[`theme-${options.theme || 'default'}`],
               )}
             >
-              {results.map((result, index) => (
+              {results.map((result) => (
                 <div
-                  key={index}
+                  key={result.phrase}
                   className="rounded-[9px] w-full h-11 hover:bg-[#d4d4d418] cursor-pointer duration-100 ease-in px-3 pl-2.5 flex items-center"
                   onClick={() => handleResultClick(result.phrase)}
                 >
