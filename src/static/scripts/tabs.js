@@ -324,9 +324,19 @@ class TabManager {
   };
 
   updateTabMeta = (t, f, newUrl) => {
+    try {
+      const doc = f.contentDocument || f.contentWindow.document;
+      if (doc?.body?.innerText?.includes('Error processing your request')) {
+        f.style.opacity = 0;
+        f.contentWindow.location.reload();
+        f.style.opacity = 1;
+        return;
+      }
+    } catch {}
+    
     const decodedUrl = this.ex(newUrl);
     const hist = this.history.get(t.id) || { urls: [decodedUrl], position: 0 };
-    
+
     if (!this.history.has(t.id)) {
       this.history.set(t.id, hist);
     } else if (hist.urls[hist.position] !== decodedUrl) {
@@ -334,9 +344,9 @@ class TabManager {
       hist.urls.push(decodedUrl);
       hist.position++;
     }
-    
+
     t.url = newUrl;
-    
+
     const updateTitle = (tries = 10) => {
       const ttl = f.contentDocument?.title?.trim();
       if (ttl) {
@@ -349,14 +359,15 @@ class TabManager {
         this.render();
       }
     };
-    
+
     updateTitle();
-    
+
     if (t.active && this.ui && t.url !== this.newTabUrl) {
       this.ui.value = decodedUrl;
       this.showBg(false);
     }
   };
+
 
   add = () => {
     if (this.tabs.length >= this.maxTabs) return;
