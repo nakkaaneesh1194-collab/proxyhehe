@@ -121,7 +121,13 @@ export default defineConfig(({ command }) => {
       }
     ],
     build: {
-      esbuild: { legalComments: 'none' },
+      esbuild: { 
+        legalComments: 'none',
+        minifyIdentifiers: true,
+        minifySyntax: true,
+        minifyWhitespace: true,
+        treeShaking: true
+      },
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
@@ -130,11 +136,26 @@ export default defineConfig(({ command }) => {
         output: {
           entryFileNames: '[hash].js',
           chunkFileNames: (chunk) =>
-            chunk.name === 'vendor-modules' ? 'chunks/vendor-modules.js' : 'chunks/[hash].js',
+            chunk.name === 'vendor-modules' ? 'chunks/vendor-modules.[hash].js' : 'chunks/[hash].js',
           assetFileNames: 'assets/[hash].[ext]',
-          manualChunks: (id) => (id.includes('node_modules') ? 'vendor-modules' : undefined),
+          manualChunks: (id) => {
+            if (id.includes('node_modules')) {
+              if (id.includes('react') || id.includes('react-dom')) return 'react-vendor';
+              if (id.includes('lucide') || id.includes('@mui')) return 'ui-vendor';
+              return 'vendor-modules';
+            }
+          },
         },
+        treeshake: {
+          moduleSideEffects: false,
+          propertyReadSideEffects: false,
+          unknownGlobalSideEffects: false
+        }
       },
+      chunkSizeWarningLimit: 1000,
+      minify: 'esbuild',
+      sourcemap: false,
+      reportCompressedSize: false
     },
     css: {
       modules: {
