@@ -131,7 +131,7 @@ export const themeConfig = [
       switchEnabledColor: '#3b3b44',
       bgColor: '#0b0b0e',
       bodyText: '#e5e7eb',
-      urlBarBg: '#151517',
+      urlBarBg: '#1c1c1c',
       urlBarText: '#f3f4f6',
       tabBarBg: '#121214',
       tabBarBorder: '#27272a',
@@ -537,16 +537,50 @@ export const prConfig = [
       prType: 'uv',
     },
   },
-  /*{
-    option: 'Ultraviolet V1 only',
-    value: {
-      prType: 'uv1',
-    },
-  },*/
   {
     option: 'Scramjet only',
     value: {
       prType: 'scr',
     },
   },
+];
+
+export const designConfig = [
+  {
+    option: 'Dots',
+    value: {
+      bgDesign: 'dots',
+      getCSS: (color) => `radial-gradient(circle, rgba(${color},0.112) 3px, transparent 1px)`
+    }
+  },
+  {
+    option: 'Stripes',
+    value: {
+      bgDesign: 'diagonalStripes',
+      getCSS: (color) => `
+        repeating-linear-gradient(
+          45deg,
+          rgba(${color},0.15),
+          rgba(${color},0.15) 2px,
+          transparent 2px,
+          transparent 8px
+        )`
+    }
+  },
+  {
+    option: 'Griddy',
+    value: {
+      bgDesign: 'grid',
+      getCSS: (color) => `
+        linear-gradient(to right, rgba(${color},0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(${color},0.2) 1px, transparent 1px)
+      `
+    }
+  },
+  {
+    option: 'None',
+    value: {
+      bgDesign: 'none',
+    }
+  }
 ];

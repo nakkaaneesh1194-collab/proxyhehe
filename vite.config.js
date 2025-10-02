@@ -74,7 +74,6 @@ export default defineConfig(({ command }) => {
               normalizePath(resolve(uvPath, 'uv.handler.js')),
               normalizePath(resolve(uvPath, 'uv.client.js')),
               normalizePath(resolve(uvPath, 'uv.bundle.js')),
-              normalizePath(resolve(uvPath, 'uv.sw.js')),
               normalizePath(resolve(uvPath, 'sw.js')),
             ],
             dest: 'uv',

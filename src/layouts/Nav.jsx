@@ -13,8 +13,8 @@ const itemSize = 16;
 
 const navItems = [
   { name: 'Apps',id: 'btn-a', type: LayoutGrid, route: '/materials' },
-  { name: 'Games',id: 'btn-g', type: Gamepad2,   route: '/docs' },
-  { name: 'Settings',id: 'btn-s', type: Cog,  route: '/settings' },
+  { name: 'Games',id: 'btn-g', type: Gamepad2, route: '/docs' },
+  { name: 'Settings',id: 'btn-s', type: Cog, route: '/settings' },
 ];
 
 const Nav = () => {
@@ -24,7 +24,6 @@ const Nav = () => {
   const navHeight = Math.round(69 * scale);
   const logoWidth = Math.round(122 * scale);
   const logoHeight = Math.round(41 * scale);
-  const versionWidth = Math.max(24, 40 * scale);
   const versionFont = Math.round(9 * scale);
   const versionMargin = Math.round(-10 * scale); 
 
@@ -40,7 +39,7 @@ const Nav = () => {
         nav.nav,
         theme['nav-backgroundColor'],
         theme[`theme-${options.theme || 'default'}`],
-        'backdrop-blur-xs w-full shadow-x1/20 flex items-center pl-6 pr-5 gap-5 z-50',
+        ' w-full shadow-x1/20 flex items-center pl-6 pr-5 gap-5 z-50',
       )}
       style={{ height: `${navHeight}px` }}
     >
@@ -52,9 +51,10 @@ const Nav = () => {
       <div
         className="border rounded-full text-center"
         style={{
-          width: `${versionWidth}px`,
           fontSize: `${versionFont}px`,
           marginLeft: `${versionMargin}px`,
+          paddingLeft: '0.3rem',
+          paddingRight: '0.3rem',
         }}
       >
         v{version}
