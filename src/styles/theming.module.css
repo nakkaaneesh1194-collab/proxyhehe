@@ -104,6 +104,23 @@
   --item-border: #2f4f3c;
 }
 
+.theme-stellar {
+  --nav-bg: #02030ecc;
+  --nav-border: #2f3350;
+  --search-border: #232538;
+  --search-bg: #171927;
+  --search-ph: #adb2e1;
+  --search-color: #e2e5ff;
+  --settings-panel: #151624;
+  --settings-border: #2d2f44;
+  --apps-bg: #181a26;
+  --apps-border: #2d2f44;
+  --apps-text: #d6daff;
+  --apps-ph: #acb0d1;
+  --item-bg: #1d1f2d;
+  --item-border: #08090f;
+}
+
 .theme-paper {
   --nav-bg: #fff9ece6;
   --nav-border: #e8e2cf;
