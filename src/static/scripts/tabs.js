@@ -532,6 +532,8 @@ window.addEventListener('load', async () => {
     }
   };
 
+  await setTransport();
+
   window.scr = new ScramjetController({
     files: {
       wasm: '/scram/scramjet.wasm.wasm',
