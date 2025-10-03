@@ -47,11 +47,18 @@ app.register(fastifyStatic,{
   root: join(__dirname,"dist"),
   prefix:"/",
   decorateReply:true,
-  maxAge:86400000,
-  immutable:true,
-  cacheControl:true,
   etag:true,
-  lastModified:true
+  lastModified:true,
+  cacheControl:true,
+  setHeaders(res, path) {
+    if (path.endsWith(".html")) {
+      res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    } else if (/\.[a-f0-9]{8,}\./.test(path)) {
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+    } else {
+      res.setHeader("Cache-Control", "public, max-age=3600");
+    }
+  }
 });
 
 if (process.env.MASQR==="true")
