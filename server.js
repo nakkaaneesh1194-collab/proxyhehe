@@ -57,8 +57,7 @@ app.register(fastifyStatic,{
 if (process.env.MASQR==="true")
   app.addHook("onRequest",MasqrMiddleware);
 
-// --- streaming proxy ---
-const proxy=(url,type="application/javascript")=>async(req,reply)=>{
+const proxy= (url, type="application/javascript")=>async(req,reply)=>{
   try {
     const res=await fetch(url(req));
     if(!res.ok) return reply.code(res.status).send();
