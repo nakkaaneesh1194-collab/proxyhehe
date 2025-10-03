@@ -57,13 +57,19 @@ app.register(fastifyStatic,{
 if (process.env.MASQR==="true")
   app.addHook("onRequest",MasqrMiddleware);
 
+// --- streaming proxy ---
 const proxy=(url,type="application/javascript")=>async(req,reply)=>{
   try {
     const res=await fetch(url(req));
     if(!res.ok) return reply.code(res.status).send();
-    reply.type(res.headers.get("content-type")||type);
-    return reply.send(Buffer.from(await res.arrayBuffer()));
-  } catch { return reply.code(500).send(); }
+    reply.raw.writeHead(res.status,{
+      ...Object.fromEntries(res.headers),
+      "content-type":res.headers.get("content-type")||type
+    });
+    res.body.pipe(reply.raw);
+  } catch {
+    reply.code(500).send();
+  }
 };
 
 app.get("/assets/img/*",proxy(req=>`https://dogeub-assets.pages.dev/img/${req.params["*"]}`,""));
