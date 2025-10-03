@@ -57,17 +57,18 @@ app.register(fastifyStatic,{
 if (process.env.MASQR==="true")
   app.addHook("onRequest",MasqrMiddleware);
 
-const proxy= (url, type="application/javascript")=>async(req,reply)=>{
+const proxy = (url,type="application/javascript")=>async(req,reply)=>{
   try {
     const res=await fetch(url(req));
     if(!res.ok) return reply.code(res.status).send();
-    reply.raw.writeHead(res.status,{
-      ...Object.fromEntries(res.headers),
-      "content-type":res.headers.get("content-type")||type
-    });
-    res.body.pipe(reply.raw);
+
+    reply.code(res.status);
+    for (const [k,v] of res.headers) reply.header(k,v);
+    if (!res.headers.get("content-type")) reply.type(type);
+
+    return reply.send(res.body);
   } catch {
-    reply.code(500).send();
+    return reply.code(500).send();
   }
 };
 
