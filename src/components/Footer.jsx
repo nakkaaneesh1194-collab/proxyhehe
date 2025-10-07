@@ -23,9 +23,9 @@ const Footer = memo(() => {
           Discord
         </div>
         {options.donationBtn !== false && (
-          <a href="https://www.buymeacoffee.com/dogubdev" target="_blank" rel="noopener noreferrer">
+          <a href="https://ko-fi.com/I3I81MF4CH" target="_blank" rel="noopener noreferrer">
             <img
-              src="https://img.buymeacoffee.com/button-api/?text=Support us&emoji=☕&slug=dogubdev&button_colour=40DCA5&font_colour=ffffff&font_family=Inter&outline_colour=000000&coffee_colour=FFDD00"
+              src="https://img.buymeacoffee.com/button-api/?text=Support%20us&emoji=%F0%9F%92%99&slug=dogubdev&button_colour=5F7FFF&font_colour=ffffff&font_family=Inter&outline_colour=000000"
               alt="Support us"
               className="w-32 h-auto"
             />
