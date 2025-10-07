@@ -3,7 +3,7 @@
   <img src="https://github.com/DogeNetwork/dogeub/blob/main/public/logo.svg" width="322" />
   <br />
 
-  <a href="https://buymeacoffee.com/dogubdev" target="_blank"><img src="https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-yellow.svg" width="130" /></a> ![](https://dcbadge.limes.pink/api/server/https://discord.gg/unblocking?compact=true)
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I81MF4CH) ![](https://dcbadge.limes.pink/api/server/https://discord.gg/unblocking?compact=true)
 
 
   <hr />
