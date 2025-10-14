@@ -38,7 +38,8 @@
         Menu,
         Plus,
         Search,
-        PanelBottomClose
+        PanelBottomClose,
+        Star
       } from "lucide";
 
       createIcons({
@@ -50,7 +51,8 @@
           Menu,
           Plus,
           Search,
-          PanelBottomClose
+          PanelBottomClose,
+          Star
         },
       });
     </script>
@@ -169,6 +171,9 @@
         <div class="ub group flex flex-1 border-0 rounded-[8px] items-center pl-2 ml-1.5 mr-1.5 h-[calc(100%-5px)]">
           <i data-lucide="search" class="w-3.5 h-3.5 mr-2"></i>
           <input id="url" class="outline-hidden flex-1 text-[13px] bg-transparent" placeholder="Search or type any URL" onmousedown="this.focus()"/>
+          <div class="flex items-center justify-center rounded-md w-6 mr-1 has-tooltip" id="bookmark-btn">
+            <i data-lucide="star" class="w-4" id="bookmark"></i>
+          </div>
         </div>
         <div class="has-tooltip w-6 h-6 duration-100 ease-in rounded-md flex justify-center items-center relative" id="tabs-btn">
           <i data-lucide="folder" class="w-4"></i>

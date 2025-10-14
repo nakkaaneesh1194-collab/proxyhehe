@@ -71,7 +71,7 @@ export const TYPE = {
 class TabManager {
   constructor(arr) {
     const stored = JSON.parse(localStorage.getItem('options')) || {};
-    
+
     Object.assign(this, {
       unsupported: CONFIG.unsupported,
       filter: CONFIG.filter,
@@ -95,7 +95,7 @@ class TabManager {
 
     const els = ['tabs-cont', 'tab-btn', 'fcn', 'url', 'class-portal']
       .reduce((acc, id) => ({ ...acc, [id]: document.getElementById(id) }), {});
-    
+
     Object.assign(this, {
       tc: els['tabs-cont'],
       ab: els['tab-btn'],
@@ -145,7 +145,7 @@ class TabManager {
   ex = (() => {
     const endpoints = Object.values(TYPE)
       .map(p => {
-        switch(p) {
+        switch (p) {
           case TYPE.scr: return 'scramjet';
           case TYPE.uv: return 'uv/service';
           case TYPE.uv1: return 'assignments';
@@ -227,7 +227,7 @@ class TabManager {
         if (this.isNewTab(t.url)) {
           f.src = t.url;
           f.onload = () => {
-            try { contentObserver.unbind(); contentObserver.bind(); } catch {}
+            try { contentObserver.unbind(); contentObserver.bind(); } catch { }
           };
         }
         this.ic.appendChild(f);
@@ -254,6 +254,7 @@ class TabManager {
       handler.navigate(decodedUrl, this, activeTab, iframe);
       if (this.ui) this.ui.value = decodedUrl;
       console.log('[info] back(): navigated to', decodedUrl);
+      this.emitNewFrame();
     }
   };
 
@@ -275,6 +276,7 @@ class TabManager {
       handler.navigate(decodedUrl, this, activeTab, iframe);
       if (this.ui) this.ui.value = decodedUrl;
       console.log('[info] forward(): navigated to', decodedUrl);
+      this.emitNewFrame();
     }
   };
 
@@ -305,7 +307,7 @@ class TabManager {
       try {
         const newUrl = f.contentWindow.location.href;
         if (newUrl && newUrl !== t.url && newUrl !== 'about:blank') this.updateTabMeta(t, f, newUrl);
-      } catch {}
+      } catch { }
     });
   };
 
@@ -332,8 +334,8 @@ class TabManager {
         f.style.opacity = 1;
         return;
       }
-    } catch {}
-    
+    } catch { }
+
     const decodedUrl = this.ex(newUrl);
     const hist = this.history.get(t.id) || { urls: [decodedUrl], position: 0 };
 
@@ -365,6 +367,7 @@ class TabManager {
     if (t.active && this.ui && t.url !== this.newTabUrl) {
       this.ui.value = decodedUrl;
       this.showBg(false);
+      this.emitNewFrame();
     }
   };
 
@@ -379,6 +382,7 @@ class TabManager {
     this.updateAddBtn();
     this.track(t.id);
     if (this.ui) this.ui.value = '';
+    this.emitNewFrame();
   };
 
 
@@ -397,6 +401,7 @@ class TabManager {
       this.tabs[newIdx].active = true;
       this.showActive();
       if (this.ui) this.ui.value = this.isNewTab(this.tabs[newIdx].url) ? '' : this.ex(this.tabs[newIdx].url);
+      this.emitNewFrame();
     }
     this.render();
     this.updateAddBtn();
@@ -412,6 +417,23 @@ class TabManager {
       const activeTab = this.active();
       this.ui.value = activeTab && !this.isNewTab(activeTab.url) ? this.ex(activeTab.url) : '';
     }
+    this.emitNewFrame();
+  };
+
+  returnMeta = () => {
+    const t = this.active();
+    if (!t) return { name: '', url: '' };
+    const url = (t.url && !this.isNewTab(t.url)) ? this.ex(t.url) : '';
+    return { name: t.title || '', url };
+  };
+
+  emitNewFrame = () => {
+    const t = this.active();
+    const meta = this.returnMeta();
+    const detail = { ...meta, tabId: t?.id };
+    const ev = new CustomEvent('newFrame', { detail });
+    try { document.dispatchEvent(ev); } catch (err) { }
+    try { window.dispatchEvent(ev); } catch (err) { }
   };
 
   updateUrl = async (input) => {
@@ -436,7 +458,7 @@ class TabManager {
       t.url = this.newTabUrl;
       t.title = this.newTabTitle;
       if (this.ui) this.ui.value = '';
-      f.onload = () => { try { contentObserver.unbind(); contentObserver.bind(); } catch {} };
+      f.onload = () => { try { contentObserver.unbind(); contentObserver.bind(); } catch { } };
       this.showActive();
       this.render();
       return;
@@ -455,6 +477,7 @@ class TabManager {
     try { t.title = new URL(url).hostname.replace('www.', ''); } catch { t.title = input; }
     this.showActive();
     this.render();
+    if (t.active) this.emitNewFrame();
   };
 
   getTabWidth = () => {
@@ -483,9 +506,8 @@ class TabManager {
   render = (() => {
     const tabTemplate = (t, w, i, op, showClose) => `
       <div ${t.justAdded ? 'data-m="bounce-up" data-m-duration="0.2"' : ''} 
-           class="tab-item relative flex items-center rounded-b-none justify-between pl-2.5 pr-1.5 py-[0.28rem] rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${
-             t.active ? `border border-b-0 text-[${op.bodyText || '#8a9bb8'}]` : 'hover:bg-[#cccccc2f]'
-           } ${i === 0 ? 'ml-0' : '-ml-px'}" 
+           class="tab-item relative flex items-center rounded-b-none justify-between pl-2.5 pr-1.5 py-[0.28rem] rounded-[6px] cursor-pointer transition-all duration-200 ease-in-out ${t.active ? `border border-b-0 text-[${op.bodyText || '#8a9bb8'}]` : 'hover:bg-[#cccccc2f]'
+      } ${i === 0 ? 'ml-0' : '-ml-px'}" 
            style="width:${w}px;min-width:${this.minW}px;background-color:${t.active ? op.urlBarBg || '#1d303f' : undefined}" 
            data-tab-id="${t.id}">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
@@ -493,15 +515,15 @@ class TabManager {
         ${showClose ? `<button class="close-tab shrink-0 w-4 h-4 rounded-full hover:bg-[#b6bfc748] active:bg-[#d0dbe467] flex items-center justify-center transition-colors" data-tab-id="${t.id}" title="Close ${this.escapeHTML(t.title)}"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>` : ''}
       </div>`.trim();
 
-    return function() {
+    return function () {
       const w = this.getTabWidth();
       const op = JSON.parse(localStorage.getItem('options') || '{}');
       const showClose = this.tabs.length > 1;
-      
+
       this.tc.innerHTML = this.tabs
         .map((t, i) => tabTemplate(t, w, i, op, showClose))
         .join('');
-      
+
       this.tabs.forEach(t => delete t.justAdded);
     };
   })();
@@ -555,7 +577,7 @@ window.addEventListener('load', async () => {
     { path: '/s_sw.js', scope: '/scramjet/' },
     { path: '/uv/sw.js' },
   ];
-  
+
   for (const sw of sws) {
     try {
       await navigator.serviceWorker.register(sw.path, sw.scope ? { scope: sw.scope } : undefined);
@@ -600,4 +622,36 @@ window.addEventListener('load', async () => {
 
   (tabManager.options.showTb ?? true) && domMap['tabs-btn']();
   Object.entries(domMap).forEach(([id, fn]) => document.getElementById(id)?.addEventListener('click', fn));
+
+  document.getElementById("bookmark-btn").addEventListener("click", () => {
+    const bookmark = document.getElementById("bookmark");
+    const setBookmark = add => {
+      const old = JSON.parse(localStorage.getItem('options'));
+      const metaInfo = tabManager.returnMeta();
+      const result = {
+        ...old,
+        quickLinks: add
+          ? [...old.quickLinks, { link: metaInfo.url, icon: "null", name: metaInfo.name }]
+          : old.quickLinks.filter(q => !(q.link === metaInfo.url && q.name === metaInfo.name))
+      };
+      localStorage.setItem('options', JSON.stringify(result));
+    };
+
+    if (bookmark.getAttribute("fill") === "currentColor") {
+      bookmark.setAttribute("fill", "none");
+      setBookmark(false);
+    } else {
+      bookmark.setAttribute("fill", "currentColor");
+      setBookmark(true);
+    }
+  });
+
+  document.addEventListener('newFrame', e => {
+    const bookmark = document.getElementById("bookmark");
+    const options = JSON.parse(localStorage.getItem('options')) || { quickLinks: [] };
+    bookmark.setAttribute(
+      "fill",
+      options.quickLinks.some(q => q.link === e.detail.url) ? "currentColor" : "none"
+    );
+  });
 });

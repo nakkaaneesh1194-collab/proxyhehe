@@ -41,8 +41,8 @@ const Settings = () => {
     [settings, fq]
   );
 
-  const showKeywordTip = fq && filtered.length && !filtered.some(s => s.name.toLowerCase().includes(fq)) &&
-                         filtered.some(s => s.keywords.some(kw => kw.toLowerCase().includes(fq)));
+  const showKeywordTip = !!fq && filtered.length > 0 && !filtered.some(s => s.name.toLowerCase().includes(fq)) &&
+    filtered.some(s => s.keywords.some(kw => kw.toLowerCase().includes(fq)));
 
   return (
     <div className="flex flex-col h-screen">
@@ -62,7 +62,7 @@ const Settings = () => {
           </div>
 
           {showKeywordTip && <div className="mt-2 text-xs text-gray-400 text-center px-2">May contain what you're looking for</div>}
-          {fq && matchCount > 0 && <div className="mt-2 text-xs text-gray-400 text-center px-2">Found {matchCount} matching settings</div>}
+          {fq && matchCount > 1 && <div className="mt-2 text-xs text-gray-400 text-center px-2">Found {matchCount} matching settings</div>}
 
           <div className="flex flex-col gap-3 mt-5">
             {filtered.map(({ name, icon: Icon, items }) => {

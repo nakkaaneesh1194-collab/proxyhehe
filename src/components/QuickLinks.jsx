@@ -100,7 +100,9 @@ const QuickLinks = ({ cls, nav = true }) => {
               />
             )}
           </div>
-          <div className="mt-3 text-sm font-medium text-center">{link.name}</div>
+          <div className="mt-3 text-sm font-medium text-center w-full px-1 overflow-hidden whitespace-nowrap text-ellipsis">
+            {link.name}
+          </div>
         </div>
       ))}
       <div className={`${linkItem} cursor-pointer`} onClick={() => setOpen(true)}>
