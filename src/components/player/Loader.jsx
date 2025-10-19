@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Control from './Controls';
 import { Maximize2, SquareArrowOutUpRight, ZoomIn, ZoomOut } from 'lucide-react';
 import InfoCard from './InfoCard';
@@ -9,9 +9,12 @@ const Loader = ({ theme, app }) => {
     const gmRef = useRef(null);
     const [zoom, setZoom] = useState(1);
 
-    const fs = () => {
-        gmRef.current && gmRef.current.requestFullscreen?.();
-    };
+    useEffect(() => {
+        const query = sessionStorage.getItem('query');
+        if (!query) window.location.href = '/docs';
+    }, []);
+
+    const fs = () => gmRef.current?.requestFullscreen?.();
 
     const external = () => {
         sessionStorage.setItem('query', app?.url);
@@ -28,7 +31,7 @@ const Loader = ({ theme, app }) => {
 
     const zoomOut = () => {
         if (!gmRef.current) return;
-        const newZoom = Math.max(zoom - 0.1, 0.5); // min 50%
+        const newZoom = Math.max(zoom - 0.1, 0.5); // min 50
         gmRef.current.style.zoom = newZoom;
         setZoom(newZoom);
     };
