@@ -20,6 +20,7 @@ const Home = lazyLoad(importHome);
 const Apps = lazyLoad(importApps);
 const Games = lazyLoad(importGames);
 const Settings = lazyLoad(importSettings);
+const Player = lazyLoad(() => import("./pages/Player"));
 const New = lazyLoad(() => import("./pages/New"));
 
 initPreload("/materials", importApps);
@@ -43,6 +44,7 @@ const ThemedApp = memo(() => {
     { path: "/", element: <Home /> },
     { path: "/materials", element: <Apps /> },
     { path: "/docs", element: <Games /> },
+    { path: "/docs/r", element: <Player /> },
     { path: "/indev", element: <Loader /> },
     { path: "/settings", element: <Settings /> },
     { path: "/new", element: <New /> },

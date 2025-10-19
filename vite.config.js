@@ -158,6 +158,11 @@ export default defineConfig(({ command }) => {
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/assets\/img/, '/img'),
         },
+        '/assets-fb': {
+          target: 'https://dogeub-assets.ftp.sh',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/assets-fb/, ''),
+        },
       },
     },
     define: {

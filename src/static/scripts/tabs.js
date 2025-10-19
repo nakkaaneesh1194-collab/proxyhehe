@@ -328,7 +328,7 @@ class TabManager {
   updateTabMeta = (t, f, newUrl) => {
     try {
       const doc = f.contentDocument || f.contentWindow.document;
-      if (doc?.body?.innerText?.includes('Error processing your request')) {
+      if (doc?.body?.innerText?.includes('Error processing your request') || doc?.body?.innerText?.includes('Scramjet v2.0.0-alpha (build f9f5232)')) {
         f.style.opacity = 0;
         f.contentWindow.location.reload();
         f.style.opacity = 1;

@@ -156,27 +156,32 @@ const hotkeyHandler = (e: KeyboardEvent): void => {
 };
 
 export function setupHotkeys(): void {
-  window.addEventListener('keydown', hotkeyHandler);
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('ui') !== 'false') {
+    
+    window.addEventListener('keydown', hotkeyHandler);
 
-  window.addEventListener('message', (e: MessageEvent) => {
-    if (e.data && e.data.type === 'hotkey') {
-      const { key, altKey, shiftKey, ctrlKey, metaKey } = e.data;
-      handleHotkey(key, altKey, shiftKey, ctrlKey, metaKey);
-    }
-  });
-
-  const hotkeyBtn = [
-    { id: 't-clear', action: () => clearTabs() },
-    { id: 't-add', action: () => addTab() },
-    { id: 't-fs', action: () => fullscreen() },
-    { id: 'rm-bar', action: () => hideBar() },
-    { id: 'return', action: () => window.parent.postMessage({ action: 'navigate', to: '/' }, '*') },
-    { id: 't-dev', action: () => devTools() },
-  ];
-
-  for (let i = 0; i < hotkeyBtn.length; i++) {
-    document.getElementById(hotkeyBtn[i].id)?.addEventListener('click', () => {
-      hotkeyBtn[i].action();
+    window.addEventListener('message', (e: MessageEvent) => {
+      if (e.data && e.data.type === 'hotkey') {
+        const { key, altKey, shiftKey, ctrlKey, metaKey } = e.data;
+        handleHotkey(key, altKey, shiftKey, ctrlKey, metaKey);
+      }
     });
+
+    const hotkeyBtn = [
+      { id: 't-clear', action: () => clearTabs() },
+      { id: 't-add', action: () => addTab() },
+      { id: 't-fs', action: () => fullscreen() },
+      { id: 'rm-bar', action: () => hideBar() },
+      { id: 'return', action: () => window.parent.postMessage({ action: 'navigate', to: '/' }, '*') },
+      { id: 't-dev', action: () => devTools() },
+    ];
+
+    for (let i = 0; i < hotkeyBtn.length; i++) {
+      document.getElementById(hotkeyBtn[i].id)?.addEventListener('click', () => {
+        hotkeyBtn[i].action();
+      });
+    }
   }
+  else document.getElementById('tb')?.remove(), document.getElementById('d-url')?.remove();
 }
