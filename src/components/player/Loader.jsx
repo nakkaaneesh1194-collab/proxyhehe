@@ -42,11 +42,8 @@ const Loader = ({ theme, app }) => {
             theming.appItemColor,
             theming[`theme-${theme || 'default'}`]
         )}>
-            <div className="p-2.5 border-b flex gap-2">
-                <Control icon={SquareArrowOutUpRight} fn={external} />
-                <Control icon={ZoomIn} fn={zoomIn} className="ml-auto" />
-                <Control icon={ZoomOut} fn={zoomOut} />
-                <Control icon={Maximize2} fn={fs} />
+            <div className="p-2 pl-1 border-b flex gap-2">
+                <InfoCard app={app} theme={theme} />
             </div>
 
             <iframe
@@ -56,8 +53,11 @@ const Loader = ({ theme, app }) => {
                 className="w-full flex-grow"
             />
 
-            <div className="p-2 pl-1 flex gap-2 border-t">
-                <InfoCard app={app} theme={theme} />
+            <div className="p-2.5 flex gap-2 border-t">
+                <Control icon={SquareArrowOutUpRight} fn={external} />
+                <Control icon={ZoomIn} fn={zoomIn} className="ml-auto" />
+                <Control icon={ZoomOut} fn={zoomOut} />
+                <Control icon={Maximize2} fn={fs} />
             </div>
         </div>
     );
