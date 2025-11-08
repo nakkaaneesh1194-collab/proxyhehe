@@ -25,10 +25,10 @@ const Setting = ({ setting }) => {
   const { options, updateOption } = useOptions();
   const [panicOpen, setPanicOpen] = useState(false);
 
-  const privSettings = settings.privacyConfig({ 
-    options, 
-    updateOption, 
-    openPanic: () => setPanicOpen(true)
+  const privSettings = settings.privacyConfig({
+    options,
+    updateOption,
+    openPanic: () => setPanicOpen(true),
   });
 
   const scroll = clsx(
@@ -43,7 +43,7 @@ const Setting = ({ setting }) => {
       className={clsx(
         theme[`theme-${options.theme || 'default'}`],
         'flex flex-1 flex-col gap-7 overflow-y-auto p-10',
-        scroll
+        scroll,
       )}
     >
       {children}

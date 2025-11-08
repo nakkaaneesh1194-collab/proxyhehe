@@ -5,7 +5,7 @@ import {
   navScaleConfig,
   searchConfig,
   prConfig,
-  designConfig
+  designConfig,
 } from '/src/utils/config';
 
 export const privacyConfig = ({ options, updateOption, openPanic }) => ({
@@ -78,7 +78,7 @@ export const customizeConfig = ({ options, updateOption }) => ({
   },
   2: {
     name: 'Background Design',
-    desc: 'Customize the site\'s background design.',
+    desc: "Customize the site's background design.",
     config: designConfig,
     value: find(designConfig, (c) => c.value?.bgDesign === options.bgDesign, 0),
     type: 'select',
@@ -149,7 +149,9 @@ export const advancedConfig = ({ options, updateOption }) => ({
   2: {
     name: 'Wisp Config',
     desc: 'Configure the websocket server location.',
-    value: options.wServer || `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/wisp/`,
+    value:
+      options.wServer ||
+      `${location.protocol === 'https:' ? 'wss:' : 'ws:'}//${location.host}/wisp/`,
     type: 'input',
     action: (b) => updateOption({ wServer: b }),
   },

@@ -39,7 +39,9 @@ const QuickLinks = ({ cls, nav = true }) => {
       name: 'GitHub',
     },
   ];
-  const [quickLinks, setQuickLinks] = useState(() => JSON.parse(localStorage.getItem('options') || {}).quickLinks ?? defaultLinks);
+  const [quickLinks, setQuickLinks] = useState(
+    () => JSON.parse(localStorage.getItem('options') || {}).quickLinks ?? defaultLinks,
+  );
   const [isOpen, setOpen] = useState(false);
   const handleQuickLink = (arr) => {
     setQuickLinks(arr);
@@ -96,6 +98,7 @@ const QuickLinks = ({ cls, nav = true }) => {
                 src={link.icon}
                 alt={link.name}
                 className="w-7 h-7 object-contain"
+                loading="lazy"
                 onError={() => setFallback((prev) => ({ ...prev, [i]: true }))}
               />
             )}

@@ -83,7 +83,7 @@ const ComboBox = ({
               'flex flex-col gap-1',
               'w-full max-h-60 overflow-auto',
               'rounded-[0.8rem] border bg-inherit p-[0.4rem] shadow-lg',
-              scroll
+              scroll,
             )}
           >
             {filteredOptions.map((cfg) => (
