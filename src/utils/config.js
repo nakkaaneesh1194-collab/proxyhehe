@@ -6,11 +6,11 @@ export const themeConfig = [
     value: {
       theme: 'default',
       type: 'dark',
-      settingsContainerColor: '#1f324e',
+      settingsContainerColor: '#18283e',
       navItemActive: '#c1d4f1',
       settingsSearchBar: '#3c475a',
       settingsPanelItemBackgroundColor: '#405a77',
-      settingsDropdownColor: '#1a2a42',
+      settingsDropdownColor: '#162337',
       siteTextColor: '#a0b0c8',
       bgDesignColor: '66, 69, 73',
       glowWrapperColor: '255, 255, 255',
@@ -82,7 +82,7 @@ export const themeConfig = [
     value: {
       theme: 'forest',
       type: 'dark',
-      settingsContainerColor: '#1d3226',
+      settingsContainerColor: '#17281f',
       navItemActive: '#d4f3e1',
       settingsSearchBar: '#274233',
       settingsPanelItemBackgroundColor: '#315b45',
@@ -119,7 +119,7 @@ export const themeConfig = [
     value: {
       theme: 'dark',
       type: 'dark',
-      settingsContainerColor: '#2a2a2f',
+      settingsContainerColor: '#18181c',
       navItemActive: '#f3f4f6',
       settingsSearchBar: '#1f1f23',
       settingsPanelItemBackgroundColor: '#2e2e34',
@@ -157,7 +157,7 @@ export const themeConfig = [
     value: {
       theme: 'stellar',
       type: 'dark',
-      settingsContainerColor: '#1b1d2a',
+      settingsContainerColor: '#141620',
       navItemActive: '#9db4ff',
       settingsSearchBar: '#232538',
       settingsPanelItemBackgroundColor: '#2d2f44',

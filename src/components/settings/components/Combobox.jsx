@@ -44,7 +44,7 @@ const ComboBox = ({
       <div
         className={clsx('relative w-full', 'rounded-xl border')}
         style={{
-          backgroundColor: options.settingsDropdownColor || '#1a2a42',
+          backgroundColor: options.settingsDropdownColor || '#162337',
           maxWidth: `${maxW}rem`,
         }}
       >
@@ -59,7 +59,7 @@ const ComboBox = ({
             placeholder={placeholder}
             className={clsx(
               'flex-1 min-w-0',
-              'text-[0.9rem] truncate',
+              'text-[0.88rem] truncate',
               'bg-transparent outline-none',
             )}
             spellCheck={false}

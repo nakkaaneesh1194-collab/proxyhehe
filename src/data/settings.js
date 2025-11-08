@@ -93,19 +93,19 @@ export const customizeConfig = ({ options, updateOption }) => ({
     action: (a) => updateOption(a),
   },
   4: {
-    name: 'Tabs Bar',
-    desc: 'Show the tabs bar, allowing you to open multiple sites when browsing.',
-    value: options.showTb ?? true,
-    type: 'switch',
-    action: (b) => setTimeout(() => updateOption({ showTb: b }), 100),
-  },
-  5: {
     name: 'Navigation Scale',
     desc: 'Scale navigation bar size (logo & font) globally.',
     config: navScaleConfig,
     value: find(navScaleConfig, (c) => c.value.navScale === (options.navScale ?? 1), 3),
     type: 'select',
     action: (a) => updateOption(a),
+  },
+  5: {
+    name: 'Tabs Bar',
+    desc: 'Show the tabs bar, allowing you to open multiple sites when browsing.',
+    value: options.showTb ?? true,
+    type: 'switch',
+    action: (b) => setTimeout(() => updateOption({ showTb: b }), 100),
   },
   6: {
     name: 'Donation button',
