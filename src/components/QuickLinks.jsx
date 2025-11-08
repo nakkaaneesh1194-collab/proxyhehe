@@ -50,6 +50,10 @@ const QuickLinks = ({ cls, nav = true }) => {
 
   useEffect(() => updateOption({ quickLinks }), [quickLinks]);
 
+  useEffect(() => {
+    setFallback({});
+  }, [quickLinks]);
+
   const linkItem = clsx(
     'flex flex-col items-center justify-center relative group w-20 h-[5.5rem] rounded-md border-transparent cursor-pointer duration-200 ease-in-out',
     options.type === 'dark' ? 'border hover:border-[#ffffff1c]' : 'border-2 hover:border-[#4f4f4f1c]',
@@ -100,6 +104,7 @@ const QuickLinks = ({ cls, nav = true }) => {
               <Globe className="w-7 h-7" />
             ) : (
               <img
+                key={link.icon}
                 src={link.icon}
                 alt={link.name}
                 className="w-7 h-7 object-contain"
