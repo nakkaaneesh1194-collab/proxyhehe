@@ -42,7 +42,7 @@ const baseConfigs = [
   {
     name: 'Browsing',
     icon: Globe,
-    keywords: ['tabs', 'tab', 'proxy engine', 'search engine', 'scramjet', 'ultraviolet'],
+    keywords: ['tabs', 'tab', 'type', 'search engine',],
     key: 'browsingConfig',
   },
   {
@@ -50,14 +50,13 @@ const baseConfigs = [
     icon: Wrench,
     keywords: [
       'wisp',
-      'proxy',
-      'ultraviolet',
+      'type',
       'bare',
-      'leave confirmation',
+      'leave confirm',
       'debug',
+      'reset instance',
       'experimental',
       'inspect',
-      'reset instance',
       'clear cache',
     ],
     key: 'advancedConfig',

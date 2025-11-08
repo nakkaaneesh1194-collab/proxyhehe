@@ -13,18 +13,18 @@ import 'nprogress/nprogress.css';
 
 const importHome = () => import('./pages/Home');
 const importApps = () => import('./pages/Apps');
-const importGames = () => import('./pages/Games');
+const importGms = () => import('./pages/Apps2');
 const importSettings = () => import('./pages/Settings');
 
 const Home = lazyLoad(importHome);
 const Apps = lazyLoad(importApps);
-const Games = lazyLoad(importGames);
+const Apps2 = lazyLoad(importGms);
 const Settings = lazyLoad(importSettings);
 const Player = lazyLoad(() => import('./pages/Player'));
 const New = lazyLoad(() => import('./pages/New'));
 
 initPreload('/materials', importApps);
-initPreload('/docs', importGames);
+initPreload('/docs', importGms);
 initPreload('/settings', importSettings);
 initPreload('/', importHome);
 
@@ -44,7 +44,7 @@ const ThemedApp = memo(() => {
     () => [
       { path: '/', element: <Home /> },
       { path: '/materials', element: <Apps /> },
-      { path: '/docs', element: <Games /> },
+      { path: '/docs', element: <Apps2 /> },
       { path: '/docs/r', element: <Player /> },
       { path: '/indev', element: <Loader /> },
       { path: '/settings', element: <Settings /> },

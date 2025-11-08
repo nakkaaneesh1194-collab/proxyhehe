@@ -127,7 +127,7 @@ export const browsingConfig = ({ options, updateOption }) => ({
   },
   2: {
     name: 'Backend Engine',
-    desc: 'Choose the default proxy engine used for browsing.',
+    desc: 'Choose the default engine used for browsing.',
     config: prConfig,
     value: find(prConfig, (c) => c.value?.prType === options.prType, 0),
     type: 'select',
@@ -137,7 +137,7 @@ export const browsingConfig = ({ options, updateOption }) => ({
 
 export const advancedConfig = ({ options, updateOption }) => ({
   1: {
-    name: 'beforeunload Event',
+    name: 'Confirm Leave',
     desc: 'Show a confirmation when attempting to leave the site.',
     value: !!options.beforeUnload,
     type: 'switch',

@@ -4,11 +4,8 @@ import theming from '/src/styles/theming.module.css';
 import clsx from 'clsx';
 
 const Breadcrumb = ({ theme, name }) => {
-  {
-    /* yes */
-  }
   const nav = useNavigate();
-  // assuming you're coming from the games page
+  // assuming you're coming from the gms page
   return (
     <div
       className={clsx(
