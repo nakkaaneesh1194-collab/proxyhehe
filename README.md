@@ -86,6 +86,7 @@ npm run dev
 * [MercuryWorkshop/scramjet](https://github.com/MercuryWorkshop/scramjet)
 * [titaniumnetwork-dev/Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)
 * [lucide-icons/lucide](https://github.com/lucide-icons/lucide)
+* [pmndrs/zustand](https://github.com/pmndrs/zustand)
 * [Stuk/jszip](https://github.com/Stuk/jszip)
 
 ## License
