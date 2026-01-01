@@ -1,6 +1,6 @@
 import Routing from './Routing';
 import ReactGA from 'react-ga4';
-import Loader from './pages/Loader';
+import Search from './pages/Search';
 import lazyLoad from './lazyWrapper';
 import NotFound from './pages/NotFound';
 import { useEffect, useMemo, memo } from 'react';
@@ -46,7 +46,7 @@ const ThemedApp = memo(() => {
       { path: '/materials', element: <Apps /> },
       { path: '/docs', element: <Apps2 /> },
       { path: '/docs/r', element: <Player /> },
-      { path: '/indev', element: <Loader /> },
+      { path: '/search', element: <Search />},
       { path: '/settings', element: <Settings /> },
       { path: '/new', element: <New /> },
       { path: '*', element: <NotFound /> },

@@ -15,47 +15,55 @@ const SORT_OPTIONS = [
   { value: 'newest', label: 'Newest' },
 ];
 
-const AppCard = memo(({ app, onClick, fallbackMap, onImgError, itemTheme, itemStyles }) => (
-  <div
-    key={app.appName}
-    className={clsx(
-      itemStyles.app,
-      itemTheme.appItemColor,
-      itemTheme[`theme-${itemTheme.current || 'default'}`],
-      app.disabled ? 'disabled cursor-not-allowed' : 'cursor-pointer',
-    )}
-    onClick={!app.disabled ? () => onClick(app) : undefined}
-  >
-    <div className="w-20 h-20 rounded-[12px] mb-4 overflow-hidden">
-      {fallbackMap[app.appName] ? (
-        <LayoutGrid className="w-full h-full" />
-      ) : (
-        <img
-          src={app.icon}
-          draggable="false"
-          loading="lazy"
-          className="w-full h-full object-cover"
-          onError={() => onImgError(app.appName)}
-        />
+const AppCard = memo(({ app, onClick, fallbackMap, onImgError, itemTheme, itemStyles }) => {
+  const [loaded, setLoaded] = useState(false);
+  
+  return (
+    <div
+      key={app.appName}
+      className={clsx(
+        itemStyles.app,
+        itemTheme.appItemColor,
+        itemTheme[`theme-${itemTheme.current || 'default'}`],
+        app.disabled ? 'disabled cursor-not-allowed' : 'cursor-pointer',
       )}
+      onClick={!app.disabled ? () => onClick(app) : undefined}
+    >
+      <div className="w-20 h-20 rounded-[12px] mb-4 overflow-hidden relative">
+        {!loaded && !fallbackMap[app.appName] && (
+          <div className="absolute inset-0 bg-gray-700 animate-pulse" />
+        )}
+        {fallbackMap[app.appName] ? (
+          <LayoutGrid className="w-full h-full" />
+        ) : (
+          <img
+            src={app.icon}
+            draggable="false"
+            loading="lazy"
+            className="w-full h-full object-cover"
+            onLoad={() => setLoaded(true)}
+            onError={() => onImgError(app.appName)}
+          />
+        )}
+      </div>
+      <p className="text-m font-semibold">{app.appName.split('').join('\u200B')}</p>
+      <p className="text-sm mt-2">{(app.desc || '').split('').join('\u200B')}</p>
     </div>
-    <p className="text-m font-semibold">{app.appName.split('').join('\u200B')}</p>
-    <p className="text-sm mt-2">{(app.desc || '').split('').join('\u200B')}</p>
-  </div>
-));
+  );
+});
 
-const Apps = memo(({ type = 'default' }) => {
+const Apps = memo(() => {
   const nav = useNavigate();
   const { options } = useOptions();
 
   const [appsList, setAppsList] = useState([]);
   useEffect(() => {
     let a = true;
-    import('../data/apps.json').then((m) => a && setAppsList(m.default?.[type] || []));
+    import('../data/apps.json').then((m) => a && setAppsList(m.default?.apps || []));
     return () => {
       a = false;
     };
-  }, [type]);
+  }, []);
 
   const [q, setQ] = useState('');
   const [sort, setSort] = useState('categorical');
@@ -108,9 +116,11 @@ const Apps = memo(({ type = 'default' }) => {
   const navApp = useCallback(
     (app) => {
       if (!app) return;
-      sessionStorage.setItem('query', app.url);
-      if (type != 'apps') nav('/docs/r/', { state: { app } });
-      else nav('/indev');
+      nav("/search", {
+        state: {
+          url: app.url,
+        }
+      });
     },
     [nav],
   );
@@ -130,7 +140,7 @@ const Apps = memo(({ type = 'default' }) => {
     [options.theme],
   );
 
-  const placeholder = useMemo(() => `Search ${appsList.length} ${type}`, [appsList.length, type]);
+  const placeholder = useMemo(() => `Search ${appsList.length} apps`, [appsList.length]);
 
   return (
     <div className={`${styles.appContainer} w-full mx-auto`}>
@@ -149,48 +159,6 @@ const Apps = memo(({ type = 'default' }) => {
             onChange={handleSearch}
             className="flex-1 bg-transparent outline-none text-sm"
           />
-          {type !== 'apps' && (
-            <div ref={sortRef} className="relative flex items-center">
-              <button
-                type="button"
-                onClick={() => setShowSort((s) => !s)}
-                className="flex items-center gap-1 text-xs md:text-sm rounded-md px-2 py-1 h-7 cursor-pointer bg-[#ffffff10] hover:bg-[#ffffff18] active:bg-[#ffffff25] border border-white/15"
-              >
-                <span className="capitalize hidden sm:inline">
-                  {SORT_OPTIONS.find((o) => o.value === sort)?.label}
-                </span>
-                <ChevronDown
-                  size={14}
-                  className={showSort ? 'rotate-180 transition-transform' : 'transition-transform'}
-                />
-              </button>
-              {showSort && (
-                <ul
-                  className={clsx(
-                    'absolute right-0 top-[calc(100%+0.5rem)] z-20 w-44 rounded-md border border-white/15 shadow-lg p-1',
-                    searchBarCls,
-                  )}
-                  role="listbox"
-                >
-                  {SORT_OPTIONS.map(({ value, label }) => (
-                    <li
-                      key={value}
-                      role="option"
-                      aria-selected={sort === value}
-                      onClick={() => {
-                        setSort(value);
-                        setShowSort(false);
-                        setPage(1);
-                      }}
-                      className="px-2 py-1.5 rounded text-[0.8rem] cursor-pointer transition-colors text-inherit hover:bg-[#ffffff12]"
-                    >
-                      {label}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          )}
         </div>
       </div>
 
@@ -239,7 +207,7 @@ const Apps = memo(({ type = 'default' }) => {
 
 Apps.displayName = 'Apps';
 
-const AppLayout = ({ type }) => {
+const AppLayout = () => {
   const { options } = useOptions();
   const scrollCls = clsx(
     'scrollbar scrollbar-thin scrollbar-track-transparent',
@@ -252,7 +220,7 @@ const AppLayout = ({ type }) => {
     <div className="flex flex-col h-screen overflow-hidden">
       <Nav />
       <div className={clsx('flex-1 overflow-y-auto', scrollCls)}>
-        <Apps type={type} />
+        <Apps />
       </div>
     </div>
   );

@@ -39,17 +39,18 @@ const obf = {
   options: {
     compact: true,
     controlFlowFlattening: true,
-    controlFlowFlatteningThreshold: 0.5,
+    controlFlowFlatteningThreshold: 0.3,
     deadCodeInjection: false,
     debugProtection: false,
     disableConsoleOutput: true,
-    identifierNamesGenerator: 'hexadecimal',
-    selfDefending: true,
+    identifierNamesGenerator: 'mangled',
+    selfDefending: false,
     simplify: true,
     splitStrings: false,
     stringArray: true,
     stringArrayEncoding: [],
     stringArrayCallsTransform: false,
+    stringArrayThreshold: 0.5,
     transformObjectKeys: false,
     unicodeEscapeSequence: false,
     ignoreImports: true,
@@ -130,7 +131,6 @@ export default defineConfig(({ command }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
-          loader: resolve(__dirname, 'src/static/loader.html'),
         },
         output: {
           entryFileNames: '[hash].js',
