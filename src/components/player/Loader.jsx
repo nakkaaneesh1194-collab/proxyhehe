@@ -1,5 +1,5 @@
 import { useRef, useState, useCallback } from 'react';
-import Search from '/src/pages/search';
+import Search from '/src/pages/Search';
 import { Maximize2, SquareArrowOutUpRight, ZoomIn, ZoomOut, Cloud, HardDrive } from 'lucide-react';
 import { useLocalGmLoader } from '/src/utils/hooks/player/useLocalGmLoader';
 import { useNavigate } from 'react-router-dom';
