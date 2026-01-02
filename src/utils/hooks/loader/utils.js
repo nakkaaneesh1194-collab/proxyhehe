@@ -46,7 +46,7 @@ export const encoding = {
   },
 };
 
-const check = (inp) => {
+const check = (inp, engine) => {
   const trimmed = inp.trim();
   if (!trimmed) return '';
 
@@ -58,7 +58,7 @@ const check = (inp) => {
   if (isUrl) {
     return trimmed.startsWith('http') ? trimmed : `https://${trimmed}`;
   } else {
-    return `https://www.google.com/search?q=${encodeURIComponent(trimmed)}`;
+    return engine + encodeURIComponent(trimmed);
   }
 };
 
@@ -75,7 +75,7 @@ const scrwlist = new Set([
   )
 ]);
 
-export const process = (input, decode = false, prType) => {
+export const process = (input, decode = false, prType, engine = "https://www.google.com/search?q=") => {
   let prefix;
 
   switch (prType) {
@@ -86,7 +86,7 @@ export const process = (input, decode = false, prType) => {
       prefix = '/scramjet/';
       break;
     default:
-      const url = check(input);
+      const url = check(input, engine);
       const match = [...scrwlist].some(d => url.includes(d));
       prefix = match ? '/scramjet/' : '/uv/service/';
   }
@@ -97,7 +97,7 @@ export const process = (input, decode = false, prType) => {
     const decoded = uvPart ? encoding.dnc(uvPart) : scrPart ? decodeURIComponent(scrPart) : input;
     return decoded.endsWith('/') ? decoded.slice(0, -1) : decoded;
   } else {
-    const final = check(input);
+    const final = check(input, engine);
     const encoded = prefix === '/scramjet/' ? encodeURIComponent(final) : encoding.enc(final);
     return `${location.protocol}//${location.host}${prefix}${encoded}`;
   }
