@@ -10,7 +10,7 @@ import {
   Lock,
 } from 'lucide-react';
 import clsx from 'clsx';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import loaderStore from '/src/utils/hooks/loader/useLoaderStore';
 import { process, openEmbed } from '/src/utils/hooks/loader/utils';
 import { useOptions } from '/src/utils/optionsContext';
@@ -96,7 +96,7 @@ const Omnibox = () => {
   }, [activeTab]);
 
   return (
-    <div className={clsx("h-10 flex items-center overflow-hidden gap-1 px-2 border-t", showUI ? '' : 'hidden')}>
+    <div className={clsx("h-10 flex items-center overflow-hidden gap-1 px-2", showUI ? '' : 'hidden')}>
       <Action
         Icon={ArrowLeft}
         size="17"
@@ -117,7 +117,7 @@ const Omnibox = () => {
         )}
         style={{
           backgroundColor: options.omninputColor || '#06080d8f',
-          borderColor: options.type == 'light' ? '#a1a1a173' : undefined,
+          borderColor: options.type == 'light' ? '#a1a1a173' : "#efefef30",
         }}
       >
         <Icon size="15" />

@@ -1,22 +1,24 @@
 import clsx from 'clsx';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useOptions } from '/src/utils/optionsContext';
 import loaderStore from '/src/utils/hooks/loader/useLoaderStore';
+import Zoom from './menu/Zoom';
+import Bookmarks from '../Bookmarks';
 
 const devTools = (fr) => {
   if (!fr?.contentWindow || !fr?.contentDocument) return;
-  
+
   try {
     const doc = fr.contentDocument;
     const win = fr.contentWindow;
     const erudaEl = doc.getElementById('eruda');
-    
+
     if (erudaEl?.shadowRoot) {
       win.eruda?.destroy();
       return;
     }
-    
+
     const s = doc.createElement('script');
     s.src = 'https://cdn.jsdelivr.net/npm/eruda';
     s.onload = () => {
@@ -35,10 +37,20 @@ const devTools = (fr) => {
 };
 
 export default function Menu() {
-  const { showMenu, toggleMenu, tabs, addTab, setActive, removeTab, showTabs, activeFrameRef, toggleUI } =
-    loaderStore();
+  const {
+    showMenu,
+    toggleMenu,
+    tabs,
+    addTab,
+    setActive,
+    removeTab,
+    showTabs,
+    activeFrameRef,
+    toggleUI,
+  } = loaderStore();
   const { options } = useOptions();
   const nav = useNavigate();
+  const [showBookmarks, setShowBm] = useState(false);
 
   const newTab = useCallback(() => {
     if (tabs.length < 20) {
@@ -76,16 +88,22 @@ export default function Menu() {
       shortcut: 'alt + c',
       fn: clearTabs,
     },
+    { name: 'Bookmarks', shortcut: 'alt + b', fn: () => setShowBm(true) },
     {
       name: 'Fullscreen',
       shortcut: 'shift + f',
       fn: fs,
       disabled: !activeFrameRef?.current,
+    },
+    { name: 'zoom-cmpn', isComponent: true, divider: true },
+    { name: 'Hide UI', shortcut: 'alt + z', fn: toggleUI },
+    {
+      name: 'DevTools',
+      shortcut: 'alt + i',
+      fn: togEruda,
+      disabled: !activeFrameRef?.current,
       divider: true,
     },
-
-    { name: 'Hide UI', shortcut: 'alt + z', fn: toggleUI },
-    { name: 'DevTools', shortcut: 'alt + i', fn: togEruda, disabled: !activeFrameRef?.current, divider: true },
     { name: 'Return Home', fn: () => nav('/') },
   ];
 
@@ -96,6 +114,7 @@ export default function Menu() {
       'shift+F': () => activeFrameRef?.current && fs(),
       'alt+z': toggleUI,
       'alt+i': togEruda,
+      'alt+b': () => setShowBm(true),
     };
 
     const handleKey = (e) => {
@@ -113,7 +132,7 @@ export default function Menu() {
   }, [newTab, clearTabs, fs, activeFrameRef, toggleUI, togEruda]);
 
   const cnt = clsx(
-    'absolute right-2 w-45 rounded-lg shadow-lg overflow-hidden text-sm z-50',
+    'absolute right-2 w-56 rounded-lg shadow-lg overflow-hidden text-sm z-50',
     'border transition-all duration-200 origin-top-right',
     showTabs ? 'mt-21' : 'mt-11',
     showMenu
@@ -127,36 +146,57 @@ export default function Menu() {
   );
 
   return (
-    <div className={cnt} style={{ backgroundColor: options.menuColor || '#1a252f' }}>
-      {items.map(({ name, shortcut = null, divider = null, fn = null, disabled = false }, id) => (
-        <div
-          key={id}
-          disabled={disabled}
-          className={clsx(disabled ? 'opacity-50 pointer-events-none' : '')}
-        >
-          <button
-            type="button"
-            onClick={() => {
-              !disabled && fn();
-              showMenu && toggleMenu();
-            }}
-            className={item}
-          >
-            <span>{name}</span>
-            {shortcut && (
-              <span className="text-[0.7rem] text-gray-500 dark:text-gray-400">{shortcut}</span>
-            )}
-          </button>
-          {divider && (
-            <hr
-              className={clsx(
-                'border-t',
-                options.type === 'light' ? 'border-gray-300' : 'border-gray-700',
+    <>
+      <Bookmarks isOpen={showBookmarks} onClose={() => setShowBm(false)} inLoader={true} />
+      <div className={cnt} style={{ backgroundColor: options.menuColor || '#1a252f' }}>
+        {items.map(
+          (
+            {
+              name,
+              shortcut = null,
+              divider = null,
+              fn = null,
+              disabled = false,
+              isComponent = false,
+            },
+            id,
+          ) => (
+            <div
+              key={id}
+              disabled={disabled}
+              className={clsx(disabled ? 'opacity-50 pointer-events-none' : '')}
+            >
+              {isComponent ? (
+                <Zoom />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => {
+                    !disabled && fn();
+                    showMenu && toggleMenu();
+                  }}
+                  className={item}
+                >
+                  <span>{name}</span>
+                  {shortcut && (
+                    <span className="text-[0.7rem] text-gray-500 dark:text-gray-400">
+                      {shortcut}
+                    </span>
+                  )}
+                </button>
               )}
-            />
-          )}
-        </div>
-      ))}
-    </div>
+              {divider && (
+                <hr
+                  className={clsx(
+                    'border-t',
+                    options.type === 'light' ? 'border-gray-300' : 'border-gray-700',
+                  )}
+                />
+              )}
+            </div>
+          ),
+        )}
+      </div>
+    </>
   );
 }

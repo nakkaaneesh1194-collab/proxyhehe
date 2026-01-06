@@ -18,7 +18,31 @@ const store = create((set) => ({
   iframeUrls: {},
   activeFrameRef: null,
   showUI: true,
+  zoomLevels: {},
   toggleUI: () => set((state) => ({ showUI: !state.showUI })),
+  setZoom: (tabId, zoom, frameRef) => {
+    const ifr = frameRef?.current;
+    if (ifr) {
+      ifr.style.transform = `scale(${zoom / 100})`;
+      ifr.style.transformOrigin = 'top left';
+      ifr.style.width = `${100 / (zoom / 100)}%`;
+      ifr.style.height = `${100 / (zoom / 100)}%`;
+    }
+    set((state) => ({
+      zoomLevels: { ...state.zoomLevels, [tabId]: zoom },
+    }));
+  },
+  resetZoom: (tabId, frameRef) => {
+    const ifr = frameRef?.current;
+    if (ifr) {
+      ifr.style.transform = '';
+      ifr.style.width = '';
+      ifr.style.height = '';
+    }
+    set((state) => ({
+      zoomLevels: { ...state.zoomLevels, [tabId]: 100 },
+    }));
+  },
   setShowTabs: (value) => set({ showTabs: value }),
   toggleTabs: () => set((state) => ({ showTabs: !state.showTabs })),
   toggleMenu: () => set((state) => ({ showMenu: !state.showMenu })),

@@ -37,7 +37,7 @@ export default function Loader({ url, ui = true, zoom }) {
       {ui && (
         <>
           <div 
-            className="flex flex-col w-full border-b" 
+            className="flex flex-col w-full" 
             style={barStyle}
             onClick={() => loaderStore.getState().showMenu && loaderStore.getState().toggleMenu()}
           >

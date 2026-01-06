@@ -26,6 +26,7 @@ export const themeConfig = [
       /* loader */
       tabColor: "#111e2fb0",
       tabOutline: "#344646",
+      barColor: "#09121e",
       tabBarColor: "#070e15",
       omninputColor: "#06080d8f",
       menuColor: "#1a252f"
