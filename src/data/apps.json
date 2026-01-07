@@ -557,7 +557,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/217.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/hotline-miami/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "ULTRAKILL",
@@ -565,7 +565,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/196.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/ultrakill/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       }
     ],
     "Sports": [
@@ -1065,9 +1065,12 @@
         "appName": "10 Minutes Till dawn",
         "desc": "Domination-type fun",
         "icon": "https://cdn.jsdelivr.net/gh/Skoolgq/Polaris-Assets/images/tmtd.png",
-        "url": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/10-minutes-till-dawn/index.html",
+        "url": [
+          "http://cdn.jsdelivr.net/gh/rewz099/js-lib-cdn/tmtd/Build.zip",
+          "http://cdn.jsdelivr.net/gh/rewz099/js-lib-cdn/tmtd/Build2.zip"
+        ],
         "disabled": false,
-        "local": false
+        "local": true
       },
       {
         "appName": "Ages of Conflict",
@@ -1251,7 +1254,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/215.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bendy/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Buckshot Roulette",
@@ -1259,7 +1262,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/205.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/buckshot-roulette/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Five Nights at Freddy's",
@@ -1629,7 +1632,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/266.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/speed-stars/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       }
     ],
     "Racing": [
@@ -1847,7 +1850,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/455.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bergentruck/BERGENTRUCK_201X.html",
         "disabled": false,
-        "local": true
+        "local": false
       }
     ],
     "Puzzle": [
@@ -2353,7 +2356,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/450.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/amanda-the-adventurer/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Baldi's Basics Plus",
@@ -2361,7 +2364,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/467.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/baldi-plus/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Kindergarten",
@@ -2369,7 +2372,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/445.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/kindergarten/1/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Kindergarten 2",
@@ -2377,7 +2380,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/446.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/kindergarten/2/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Lacey's Flash apps",
@@ -2385,7 +2388,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/463.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/lacysflashgames/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       }
     ],
     "Idle/Clicker": [
@@ -2611,7 +2614,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/454.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/bloodmoney/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       }
     ],
     "Sandbox/Creative": [
@@ -3181,7 +3184,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/259.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/class-of-09/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Cuphead",
@@ -3197,7 +3200,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/425.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/deltarune/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Raft",
@@ -3205,7 +3208,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/457.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/raft/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "R.E.P.O (REPO)",
@@ -3213,7 +3216,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/195.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/repo/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Undertale",
@@ -3221,7 +3224,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/184.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/undertale/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Undertale (Yellow)",
@@ -3229,7 +3232,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/456.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/undertale-yellow/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "WebFishing",
@@ -3237,7 +3240,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/423.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/webfishing/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Happy Sheepies",
@@ -3245,7 +3248,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/351.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/happy-sheepies/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Yume Nikki",
@@ -3253,7 +3256,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/433.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/yume-nikki/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Crazy Cattle 3D",
@@ -3271,7 +3274,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/426.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/andys-apple-farm/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Baldi's Basics Classic Remastered",
@@ -3279,7 +3282,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/466.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/baldi-remaster/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Dead Plate",
@@ -3287,7 +3290,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/462.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/dead-plate/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "The Deadseat",
@@ -3295,7 +3298,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/458.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/deadseat/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Do NOT Take This Cat Home",
@@ -3303,7 +3306,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/193.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/donottakethiscathome/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Fears to Fathom: Home Alone",
@@ -3311,7 +3314,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/460.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/fears-to-fathom/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Human Expenditure Program",
@@ -3319,7 +3322,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/482.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/human-expenditure-program/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Omori",
@@ -3327,7 +3330,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/427.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/omori-fixed/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "Slender: The Eight Pages",
@@ -3335,7 +3338,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/451.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/slender/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "That's Not My Neighbor",
@@ -3343,7 +3346,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/216.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/thats-not-my-neighbor/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       },
       {
         "appName": "The Man From The Window",
@@ -3351,7 +3354,7 @@
         "icon": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/459.png",
         "url": "https://rawcdn.githack.com/fowntain/web-port-doge/1102f068fff0083d2a5ed979ebac6425540d78a5/the-man-in-the-window/index.html",
         "disabled": false,
-        "local": true
+        "local": false
       }
     ],
     "Multiplayer": [

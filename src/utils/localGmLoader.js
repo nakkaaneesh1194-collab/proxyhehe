@@ -128,6 +128,18 @@ class LocalGmLoader {
     return files;
   }
 
+  async extractMultipleZips(urls) {
+    const allFiles = {};
+    
+    for (const url of urls) {
+      const files = await this.extractZip(url);
+      //merge
+      Object.assign(allFiles, files);
+    }
+    
+    return allFiles;
+  }
+
   getMime(filename) {
     const ext = filename.split('.').pop().toLowerCase();
     const types = {
@@ -184,7 +196,9 @@ class LocalGmLoader {
     await this.regSW();
     await this.initDB();
     
-    const gmName = url.split('/').pop().replace('.zip', '') || 'gm-' + Date.now();
+    const isSplitZip = Array.isArray(url);
+    const firstUrl = isSplitZip ? url[0] : url;
+    const gmName = firstUrl.split('/').pop().replace('.zip', '') || 'gm-' + Date.now();
     const existing = await this.getGm(gmName);
     
     if (existing) {
@@ -193,7 +207,11 @@ class LocalGmLoader {
     }
 
     if (onDownload) onDownload(true);
-    const files = await this.extractZip(url);
+    
+    const files = isSplitZip 
+      ? await this.extractMultipleZips(url)
+      : await this.extractZip(url);
+      
     await this.saveGm(gmName, files);
     if (onDownload) onDownload(false);
     
