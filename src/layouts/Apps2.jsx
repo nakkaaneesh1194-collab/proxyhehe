@@ -159,7 +159,8 @@ const Games = memo(() => {
     if (showDl) {
       const dlNames = new Set(dlGames.map(g => g.name));
       toFilter = all.filter(game => {
-        const gmName = game.url?.split('/').pop()?.replace('.zip', '');
+        const firstUrl = Array.isArray(game.url) ? game.url[0] : game.url;
+        const gmName = firstUrl?.split('/').pop()?.replace('.zip', '');
         return gmName && dlNames.has(gmName);
       });
     } else if (category) {
