@@ -183,7 +183,6 @@ class LocalGmLoader {
   async load(url, onDownload) {
     await this.regSW();
     await this.initDB();
-    await this.cleanupOld();
     
     const gmName = url.split('/').pop().replace('.zip', '') || 'gm-' + Date.now();
     const existing = await this.getGm(gmName);

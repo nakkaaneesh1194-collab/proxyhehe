@@ -136,6 +136,7 @@ const Games = memo(() => {
   useEffect(() => {
     import('../utils/localGmLoader').then(async (m) => {
       const loader = new m.default();
+      await loader.cleanupOld();
       const gms = await loader.getAllGms();
       setDlCount(gms.length);
       setDlGames(gms);
