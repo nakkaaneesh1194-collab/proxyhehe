@@ -32,7 +32,7 @@
     "fastify": "^5.4.0",
     "jszip": "^3.10.1",
     "lucide": "^0.536.0",
-    "lucide-react": "^0.536.0",
+    "lucide-react": "^0.563.0",
     "movement.css": "^1.1.2",
     "node-fetch": "^3.3.2",
     "nprogress": "^0.2.0",

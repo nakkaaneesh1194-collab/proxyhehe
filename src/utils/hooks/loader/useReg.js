@@ -1,11 +1,14 @@
 import { useEffect } from 'react';
 import { BareMuxConnection } from '@mercuryworkshop/bare-mux';
 import { useOptions } from '/src/utils/optionsContext';
+import { fetchW as returnWServer } from './findWisp';
+import store from './useLoaderStore';
 
 export default function useReg() {
   const { options } = useOptions();
   const ws = `${location.protocol == 'http:' ? 'ws:' : 'wss:'}//${location.host}/wisp/`;
   const sws = [{ path: '/uv/sw.js' }, { path: '/s_sw.js', scope: '/scramjet/' }];
+  const setWispStatus = store((s) => s.setWispStatus);
 
   useEffect(() => {
     const init = async () => {
@@ -20,7 +23,7 @@ export default function useReg() {
       }
 
       const { ScramjetController } = $scramjetLoadController();
-      
+
       window.scr = new ScramjetController({
         files: {
           wasm: '/scram/scramjet.wasm.wasm',
@@ -44,7 +47,20 @@ export default function useReg() {
       }
 
       const connection = new BareMuxConnection('/baremux/worker.js');
-      await connection.setTransport('/libcurl/index.mjs', [{ wisp: options.wServer ?? ws }]);
+      isStaticBuild && setWispStatus('init');
+      let socket = isStaticBuild ? await returnWServer() : null;
+      isStaticBuild && (!socket ? setWispStatus(false) : setWispStatus(true));
+
+      await connection.setTransport('/libcurl/index.mjs', [
+        {
+          wisp:
+            options.wServer != null && options.wServer !== ''
+              ? options.wServer
+              : isStaticBuild
+                ? socket
+                : ws,
+        },
+      ]);
     };
 
     init();

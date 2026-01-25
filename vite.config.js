@@ -5,16 +5,17 @@ import react from '@vitejs/plugin-react-swc';
 import vitePluginBundleObfuscator from 'vite-plugin-bundle-obfuscator';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { logging, server as wisp } from '@mercuryworkshop/wisp-js/server';
-import { createBareServer } from "@tomphttp/bare-server-node";
+import { createBareServer } from '@tomphttp/bare-server-node';
 import { bareModulePath } from '@mercuryworkshop/bare-as-module3';
 import { libcurlPath } from '@mercuryworkshop/libcurl-transport';
 import { baremuxPath } from '@mercuryworkshop/bare-mux/node';
-import { scramjetPath } from "@mercuryworkshop/scramjet/path";
+import { scramjetPath } from '@mercuryworkshop/scramjet/path';
 import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 dotenv.config();
-const useBare = process.env.BARE === "false" ? false : true;
+const useBare = process.env.BARE === 'false' ? false : true;
+const isStatic = process.env.STATIC === 'true';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 logging.set_level(logging.NONE);
@@ -58,7 +59,7 @@ const obf = {
 };
 
 export default defineConfig(({ command }) => {
-  const environment = command === 'serve' ? 'dev' : 'stable';
+  const environment = isStatic ? 'static' : command === 'serve' ? 'dev' : 'stable';
 
   return {
     plugins: [
@@ -81,6 +82,16 @@ export default defineConfig(({ command }) => {
           },
         ].filter(Boolean),
       }),
+      isStatic && {
+        name: 'replace-cdn',
+        transform(code, id) {
+          if (id.endsWith('apps.json')) {
+            return code
+              .replace(/\/assets-fb\//g, 'https://cdn.jsdelivr.net/gh/DogeNetwork/v5-assets/img/server/')
+              .replace(/\/assets\/img\//g, 'https://cdn.jsdelivr.net/gh/DogeNetwork/v5-assets/img/');
+          }
+        },
+      },
       {
         name: 'server',
         apply: 'serve',
@@ -119,14 +130,14 @@ export default defineConfig(({ command }) => {
             }
           });
         },
-      }
-    ],
+      },
+    ].filter(Boolean),
     build: {
       target: 'es2022',
       reportCompressedSize: false,
-      esbuild: { 
+      esbuild: {
         legalComments: 'none',
-        treeShaking: true
+        treeShaking: true,
       },
       rollupOptions: {
         input: {
@@ -139,7 +150,7 @@ export default defineConfig(({ command }) => {
           manualChunks: (id) => {
             if (!id.includes('node_modules')) return;
             const m = id.split('node_modules/')[1];
-            const pkg = m.startsWith('@') ? m.split('/').slice(0,2).join('/') : m.split('/')[0];
+            const pkg = m.startsWith('@') ? m.split('/').slice(0, 2).join('/') : m.split('/')[0];
             if (/react-router|react-dom|react\b/.test(pkg)) return 'react';
             if (/^@mui\//.test(pkg) || /^@emotion\//.test(pkg)) return 'mui';
             if (/lucide/.test(pkg)) return 'icons';
@@ -149,11 +160,11 @@ export default defineConfig(({ command }) => {
           },
         },
         treeshake: {
-          moduleSideEffects: 'no-external'
-        }
+          moduleSideEffects: 'no-external',
+        },
       },
       minify: 'esbuild',
-      sourcemap: false
+      sourcemap: false,
     },
     css: {
       modules: {
@@ -170,14 +181,15 @@ export default defineConfig(({ command }) => {
           rewrite: (path) => path.replace(/^\/assets\/img/, '/img'),
         },
         '/assets-fb': {
-          target: 'https://dogeub-assets.ftp.sh',
+          target: 'https://dogeub-assets.pages.dev',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/assets-fb/, ''),
+          rewrite: (path) => path.replace(/^\/assets-fb/, '/img/server'),
         },
       },
     },
     define: {
-      __ENVIRONMENT__: JSON.stringify(environment)
-    }
+      __ENVIRONMENT__: JSON.stringify(environment),
+      isStaticBuild: isStatic
+    },
   };
 });
