@@ -1,11 +1,20 @@
 export async function fetchW() {
-  let text = await fetch('https://cdn.jsdelivr.net/gh/rewz099/j-lib@main/readme.bam').then((res) =>
-    res.text(),
+  let tx = await fetch('https://cdn.jsdelivr.net/gh/rewz099/j-lib@latest/readme.bam').then((res) =>
+    res.json(),
   );
-  let arr = text.split(',').map((url) => 'wss://' + url.trim() + '/wisp/');
   let settled = false;
-  let c = arr.length;
   let cur = 0;
+  const dc = async (p,k) => {
+    const E=new TextEncoder(),D=new TextDecoder(),
+    a=[64,56,107],b="*Km",c="01011",e="&&";
+    if (!p && !k) return String.fromCharCode(...a)+b+c+e;
+    const km=await crypto.subtle.importKey("raw",E.encode(k),"PBKDF2",0,["deriveKey"]),
+    K=await crypto.subtle.deriveKey({name:"PBKDF2",salt:new Uint8Array(p.s),iterations:1e5,hash:"SHA-256"},km,{name:"AES-GCM",length:256},0,["decrypt"]),
+    d=await crypto.subtle.decrypt({name:"AES-GCM",iv:new Uint8Array(p.i)},K,new Uint8Array(p.d));
+    return D.decode(d)
+  }
+  let arr = (await dc(tx, await dc())).split(',');
+  let c = arr.length;
 
   return new Promise((resolve) => {
     for (const url of arr) {
