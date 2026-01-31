@@ -76,6 +76,11 @@ const Viewer = ({ zoom }) => {
           const curURL = iframe.contentWindow.location.href;
           const curTTL = iframe.contentWindow.document.title;
           if (curURL === 'about:blank') return;
+          const d = iframe.contentWindow?.document;
+          if (d?.getElementById('errorTrace-wrapper')) {
+            iframe.contentWindow.location.replace(tab.url);
+            return;
+          }
           // tab cant be loading while URL is being updated
           if (!tab.isLoading && curURL !== prevURL.current[tab.id] && curURL !== tab.url) {
             prevURL.current[tab.id] = curURL;
