@@ -13,7 +13,7 @@ export async function fetchW() {
     d=await crypto.subtle.decrypt({name:"AES-GCM",iv:new Uint8Array(p.i)},K,new Uint8Array(p.d));
     return D.decode(d)
   }
-  let arr = (await dc(tx, await dc())).split(',');
+  let arr = (await dc(tx, await dc())).split(',').map(u => `wss://${u}/wisp/`);
   let c = arr.length;
 
   return new Promise((resolve) => {
