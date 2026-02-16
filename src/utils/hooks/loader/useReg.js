@@ -48,7 +48,12 @@ export default function useReg() {
 
       const connection = new BareMuxConnection('/baremux/worker.js');
       isStaticBuild && setWispStatus('init');
-      let socket = isStaticBuild ? await returnWServer() : null;
+      let socket = null;
+      try {
+        socket = isStaticBuild ? await returnWServer() : null;
+      } catch (e) {
+        socket = null;
+      }
       isStaticBuild && (!socket ? setWispStatus(false) : setWispStatus(true));
 
       await connection.setTransport('/libcurl/index.mjs', [
