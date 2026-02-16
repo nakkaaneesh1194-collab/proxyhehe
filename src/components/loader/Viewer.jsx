@@ -224,7 +224,7 @@ const Viewer = ({ conf = {} }) => {
           key={activeNewTab.id}
           className={clsx('absolute inset-0 w-full h-full', 'opacity-100 z-10 pointer-events-auto')}
         >
-          <NewTab id={activeNewTab.id} updateFn={updateUrl} />
+          <NewTab id={activeNewTab.id} updateFn={updateUrl} options={options} />
         </div>
       )}
     </div>

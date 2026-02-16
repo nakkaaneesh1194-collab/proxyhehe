@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 import { OptionsProvider, useOptions } from './utils/optionsContext';
 import { initPreload } from './utils/preload';
 import { designConfig as bgDesign } from './utils/config';
+import useReg from './utils/hooks/loader/useReg';
 import './index.css';
 import 'nprogress/nprogress.css';
 
@@ -21,7 +22,6 @@ const Apps = lazyLoad(importApps);
 const Apps2 = lazyLoad(importGms);
 const Settings = lazyLoad(importSettings);
 const Player = lazyLoad(() => import('./pages/Player'));
-const New = lazyLoad(() => import('./pages/New'));
 
 initPreload('/materials', importApps);
 initPreload('/docs', importGms);
@@ -38,6 +38,7 @@ function useTracking() {
 
 const ThemedApp = memo(() => {
   const { options } = useOptions();
+  useReg();
   useTracking();
 
   const pages = useMemo(
@@ -48,7 +49,6 @@ const ThemedApp = memo(() => {
       { path: '/docs/r', element: <Player /> },
       { path: '/search', element: <Search />},
       { path: '/settings', element: <Settings /> },
-      { path: '/new', element: <New /> },
       { path: '*', element: <NotFound /> },
     ],
     [],

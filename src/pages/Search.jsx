@@ -2,7 +2,6 @@ import Tabs from '/src/components/loader/Tabs';
 import Omnibox from '/src/components/loader/Omnibox';
 import Viewer from '/src/components/loader/Viewer';
 import Menu from '/src/components/loader/Menu';
-import useReg from '/src/utils/hooks/loader/useReg';
 import loaderStore from '/src/utils/hooks/loader/useLoaderStore';
 import { process } from '/src/utils/hooks/loader/utils';
 import { useOptions } from '../utils/optionsContext';
@@ -10,7 +9,6 @@ import { useEffect } from 'react';
 
 export default function Loader({ config = {} }) {
   const { url, ui = true, zoom, alerts = false } = config;
-  useReg();
   const { options } = useOptions();
   const tabs = loaderStore((state) => state.tabs);
   const updateUrl = loaderStore((state) => state.updateUrl);

@@ -4,11 +4,11 @@ import Logo from '../Logo';
 
 import { process } from '/src/utils/hooks/loader/utils';
 
-const NewTab = ({ id, updateFn }) => {
+const NewTab = ({ id, updateFn, options = {} }) => {
   const navigating = {
     id: id,
     go: updateFn,
-    process: process,
+    process: (input) => process(input, false, options.prType || 'auto', options.engine || undefined),
   };
   return (
     <div className="h-[calc(100%-100px)] flex flex-col items-center justify-center p-6 gap-8">
