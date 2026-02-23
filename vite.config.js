@@ -36,7 +36,7 @@ const routeRequest = (req, resOrSocket, head) => {
 const obf = {
   enable: true,
   autoExcludeNodeModules: true,
-  threadPool: true,
+  threadPool: false,
   options: {
     compact: true,
     controlFlowFlattening: true,

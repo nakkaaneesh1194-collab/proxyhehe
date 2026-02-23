@@ -1292,14 +1292,6 @@
         "local": false
       },
       {
-        "appName": "Geometry Dash",
-        "desc": "Ball/Platformer apps",
-        "icon": "/assets/img/geometry-dash.webp",
-        "url": "https://geometrydashwave.io/game/gd/?v=5",
-        "disabled": false,
-        "local": false
-      },
-      {
         "appName": "Obby Faster",
         "desc": "Ball/Platformer apps",
         "icon": "/assets/img/obby-faster.webp",
@@ -5026,7 +5018,7 @@
         "appName": "Geometry Dash Lite",
         "desc": "Ball/Platformer apps",
         "icon": "/assets/img/geometrydash.webp",
-        "url": "https://geometrydash-lite.io/",
+        "url": "https://geometrydashwave.io/game/gd/?v=5",
         "disabled": false,
         "local": false
       },

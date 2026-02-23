@@ -61,9 +61,24 @@ cd dogeub
 npm i
 npm run dev
 ```
-
 ---
 
+#### Deploying with Docker:
+
+```bash
+docker run -d \
+  --name dogeub \
+  --restart unless-stopped \
+  -p 3000:3000 \
+  -e NODE_ENV=production \
+  -e PORT=3000 \
+  ghcr.io/dogenetwork/dogeub:latest
+```
+
+> [!NOTE]
+> If accessing over a network instead of localhost, you will need to provide a valid SSL certificate (e.g., using a reverse proxy like Nginx or Caddy). This is required for the built-in service worker to function properly.
+
+---
 
 ### Contributors / Developers
 

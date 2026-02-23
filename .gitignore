@@ -27,5 +27,4 @@ tools
 *.sw?
 
 .env
-
 package-lock.json
