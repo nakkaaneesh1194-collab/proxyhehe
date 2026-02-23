@@ -1,50 +1,6 @@
-const k = new TextEncoder().encode(
-  btoa(new Date().toISOString().slice(0, 10) + location.host)
-    .split('')
-    .reverse()
-    .join('')
-    .slice(6.7),
-);
-export const encoding = {
-  enc: (s) => {
-    if (!s) return s;
-    try {
-      const d = new TextEncoder().encode(s),
-        o = new Uint8Array(d.length);
-      for (let i = 0; i < d.length; i++) o[i] = d[i] ^ k[i % 8];
-      return Array.from(o, (b) => b.toString(16).padStart(2, '0')).join('');
-    } catch {
-      return s;
-    }
-  },
-  dnc: (s) => {
-    if (!s) return s;
-    try {
-      const n =
-        Math.min(
-          s.indexOf('?') + 1 || s.length + 1,
-          s.indexOf('#') + 1 || s.length + 1,
-          s.indexOf('&') + 1 || s.length + 1,
-        ) - 1;
-      let h = 0;
-      for (let i = 0; i < n && i < s.length; i++) {
-        const c = s.charCodeAt(i);
-        if (!((c >= 48 && c <= 57) || (c >= 65 && c <= 70) || (c >= 97 && c <= 102))) break;
-        h = i + 1;
-      }
-      if (h < 2 || h % 2) return decodeURIComponent(s);
-      const l = h >> 1,
-        o = new Uint8Array(l);
-      for (let i = 0; i < l; i++) {
-        const x = i << 1;
-        o[i] = parseInt(s[x] + s[x + 1], 16) ^ k[i % 8];
-      }
-      return new TextDecoder().decode(o) + s.slice(h);
-    } catch {
-      return decodeURIComponent(s);
-    }
-  },
-};
+import { mango } from './of.js';
+import whitelist from '/src/data/whitelist.json';
+import appsData from '/src/data/apps.json';
 
 const check = (inp, engine) => {
   const trimmed = inp.trim();
@@ -62,9 +18,6 @@ const check = (inp, engine) => {
   }
 };
 
-import whitelist from '/src/data/whitelist.json';
-import appsData from '/src/data/apps.json';
-
 const scrwlist = new Set([
   ...whitelist,
   ...Object.values(appsData.games || {}).flatMap(cat => 
@@ -80,25 +33,25 @@ export const process = (input, decode = false, prType, engine = "https://www.goo
 
   switch (prType) {
     case 'uv':
-      prefix = '/uv/service/';
+      prefix = '/portal/k12/';
       break;
     case 'scr':
-      prefix = '/scramjet/';
+      prefix = '/ham/';
       break;
     default:
       const url = check(input, engine);
       const match = [...scrwlist].some(d => url.includes(d));
-      prefix = match ? '/scramjet/' : '/uv/service/';
+      prefix = match ? '/ham/' : '/portal/k12/';
   }
 
   if (decode) {
-    const uvPart = input.split('/uv/service/')[1];
-    const scrPart = input.split('/scramjet/')[1];
-    const decoded = uvPart ? encoding.dnc(uvPart) : scrPart ? decodeURIComponent(scrPart) : input;
+    const uvPart = input.split('/portal/k12/')[1];
+    const scrPart = input.split('/ham/')[1];
+    const decoded = uvPart ? mango.dnc(uvPart) : scrPart ? mango.dnc(scrPart) : input;
     return decoded.endsWith('/') ? decoded.slice(0, -1) : decoded;
   } else {
     const final = check(input, engine);
-    const encoded = prefix === '/scramjet/' ? encodeURIComponent(final) : encoding.enc(final);
+    const encoded = prefix === '/ham/' ? mango.enc(final) : mango.enc(final);
     return `${location.protocol}//${location.host}${prefix}${encoded}`;
   }
 };

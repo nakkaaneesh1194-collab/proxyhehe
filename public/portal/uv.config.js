@@ -1,6 +1,6 @@
 const k = new TextEncoder().encode(btoa(new Date().toISOString().slice(0, 10) + location.host).split('').reverse().join('').slice(6.7));
 self.__uv$config = {
-    prefix: "/uv/service/",
+    prefix: "/portal/k12/",
     encodeUrl: s => {
         if (!s) return s;
         try {
@@ -28,9 +28,13 @@ self.__uv$config = {
             return new TextDecoder().decode(o) + s.slice(h);
         } catch { return decodeURIComponent(s); }
     },
-    handler: "/uv/uv.handler.js",
-    client: "/uv/uv.client.js", 
-    bundle: "/uv/uv.bundle.js",
-    config: "/uv/uv.config.js",
-    sw: "/uv/uv.sw.js"
+    handler: "/portal/uv.handler.js",
+    client: "/portal/uv.client.js", 
+    bundle: "/portal/uv.bundle.js",
+    config: "/portal/uv.config.js",
+    sw: "/portal/uv.sw.js"
 };
+
+self.console = new Proxy({}, {
+  get: () => () => {}
+});
