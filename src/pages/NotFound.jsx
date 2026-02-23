@@ -19,31 +19,33 @@ const NotFound = () => {
   };
 
   useEffect(() => {
-    if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/uv/service/')) {
-      nav('/');
+    if (loc.pathname.includes('/ham/') || loc.pathname.includes('/portal/k12/')) {
+      return;
     }
+    nav('/');
   }, [loc, nav]);
 
-  if (!loc.pathname.includes('/scramjet/') && !loc.pathname.includes('/uv/service/')) return null;
-  else location.reload();
-
-  return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center p-6"
-      style={{ fontFamily: 'SFProText, system-ui, sans-serif' }}
-    >
-      <h1 className="text-2xl font-medium mb-2" style={{ color: colorConfig.text }}>
-        Whoops, something broke!
-      </h1>
-      <p
-        onClick={() => location.reload()}
-        className="cursor-pointer underline"
-        style={{ color: colorConfig.textMuted }}
+  if (loc.pathname.includes('/ham/') || loc.pathname.includes('/portal/k12/')) {
+    return (
+      <div
+        className="min-h-screen flex flex-col items-center justify-center p-6"
+        style={{ fontFamily: 'SFProText, system-ui, sans-serif' }}
       >
-        Please refresh here
-      </p>
-    </div>
-  );
+        <h1 className="text-2xl font-medium mb-2" style={{ color: colorConfig.text }}>
+          Whoops, something broke!
+        </h1>
+        <p
+          onClick={() => location.reload()}
+          className="cursor-pointer underline"
+          style={{ color: colorConfig.textMuted }}
+        >
+          Please refresh here
+        </p>
+      </div>
+    );
+  }
+
+  return null;
 };
 
 export default NotFound;

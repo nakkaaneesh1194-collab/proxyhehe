@@ -1,20 +1,21 @@
 import { useEffect } from 'react';
-import { BareMuxConnection } from '@mercuryworkshop/bare-mux';
+import { BareMuxConnection } from 'bare-mux-fork';
 import { useOptions } from '/src/utils/optionsContext';
 import { fetchW as returnWServer } from './findWisp';
+import { makecodec } from './of';
 import store from './useLoaderStore';
 
 export default function useReg() {
   const { options } = useOptions();
   const ws = `${location.protocol == 'http:' ? 'ws:' : 'wss:'}//${location.host}/wisp/`;
-  const sws = [{ path: '/uv/sw.js' }, { path: '/s_sw.js', scope: '/scramjet/' }];
+  const sws = [{ path: '/sw.js', scope: '/portal/k12/' }, { path: '/s_sw.js', scope: '/ham/' }];
   const setWispStatus = store((s) => s.setWispStatus);
 
   useEffect(() => {
     const init = async () => {
       if (!window.scr) {
         const script = document.createElement('script');
-        script.src = '/scram/scramjet.all.js';
+        script.src = '/eggs/scramjet.all.js';
         await new Promise((resolve, reject) => {
           script.onload = resolve;
           script.onerror = reject;
@@ -25,12 +26,14 @@ export default function useReg() {
       const { ScramjetController } = $scramjetLoadController();
 
       window.scr = new ScramjetController({
+        prefix: "/ham/",
         files: {
-          wasm: '/scram/scramjet.wasm.wasm',
-          all: '/scram/scramjet.all.js',
-          sync: '/scram/scramjet.sync.js',
+          wasm: '/eggs/scramjet.wasm.wasm',
+          all: '/eggs/scramjet.all.js',
+          sync: '/eggs/scramjet.sync.js',
         },
         flags: { rewriterLogs: false, scramitize: false, cleanErrors: true, sourcemaps: true },
+        codec: makecodec()
       });
 
       window.scr.init();
