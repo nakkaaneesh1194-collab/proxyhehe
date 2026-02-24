@@ -39,13 +39,23 @@ export const privacyConfig = ({ options, updateOption, openPanic }) => ({
     disabled: !options.tabName || options.tabName == meta[0].value.tabName,
   },
   3: {
-    name: 'Open in AB',
-    desc: 'This will open the site into an about:blank tab. Make sure popups are enabled.',
-    value: options.aboutBlank,
+    name: 'Open about:blank on startup',
+    desc: 'When enabled, the about:blank tab opens automatically when you visit.',
+    value:
+      options.aboutBlankAutoOpen === true ||
+      (options.aboutBlank && options.aboutBlankAutoOpen !== false),
     type: 'switch',
-    action: (b) => setTimeout(() => updateOption({ aboutBlank: b }), 100),
+    action: (b) => setTimeout(() => updateOption({ aboutBlankAutoOpen: b }), 100),
   },
   4: {
+    name: 'Open manually',
+    desc: 'Open the about:blank tab now.',
+    value: 'Open manually',
+    type: 'button',
+    action: () =>
+      import('/src/utils/utils.js').then(({ openAboutBlankPopup }) => openAboutBlankPopup(true)),
+  },
+  5: {
     name: 'Panic Key',
     desc: 'Enable or disable the panic key option.',
     value: !!options.panicToggleEnabled,
@@ -57,7 +67,7 @@ export const privacyConfig = ({ options, updateOption, openPanic }) => ({
       }, 100);
     },
   },
-  5: {
+  6: {
     name: 'Panic Shortcut',
     desc: 'Set a keybind/shortcut that redirects you to a page when pressed.',
     value: 'Set Key',
