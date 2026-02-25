@@ -70,12 +70,7 @@ export const panic = () => {
   }
 };
 
-/**
- * Opens the about:blank popup with an iframe pointing to the current proxy URL.
- * Syncs title/icon from localStorage.options in the popup.
- * @param {boolean} redirectCurrentTab - If true, redirect this tab to google.com after opening (default true).
- * @returns {boolean} - True if popup was opened, false if blocked.
- */
+/* about:blank logic */
 export const openAboutBlankPopup = (redirectCurrentTab = true) => {
   const w = open('about:blank');
   if (!w || w.closed) {
