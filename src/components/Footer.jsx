@@ -13,6 +13,10 @@ const Footer = memo(() => {
     window.open('/ds', '_blank');
   }, []);
 
+  const handleAboutBlank = useCallback(() => {
+    import('/src/utils/utils.js').then(({ openAboutBlankPopup }) => openAboutBlankPopup(true));
+  }, []);
+
   return (
     <div className="w-full fixed bottom-0 flex items-end justify-between p-2">
       {options.donationBtn !== false && (
@@ -30,6 +34,16 @@ const Footer = memo(() => {
         </a>
       )}
       <div className="flex gap-2 items-center">
+        <div
+          className={clsx(
+            'flex gap-1 items-center cursor-pointer',
+            'hover:-translate-y-0.5 duration-200',
+          )}
+          onClick={handleAboutBlank}
+        >
+          about:blank
+        </div>
+        <span className="text-gray-500">•</span>
         <div
           className={clsx(
             'flex gap-1 items-center cursor-pointer',
