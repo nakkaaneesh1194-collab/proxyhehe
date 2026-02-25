@@ -48,14 +48,6 @@ export const privacyConfig = ({ options, updateOption, openPanic }) => ({
     action: (b) => setTimeout(() => updateOption({ aboutBlankAutoOpen: b }), 100),
   },
   4: {
-    name: 'Open manually',
-    desc: 'Open the about:blank tab now.',
-    value: 'Open manually',
-    type: 'button',
-    action: () =>
-      import('/src/utils/utils.js').then(({ openAboutBlankPopup }) => openAboutBlankPopup(true)),
-  },
-  5: {
     name: 'Panic Key',
     desc: 'Enable or disable the panic key option.',
     value: !!options.panicToggleEnabled,
@@ -67,7 +59,7 @@ export const privacyConfig = ({ options, updateOption, openPanic }) => ({
       }, 100);
     },
   },
-  6: {
+  5: {
     name: 'Panic Shortcut',
     desc: 'Set a keybind/shortcut that redirects you to a page when pressed.',
     value: 'Set Key',

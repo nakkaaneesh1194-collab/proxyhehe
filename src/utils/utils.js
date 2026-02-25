@@ -108,7 +108,7 @@ export const openAboutBlankPopup = (redirectCurrentTab = true) => {
     }, 800);
   `;
   d.head.appendChild(s);
-  if (redirectCurrentTab) location.href = 'https://google.com';
+  if (redirectCurrentTab) window.location.replace('https://google.com');
   return true;
 };
 
@@ -125,7 +125,6 @@ export const check = (() => {
     op.aboutBlankAutoOpen === true || (op.aboutBlank && op.aboutBlankAutoOpen !== false);
   if (window.top === window.self && openOnStartup) {
     openAboutBlankPopup(true);
-    history.replaceState(null, '', '/');
   }
 
   ckOff();
