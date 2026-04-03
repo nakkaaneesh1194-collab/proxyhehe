@@ -136,6 +136,43 @@ Use a two-environment check:
 
 If it fails only in Codespaces but works elsewhere, the root cause is usually platform/network reputation or Codespaces auth/cross-origin behavior rather than your project build.
 
+### Put DogeUB on your own website
+
+For a games site, the safest setup is a **separate subdomain** (recommended), e.g. `hub.yoursite.com`.
+
+Why subdomain is better than a subpath:
+- The app and service workers use root-style paths (e.g. `/portal/...`, `/ham/...`, `/sw.js`).
+- Hosting under a subpath like `/games/dogeub/` usually requires extra rewrite work.
+
+Recommended deployment pattern:
+1. Build the app:
+   ```bash
+   npm install
+   npm run build
+   ```
+2. Run the server behind a reverse proxy:
+   ```bash
+   PORT=2345 node server.js
+   ```
+3. Point a subdomain to your server and terminate HTTPS in Nginx/Caddy.
+
+Example Nginx site block:
+```nginx
+server {
+  listen 443 ssl http2;
+  server_name hub.yoursite.com;
+
+  location / {
+    proxy_pass http://127.0.0.1:2345;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+```
+
+Then link to it from your main site with a normal link or iframe (link is usually more reliable).
+
 #### Deploying with Docker:
 
 ```bash
