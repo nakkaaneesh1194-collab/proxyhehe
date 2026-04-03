@@ -173,6 +173,18 @@ server {
 
 Then link to it from your main site with a normal link or iframe (link is usually more reliable).
 
+#### CORS / CORP / COEP notes (Render)
+
+Short answer: you usually **do not** need to add strict cross-origin policies for this proxy app.
+
+Recommended for Render deploys:
+- Keep default CORS behavior unless you have a specific API requirement.
+- Do **not** force `Cross-Origin-Resource-Policy: same-origin` globally.
+- Do **not** force `Cross-Origin-Embedder-Policy: require-corp` globally.
+- Do **not** force `Cross-Origin-Opener-Policy: same-origin` globally.
+
+Those strict headers can break proxied scripts/assets and challenge flows.
+
 #### Deploying with Docker:
 
 ```bash
