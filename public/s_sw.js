@@ -41,6 +41,9 @@ async function handleRequest(event) {
       return new Response("", { status: 204 });
     }
   }
+  await scramjet.loadConfig();
+  if (scramjet.route(event)) return scramjet.fetch(event);
+  return fetch(event.request);
 }
 
 let playgroundData;
