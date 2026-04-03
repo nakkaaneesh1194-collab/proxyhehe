@@ -116,6 +116,13 @@ app.get("/return", async (req, reply) =>
     : reply.code(401).send({ error: "query parameter?" })
 );
 
+app.get("/shared_dict/*", async (_, reply) =>
+  reply
+    .code(204)
+    .header("Cache-Control", "no-store")
+    .send()
+);
+
 app.setNotFoundHandler((req, reply) =>
   req.raw.method === "GET" && req.headers.accept?.includes("text/html")
     ? reply.sendFile("index.html")
