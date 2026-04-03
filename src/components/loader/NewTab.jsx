@@ -8,7 +8,7 @@ const NewTab = ({ id, updateFn, options = {} }) => {
   const navigating = {
     id: id,
     go: updateFn,
-    process: (input) => process(input, false, options.prType || 'auto', options.engine || undefined),
+    process: (input) => process(input, false, options.prType || 'scr', options.engine || undefined),
   };
   return (
     <div className="h-[calc(100%-100px)] flex flex-col items-center justify-center p-6 gap-8">

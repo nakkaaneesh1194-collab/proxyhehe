@@ -88,6 +88,27 @@ npm run dev
 ```
 Then open the Vite URL shown in terminal (usually `http://localhost:5173`).
 
+
+> [!TIP]
+> If your environment is on Node.js 16 (common in older/dev containers), switch to Node 20 before installing deps:
+> ```bash
+> nvm install 20
+> nvm use 20
+> node -v
+> ```
+
+### Troubleshooting (Codespaces / CAPTCHA / "Robot" detections)
+
+#### Change proxy mode (UI)
+
+1. Open **Settings**.
+2. Go to **Browsing** settings.
+3. Find **Backend Engine**.
+4. Choose:
+   - **Scramjet only** (default)
+   - **Ultraviolet only**
+   - **Automatic**
+
 ### Troubleshooting (Codespaces / CAPTCHA / "Robot" detections)
 
 If you run DogeUB inside **GitHub Codespaces**, some sites may repeatedly show bot checks or a reCAPTCHA spinner that never finishes.

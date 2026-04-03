@@ -1,6 +1,4 @@
 import { mango } from './of.js';
-import whitelist from '/src/data/whitelist.json';
-import appsData from '/src/data/apps.json';
 
 const check = (inp, engine) => {
   const trimmed = inp.trim();
@@ -18,15 +16,6 @@ const check = (inp, engine) => {
   }
 };
 
-const scrwlist = new Set([
-  ...whitelist,
-  ...Object.values(appsData.games || {}).flatMap(cat => 
-    cat.filter(g => g.url && !g.local).map(g => {
-      try { return new URL(g.url.startsWith('http') ? g.url : `https://${g.url}`).hostname.replace(/^www\./, ''); }
-      catch { return null; }
-    }).filter(Boolean)
-  )
-]);
 
 export const process = (input, decode = false, prType, engine = "https://www.google.com/search?q=") => {
   const upwefix = isStaticBuild 
@@ -46,9 +35,10 @@ export const process = (input, decode = false, prType, engine = "https://www.goo
       prefix = eggowaffle;
       break;
     default:
-      const url = check(input, engine);
-      const match = [...scrwlist].some(d => url.includes(d));
-      prefix = match ? eggowaffle : upwefix;
+      // Prefer Scramjet in automatic mode for broader compatibility with
+      // modern anti-bot/challenge-heavy sites. UV can still be selected
+      // explicitly from settings.
+      prefix = eggowaffle;
   }
 
   if (decode) {
