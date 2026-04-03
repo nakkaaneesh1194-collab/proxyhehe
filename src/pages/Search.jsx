@@ -20,7 +20,7 @@ export default function Loader({ config = {} }) {
     if (url && tabs.length > 0) {
       //only 1 tab on initial load so tabs[0]
       const tab = tabs[0];
-      const processedUrl = process(url, false, options.prType || 'auto', options.engine || null);
+      const processedUrl = process(url, false, options.prType || 'scr', options.engine || null);
       if (processedUrl && tab.url !== processedUrl) {
         updateUrl(tab.id, processedUrl);
       }
