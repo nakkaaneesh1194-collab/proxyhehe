@@ -63,6 +63,77 @@ npm run dev
 ```
 ---
 
+
+### Run on your own machine
+
+You only need a few things installed:
+- **Node.js 20+** (recommended: latest LTS)
+- **npm** (comes with Node.js)
+- **git**
+
+Quick start (production-style run):
+```bash
+git clone https://github.com/DogeNetwork/dogeub.git
+cd dogeub
+npm install
+npm run build
+node server.js
+```
+Then open: `http://localhost:2345` (or your configured `PORT`).
+
+Local development mode (hot reload):
+```bash
+npm install
+npm run dev
+```
+Then open the Vite URL shown in terminal (usually `http://localhost:5173`).
+
+
+> [!TIP]
+> If your environment is on Node.js 16 (common in older/dev containers), switch to Node 20 before installing deps:
+> ```bash
+> nvm install 20
+> nvm use 20
+> node -v
+> ```
+
+### Troubleshooting (Codespaces / CAPTCHA / "Robot" detections)
+
+#### Change proxy mode (UI)
+
+1. Open **Settings**.
+2. Go to **Browsing** settings.
+3. Find **Backend Engine**.
+4. Choose:
+   - **Scramjet only** (default)
+   - **Ultraviolet only**
+   - **Automatic**
+
+If you run DogeUB inside **GitHub Codespaces**, some sites may repeatedly show bot checks or a reCAPTCHA spinner that never finishes.
+
+Common reasons:
+- **Datacenter IP reputation**: Codespaces egress IPs are often flagged by anti-bot systems.
+- **Strict browser integrity checks**: Some providers detect proxy/service-worker flows and block challenge completion.
+- **Cookie/storage restrictions**: CAPTCHA flows can fail if required storage/cookies are blocked or partitioned.
+- **TLS / origin issues**: Make sure you are using the HTTPS URL provided by Codespaces port forwarding.
+
+What to try:
+1. Open the app from the forwarded **HTTPS** Codespaces URL (not plain localhost in another device/browser).
+2. In Codespaces Port Forwarding, set the app port visibility to **Public** (or required mode for your usage).
+3. Test in a clean browser profile with extensions/ad blockers disabled.
+4. If CAPTCHA still loops, run on a different host/network with better IP reputation (self-hosted VPS/reverse proxy or local network).
+
+> [!IMPORTANT]
+> Some anti-bot pages are intentionally difficult or impossible to complete through proxy contexts. This is an upstream site security behavior, not always a build/runtime bug in DogeUB.
+
+#### Where to test (recommended)
+
+Use a two-environment check:
+1. **Codespaces (repro check):** confirm whether the issue appears on `*.app.github.dev`.
+2. **Non-Codespaces host (control check):** run the same build on local machine/VPS/custom domain to compare behavior.
+
+If it fails only in Codespaces but works elsewhere, the root cause is usually platform/network reputation or Codespaces auth/cross-origin behavior rather than your project build.
+
 #### Deploying with Docker:
 
 ```bash
@@ -77,6 +148,24 @@ docker run -d \
 
 > [!NOTE]
 > If accessing over a network instead of localhost, you will need to provide a valid SSL certificate (e.g., using a reverse proxy like Nginx or Caddy). This is required for the built-in service worker to function properly.
+
+#### HTTPS requirements (important)
+
+- **`localhost` is OK without custom certs** for local testing.
+- **Any non-localhost host** (LAN IP, VPS domain, school/work domain, etc.) should be served over valid **HTTPS** for reliable service-worker behavior.
+- **Codespaces URLs are already HTTPS**, but can still hit platform auth/bot checks unrelated to your build.
+
+Example Caddy reverse proxy (auto HTTPS):
+```caddyfile
+your-domain.example.com {
+    reverse_proxy 127.0.0.1:2345
+}
+```
+
+Then run DogeUB on localhost and let Caddy terminate TLS:
+```bash
+PORT=2345 node server.js
+```
 
 ---
 
