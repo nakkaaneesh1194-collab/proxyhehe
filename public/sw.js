@@ -34,6 +34,8 @@ async function handleRequest(event) {
       return new Response("", { status: 204 });
     }
   }
+  if (uv.route(event)) return uv.fetch(event);
+  return fetch(event.request);
 }
 
 self.addEventListener("fetch", event => {

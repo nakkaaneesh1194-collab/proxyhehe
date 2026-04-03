@@ -109,6 +109,8 @@ Then open the Vite URL shown in terminal (usually `http://localhost:5173`).
    - **Ultraviolet only**
    - **Automatic**
 
+### Troubleshooting (Codespaces / CAPTCHA / "Robot" detections)
+
 If you run DogeUB inside **GitHub Codespaces**, some sites may repeatedly show bot checks or a reCAPTCHA spinner that never finishes.
 
 Common reasons:
