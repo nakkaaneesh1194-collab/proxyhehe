@@ -63,6 +63,26 @@ npm run dev
 ```
 ---
 
+
+### Troubleshooting (Codespaces / CAPTCHA / "Robot" detections)
+
+If you run DogeUB inside **GitHub Codespaces**, some sites may repeatedly show bot checks or a reCAPTCHA spinner that never finishes.
+
+Common reasons:
+- **Datacenter IP reputation**: Codespaces egress IPs are often flagged by anti-bot systems.
+- **Strict browser integrity checks**: Some providers detect proxy/service-worker flows and block challenge completion.
+- **Cookie/storage restrictions**: CAPTCHA flows can fail if required storage/cookies are blocked or partitioned.
+- **TLS / origin issues**: Make sure you are using the HTTPS URL provided by Codespaces port forwarding.
+
+What to try:
+1. Open the app from the forwarded **HTTPS** Codespaces URL (not plain localhost in another device/browser).
+2. In Codespaces Port Forwarding, set the app port visibility to **Public** (or required mode for your usage).
+3. Test in a clean browser profile with extensions/ad blockers disabled.
+4. If CAPTCHA still loops, run on a different host/network with better IP reputation (self-hosted VPS/reverse proxy or local network).
+
+> [!IMPORTANT]
+> Some anti-bot pages are intentionally difficult or impossible to complete through proxy contexts. This is an upstream site security behavior, not always a build/runtime bug in DogeUB.
+
 #### Deploying with Docker:
 
 ```bash
