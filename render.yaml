@@ -1,6 +1,6 @@
  services:
   - type: web
-    name: educational-website
+    name: verycoolthing
     env: node
     plan: free
     startCommand: npm install && npm run build && node server.js
