@@ -213,7 +213,7 @@ const Bookmarks = ({ isOpen, onClose, inLoader = false }) => {
                     if (inLoader) {
                       const activeTab = tabs.find(t => t.active);
                       if (activeTab) {
-                        const processedUrl = process(fixUrl(b.url), false, o.prType || 'auto', o.engine || null);
+                        const processedUrl = process(fixUrl(b.url), false, o.prType || 'scr', o.engine || null);
                         if (processedUrl) {
                           setLoading(activeTab.id, true);
                           updateUrl(activeTab.id, processedUrl);

@@ -519,6 +519,12 @@ export const navScaleConfig = [
 
 export const prConfig = [
   {
+    option: 'Scramjet only',
+    value: {
+      prType: 'scr',
+    },
+  },
+  {
     option: 'Automatic',
     value: {
       prType: 'auto',
@@ -528,12 +534,6 @@ export const prConfig = [
     option: 'Ultraviolet only',
     value: {
       prType: 'uv',
-    },
-  },
-  {
-    option: 'Scramjet only',
-    value: {
-      prType: 'scr',
     },
   },
 ];

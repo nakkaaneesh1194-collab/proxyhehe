@@ -54,7 +54,7 @@ const Omnibox = () => {
     if (isNewTab(url)) {
       setIcon(Info);
     } else if (isProcied(url)) {
-      const decoded = process(url, true, options.prType || 'auto', options.engine || undefined);
+      const decoded = process(url, true, options.prType || 'scr', options.engine || undefined);
       setIcon(decoded.startsWith('https://') ? Lock : Info);
     } else {
       setIcon(Info);
@@ -64,7 +64,7 @@ const Omnibox = () => {
   const getDisplayUrl = (url) => {
     if (isNewTab(url)) return '';
     if (isProcied(url)) {
-      const decoded = process(url, true, options.prType || 'auto', options.engine || undefined);
+      const decoded = process(url, true, options.prType || 'scr', options.engine || undefined);
       return decoded.startsWith('https://') ? decoded.slice(8) : decoded;
     }
     return url;
@@ -84,7 +84,7 @@ const Omnibox = () => {
 
   useEffect(() => {
     if (state?.url && activeTab) {
-      const processedUrl = process(state.url, false, options.prType || 'auto', options.engine || undefined);
+      const processedUrl = process(state.url, false, options.prType || 'scr', options.engine || undefined);
       if (processedUrl) {
         updateUrl(activeTab.id, processedUrl);
       }
@@ -134,7 +134,7 @@ const Omnibox = () => {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === 'Enter' && activeTab && input.length !== 0) {
-              const processedUrl = process(input, false, options.prType || 'auto', options.engine || undefined);
+              const processedUrl = process(input, false, options.prType || 'scr', options.engine || undefined);
               if (processedUrl) {
                 updateUrl(activeTab.id, processedUrl);
               }
