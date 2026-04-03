@@ -1,1 +1,94 @@
-navigator.userAgent.includes("Firefox")&&Object.defineProperty(globalThis,"crossOriginIsolated",{value:!0,writable:!1}),importScripts("eggs/scramjet.all.js");const{ScramjetServiceWorker:ScramjetServiceWorker}=$scramjetLoadWorker(),scramjet=new ScramjetServiceWorker;async function handleRequest(e){return await scramjet.loadConfig(),scramjet.route(e)?scramjet.fetch(e):fetch(e.request)}let playgroundData;self.addEventListener("fetch",(e=>{e.respondWith(handleRequest(e))})),self.addEventListener("message",(({data:e})=>{"playgroundData"===e.type&&(playgroundData=e)})),scramjet.addEventListener("request",(e=>{if(playgroundData&&e.url.href.startsWith(playgroundData.origin)){const s={},t=playgroundData.origin;e.url.href===t+"/"?(s["content-type"]="text/html",e.response=new Response(playgroundData.html,{headers:s})):e.url.href===t+"/style.css"?(s["content-type"]="text/css",e.response=new Response(playgroundData.css,{headers:s})):e.url.href===t+"/script.js"?(s["content-type"]="application/javascript",e.response=new Response(playgroundData.js,{headers:s})):e.response=new Response("empty response",{headers:s}),e.response.rawHeaders=s,e.response.rawResponse={body:e.response.body,headers:s,status:e.response.status,statusText:e.response.statusText},e.response.finalURL=e.url.toString()}}));
+self.skipWaiting();
+
+if (navigator.userAgent.includes("Firefox")) {
+  Object.defineProperty(globalThis, "crossOriginIsolated", {
+    value: true,
+    writable: false
+  });
+}
+
+importScripts("eggs/scramjet.all.js");
+
+const { ScramjetServiceWorker } = $scramjetLoadWorker();
+const scramjet = new ScramjetServiceWorker();
+
+function shouldBypassServiceWorker(request) {
+  const url = new URL(request.url);
+
+  if (url.hostname === "github.dev" && url.pathname.startsWith("/pf-signin")) {
+    return true;
+  }
+
+  const isCodespacesHost = url.hostname.endsWith(".app.github.dev");
+  if (!isCodespacesHost) return false;
+
+  return (
+    url.pathname.startsWith("/shared_dict/") ||
+    url.pathname.startsWith("/auth/") ||
+    url.pathname.startsWith("/pf-signin")
+  );
+}
+
+async function handleRequest(event) {
+  try {
+    await scramjet.loadConfig();
+    if (scramjet.route(event)) return await scramjet.fetch(event);
+    return await fetch(event.request);
+  } catch {
+    try {
+      return await fetch(event.request);
+    } catch {
+      return new Response("", { status: 204 });
+    }
+  }
+}
+
+let playgroundData;
+
+self.addEventListener("fetch", event => {
+  if (shouldBypassServiceWorker(event.request)) {
+    return;
+  }
+
+  event.respondWith(handleRequest(event));
+});
+
+self.addEventListener("message", ({ data }) => {
+  if (data.type === "playgroundData") {
+    playgroundData = data;
+  }
+});
+
+scramjet.addEventListener("request", event => {
+  if (!playgroundData || !event.url.href.startsWith(playgroundData.origin)) return;
+
+  const headers = {};
+  const base = playgroundData.origin;
+
+  if (event.url.href === `${base}/`) {
+    headers["content-type"] = "text/html";
+    event.response = new Response(playgroundData.html, { headers });
+  } else if (event.url.href === `${base}/style.css`) {
+    headers["content-type"] = "text/css";
+    event.response = new Response(playgroundData.css, { headers });
+  } else if (event.url.href === `${base}/script.js`) {
+    headers["content-type"] = "application/javascript";
+    event.response = new Response(playgroundData.js, { headers });
+  } else {
+    event.response = new Response("empty response", { headers });
+  }
+
+  event.response.rawHeaders = headers;
+  event.response.rawResponse = {
+    body: event.response.body,
+    headers,
+    status: event.response.status,
+    statusText: event.response.statusText
+  };
+  event.response.finalURL = event.url.toString();
+});
+
+
+self.addEventListener("activate", event => {
+  event.waitUntil(self.clients.claim());
+});
