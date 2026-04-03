@@ -1,3 +1,5 @@
+self.skipWaiting();
+
 importScripts("portal/uv.bundle.js");
 importScripts("portal/uv.config.js");
 importScripts("portal/uv.sw.js");
@@ -22,6 +24,16 @@ function shouldBypassServiceWorker(request) {
 }
 
 async function handleRequest(event) {
+  try {
+    if (uv.route(event)) return await uv.fetch(event);
+    return await fetch(event.request);
+  } catch {
+    try {
+      return await fetch(event.request);
+    } catch {
+      return new Response("", { status: 204 });
+    }
+  }
   if (uv.route(event)) return uv.fetch(event);
   return fetch(event.request);
 }
@@ -32,4 +44,9 @@ self.addEventListener("fetch", event => {
   }
 
   event.respondWith(handleRequest(event));
+});
+
+
+self.addEventListener("activate", event => {
+  event.waitUntil(self.clients.claim());
 });

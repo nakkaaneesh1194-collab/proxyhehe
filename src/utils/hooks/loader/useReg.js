@@ -55,10 +55,12 @@ export default function useReg() {
 
       for (const sw of sws) {
         try {
-          await navigator.serviceWorker.register(
-            sw.path,
-            sw.scope ? { scope: sw.scope } : undefined,
-          );
+          const registerOptions = sw.scope
+            ? { scope: sw.scope, updateViaCache: 'none' }
+            : { updateViaCache: 'none' };
+
+          const reg = await navigator.serviceWorker.register(sw.path, registerOptions);
+          await reg.update();
         } catch (err) {
           console.warn(`SW reg err (${sw.path}):`, err);
         }
