@@ -1,3 +1,5 @@
+self.skipWaiting();
+
 if (navigator.userAgent.includes("Firefox")) {
   Object.defineProperty(globalThis, "crossOriginIsolated", {
     value: true,
@@ -28,6 +30,17 @@ function shouldBypassServiceWorker(request) {
 }
 
 async function handleRequest(event) {
+  try {
+    await scramjet.loadConfig();
+    if (scramjet.route(event)) return await scramjet.fetch(event);
+    return await fetch(event.request);
+  } catch {
+    try {
+      return await fetch(event.request);
+    } catch {
+      return new Response("", { status: 204 });
+    }
+  }
   await scramjet.loadConfig();
   if (scramjet.route(event)) return scramjet.fetch(event);
   return fetch(event.request);
@@ -76,4 +89,9 @@ scramjet.addEventListener("request", event => {
     statusText: event.response.statusText
   };
   event.response.finalURL = event.url.toString();
+});
+
+
+self.addEventListener("activate", event => {
+  event.waitUntil(self.clients.claim());
 });
