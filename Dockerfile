@@ -24,7 +24,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 # DogeUB documents PORT via env in copy.env
-ENV PORT=3000
+ENV PORT=7860
 
 # Install only production deps
 COPY package*.json ./
@@ -43,5 +43,5 @@ COPY --from=build /app/placeholder.svg ./placeholder.svg
 # Run as non-root (the official node image defines a 'node' user)
 USER node
 
-EXPOSE 3000
+EXPOSE 7860
 CMD ["node", "server.js"]

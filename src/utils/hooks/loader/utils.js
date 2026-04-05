@@ -27,18 +27,19 @@ export const process = (input, decode = false, prType, engine = "https://www.goo
   
   let prefix;
 
+  const uvSites = ['youtube.com', 'youtu.be'];
+  const finalUrl = check(input, engine);
+  const forceUV = uvSites.some(site => finalUrl.includes(site));
+
   switch (prType) {
     case 'uv':
       prefix = upwefix;
       break;
     case 'scr':
-      prefix = eggowaffle;
+      prefix = forceUV ? upwefix : eggowaffle;
       break;
     default:
-      // Prefer Scramjet in automatic mode for broader compatibility with
-      // modern anti-bot/challenge-heavy sites. UV can still be selected
-      // explicitly from settings.
-      prefix = eggowaffle;
+      prefix = forceUV ? upwefix : eggowaffle;
   }
 
   if (decode) {
